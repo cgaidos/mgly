@@ -1,0 +1,14 @@
+.online {
+  &:after {
+    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: #1f88db;
+  }
+}
+
+.offline {
+
+}

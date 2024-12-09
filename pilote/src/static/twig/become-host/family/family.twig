@@ -1,0 +1,80 @@
+<div class="container">
+    <h2 class="text-center mt-75 mb-60">What about your family?</h2>
+
+    <div class="box light">
+        <div class="col-min-30-sm">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label class="mb-30">Member of family</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label class="form-control-content">
+                                Parents:
+                            </label>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="form-group">
+                                {{ forms.select('', [0,1,2], '', 0, 'id="parents"') }}
+                            </div>
+
+                            <script id="parent-template" data-value="" type="text/html">
+                                {% include 'become-host/family/common/parent.twig' %}
+                            </script>
+
+                            <div id="parents-options-placement" class="items mt-20"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 mt-sm-20">
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label class="form-control-content">
+                                Kids:
+                            </label>
+                        </div>
+                        <div class="col-xs-9">
+
+                            <div class="form-group">
+                                {{ forms.select('', [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], '', 0, 'id="kids"') }}
+                            </div>
+
+                            <script id="kid-template" data-value="" type="text/html">
+                                {% include 'become-host/family/common/kid.twig' %}
+                            </script>
+
+                            <div id="kids-options-placement" class="items mt-20">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="box light mt-30">
+        <div class="col-min-30-sm">
+            <div class="row">
+                <div class="col-md-12">
+                    <label class="mb-20">Describe the habits of the family:</label>
+                        <textarea name="description[en]" class="form-control" rows="6" placeholder="Here you will put info about your habits .."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-70">
+        <a href="#bh-activities" class="btn btn-default btn-become-who" role="tab"
+           data-toggle="tab">Next</a>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+.widget {
+  padding: 15px;
+  background: #fff;
+
+  &.map-container-fluid {
+    padding: 0;
+    margin: 0;
+
+    .map-fluid {
+      position: relative;
+      top: 0;
+      right: 0;
+      max-height: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.profile-widget {
+  @extend .widget;
+
+
+  .profile-widget-content {
+    position: relative;
+    text-align: center;
+
+    .manage-nav {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .profile-username {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: $font-size-base;
+      color: $grey-dark;
+    }
+
+    .profile-avatar {
+      padding: 10px;
+      border-radius: 50%;
+      border: 1px solid $grey-light;
+      margin-top: 15px;
+      position: relative;
+      max-width: 195px;
+      max-height: 195px;
+      display: inline-block;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 50%;
+        height: auto;
+      }
+
+      &:after {
+        content: '';
+        width: 1px;
+        height: 15px;
+        background: $grey-light;
+
+        position: absolute;
+        top: -15px;
+        left: 50%;
+      }
+    }
+
+    .profile-address {
+      color: $grey-dark;
+      display: block;
+      margin-top: 15px;
+    }
+  }
+}

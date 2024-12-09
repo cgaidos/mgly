@@ -1,0 +1,312 @@
+﻿########################
+# Insertion in Kibana
+########################
+
+########################
+# CREATE index moogly
+########################
+PUT moowgly
+
+########################
+# Host and Offer Mapping
+########################
+
+PUT moowgly/_mapping/Offer 
+{
+  "properties": {
+    "date_range": {
+      "type": "nested",
+      "properties": {
+        "from": { "type": "date"  },
+        "to": { "type": "date"  }
+      }
+    },
+    "geo_location": {
+    "type": "geo_point"
+  }
+  }
+}
+
+PUT moowgly/_mapping/Host 
+{
+  "properties": {
+    "date_range": {
+      "type": "nested",
+      "properties": {
+        "from": { "type": "date"  },
+        "to": { "type": "date"  }
+      }
+    },
+    "calendar_a": {
+      "type": "nested",
+      "properties": {
+        "from": { "type": "date"  },
+        "to": { "type": "date"  }
+      }
+    },
+    "calendar_b": {
+      "type": "nested",
+      "properties": {
+        "from": { "type": "date"  },
+        "to": { "type": "date"  }
+      }
+    },
+    "calendar_u": {
+      "type": "nested",
+      "properties": {
+        "from": { "type": "date"  },
+        "to": { "type": "date"  }
+      }
+    },
+    "geo_location": {
+    "type": "geo_point"
+  }
+  }
+}
+
+########################
+# INSERT Host
+########################
+# 1
+
+PUT moowgly/Host/ac50a410-b68b-4edc-97b0-a39529e97e5a
+{
+    "email":"anaxnake@gmail.com",
+        "family_name":"Gaidos",
+        "first_name":"Christos",
+        "telephone": "06 01 02 03 04",
+        "address": {
+            "street":"Grunwaldzka 25",
+            "city":"Poznań",
+            "region":"Wielkopolska",
+            "country":"Polska"
+        },
+        "geo_location" : { "lon" : 16.896784900000057, "lat" : 52.404722 },
+        "type_of_home" : "apartment",
+        "description" : [{ "en" : "We are a family bla bla" }, {"fr" : "Nous sommes une famille bla bla"}],
+        "activity": [{"game" : ["chess"]}],
+        "activity_code": ["che"],
+        "nb_welcomed_kids" : 2,
+        "age_min" : 15,
+        "age_max" : 25,
+        "languages" : ["english", "french", "polish"],
+        "welcomed_adult" : true,
+        "calendar_a" : [{ "from": "2017-03-01", "to" : "2017-06-30" },{ "from": "2017-10-06" , "to" : "2017-10-08" } ],
+        "calendar_b" : [{ "from": "2017-07-01" , "to" : "2017-09-30" }],
+        "calendar_u" :[{ "from": "2017-10-01" , "to" : "2017-10-05" },{ "from": "2017-10-09" , "to" : "2017-03-01" }],
+        "daily_price" : 30,
+        "currency" : "EUR",
+        "avg_rating" : 4.5,
+        "charter" : true
+}
+
+
+# 2
+
+PUT moowgly/Host/89d240c9-0d38-4441-b5df-001886c47c95
+{
+    "email":"gwendal@eptamel.com",
+    "family_name":"Dupond",
+    "first_name":"Pierre",
+    "telephone": "06 01 02 03 04",
+    "address": {
+        "street":"Via Antonio Giuriolo, 6",
+        "city":"Padova",
+        "zip_code":"35129",
+        "region":"Veneto",
+        "country":"Italia"
+    },
+    "geo_location" : { "lon" : 11.912131999999929, "lat" : 45.42524119999999 },
+    "type_of_home" : "apartment",
+    "activity": [{"art" : ["painting"]}],
+    "activity_code": ["pai"],
+    "nb_welcomed_kids" : 2,
+    "age_min" : 15,
+    "age_max" : 25,
+    "languages" : ["english", "french", "italian"],
+    "welcomed_adult" : true,
+    "calendar_a" : [{ "from": "2017-03-01", "to" : "2017-06-30" },{ "from": "2017-10-06" , "to" : "2017-10-08" } ],
+    "calendar_b" : [{ "from": "2017-07-01" , "to" : "2017-09-30" }],
+    "calendar_u" :[{ "from": "2017-10-01" , "to" : "2017-10-05" },{ "from": "2017-10-09" , "to" : "2017-03-01" }],
+    "daily_price" : 30,
+    "currency" : "EUR",
+    "charter" : true
+}
+
+# 3
+
+PUT moowgly/Host/76890f93-9405-4676-94f5-adf2a0b2f831
+{
+    "email":"cgaidos@eptamel.com",
+    "family_name":"Gaidosky",
+    "first_name":"Christosian",
+    "telephone": "06 01 02 03 04",
+    "address": {
+        "street":"Via Plauna 39",
+        "city":"Laax",
+        "zip_code":"7031",
+        "country":"Suisse"
+    },
+    "geo_location" : { "lon" : 2.287592000000018, "lat" : 46.8120529 },
+    "type_of_home" : "house",
+    "description" : [{ "en" : "We are a family bla bla" }, {"fr" : "Nous sommes une famille bla bla"}],
+    "activity": [{"sport" : ["ski"]}],
+    "activity_code": ["ski"],
+    "nb_welcomed_kids" : 2,
+    "age_min" : 15,
+    "age_max" : 25,
+    "languages" : ["english", "french", "italian"],
+    "welcomed_adult" : true,
+    "calendar_a" : [{ "from": "2017-03-01", "to" : "2017-06-30" },{ "from": "2017-10-06" , "to" : "2017-10-08" } ],
+    "calendar_b" : [{ "from": "2017-07-01" , "to" : "2017-09-30" }],
+    "calendar_u" :[{ "from": "2017-10-01" , "to" : "2017-10-05" },{ "from": "2017-10-09" , "to" : "2017-03-01" }],
+    "daily_price" : 30,
+    "currency" : "EUR",
+    "charter" : true
+}
+
+########################
+# CREATE Offer
+########################
+# 1
+
+POST moowgly/Offer
+{
+        "id_offer":"1",
+        "id_host": "76890f93-9405-4676-94f5-adf2a0b2f831",
+        "email":"cgaidos@eptamel.com",
+        "family_name":"Gaidosky",
+        "first_name":"Christosian",
+        "telephone": "06 01 02 03 04",
+        "address": {
+            "street":"Via Plauna 39",
+            "city":"Laax",
+            "zip_code":"7031",
+            "country":"Suisse"
+        },
+        "geo_location" : { "lon" : 2.287592000000018, "lat" : 46.8120529 },
+        "nb_seats" : 4,
+        "fill_rate" : 4,
+        "title" : "Ski holidays",
+        "description" : [{ "en" : "Ski holidays for 4 people, 600€ by person" }, {"fr" : "Vacances au ski pour 4 personnes, 600€ par personne"}],
+        "activity": [{"sport" : ["ski"]}],
+        "activity_code": ["ski"],
+        "date_range" : [ {"from" : "2017-04-01"}, {"to" :"2017-04-07"} ],
+        "type" : "activity",
+        "meal" : "include",
+        "accomodation" : "include",
+        "price" : 600,
+        "currency" : "EUR"
+}
+
+# 2
+
+POST moowgly/Offer
+{
+        "id_offer":"2",
+        "id_host":"ac50a410-b68b-4edc-97b0-a39529e97e5a",
+        "email":"anaxnake@gmail.com",
+        "family_name":"Gaidos",
+        "first_name":"Christos",
+        "telephone": "06 01 02 03 04",
+        "address": {
+            "street":"Grunwaldzka 25",
+            "city":"Poznań",
+            "region":"Wielkopolska",
+            "country":"Polska"
+        },
+        "geo_location" : { "lon" : 16.896784900000057, "lat" : 52.404722 },
+        "nb_seats" : 12,
+        "fill_rate" : 3,
+        "title" : "Learn to play chess with a champion",
+        "description" : [{ "en" : "From 2 pm to 6 pm, we can learn !" }, {"fr" : "De 14h à 18h, nous pouvons apprendre "}],
+        "activity": [{"game" : ["chess"]}],
+        "activity_code": ["che"],
+        "date_range" : [ {"from" : "2017-04-02"}, {"to" :"2017-05-28"} ],
+        "type" : "activity",
+        "meal" : "exclude",
+        "accomodation" : "exclude",
+        "price" : 10,
+        "currency" : "EUR"
+}
+
+# 3
+POST moowgly/Offer
+{
+        "id_offer":"3",
+        "id_host":"89d240c9-0d38-4441-b5df-001886c47c95",
+        "email":"gwendal@eptamel.com",
+        "family_name":"Dupond",
+        "first_name":"Pierre",
+        "telephone": "06 01 02 03 04",
+        "address": {
+            "street":"Via Antonio Giuriolo, 6",
+            "city":"Padova",
+            "zip_code":"35129",
+            "region":"Veneto",
+            "country":"Italia"
+        },
+        "geo_location" : { "lon" : 11.912131999999929, "lat" : 45.42524119999999 },
+        "nb_seats" : 6,
+        "title" : "Learn to paint like Van Gogh",
+        "description" : [{ "en" : "Learn to paint like Van Gogh in 2 day !!" }, {"fr" : "Apprenez à peindre comme Van Gogh en 2 jours"}],
+        "activity": [{"art" : ["painting"]}],
+        "activity_code": ["pai"],
+        "date_range" : [ {"from" : "2017-04-24"}, {"to" :"2017-04-26"} ],
+        "type" : "activity",
+        "meal" : "exclude",
+        "accomodation" : "exclude",
+        "price" : 100,
+        "currency" : "EUR"
+}
+
+# Complex search :
+
+GET /moowgly/Host/_search
+{
+  "sort" : [
+        { "price" : "desc" }
+    ],
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "activity_code": "pai"
+          }
+        },
+        {
+          "bool": {
+            "minimum_should_match": 1,
+            "should": [
+              {"nested" : {
+                    "path" : "calendar_a",
+                    "query" : {
+                        "bool" : {
+                            "must" : [
+                              { "range" : {"calendar_a.from" : {"gte" : "2017-03-01"}} },
+                              { "range" : {"calendar_a.to" : {"lte" : "2017-06-30"}} }
+                            ]
+                        }
+                    }
+                }}
+            ]
+          }
+        },
+        {
+          "bool": {
+              "filter": {
+                  "geo_distance" : {
+                        "distance" : "100km",
+                        "geo_location" : {
+                            "lon" : 11.912131999999929,
+                            "lat" : 45.42524119999999
+                        }
+                    }
+              }
+          }
+        }
+      ]
+    }
+  }
+}

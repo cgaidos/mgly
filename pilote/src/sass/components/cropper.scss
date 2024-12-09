@@ -1,0 +1,15 @@
+.model-cropper {
+
+  .preview-body {
+    .preview {
+      overflow: hidden;
+    }
+  }
+
+  .cropper-image {
+    max-width: 100%;
+    max-height: 10vh;
+  }
+}
+
+

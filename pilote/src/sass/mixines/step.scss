@@ -1,0 +1,11 @@
+@mixin step ($rule, $start, $step, $length, $unit: 'px') {
+  $media-list: media_list();
+
+  @for $j from 0 through ($length - 1) {
+    $calc: $start + ($step * $j);
+
+    &-#{$calc} {
+      #{$rule}: $calc + px;
+    }
+  }
+}

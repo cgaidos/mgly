@@ -1,0 +1,17 @@
+.bg- {
+
+  // whites
+  &white {
+    background: #ffffff;
+  }
+
+  // greys
+  &grey-light {
+    background: #f7f7f7;
+  }
+
+  // blacks
+  &chocko {
+    background: $bg-chocko;
+  }
+}

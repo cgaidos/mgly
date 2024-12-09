@@ -1,0 +1,22 @@
+{% macro alert(message, type = 'default', reactions, icon = 'icon-star') %}
+    <div class="notification alert alert-normal alert-{{ type }} alert-dismissable">
+        <i class="{{ icon }}"></i>
+        <p>{{ message }}</p>
+
+        {{ reactions }}
+        <button class="close"></button>
+    </div>
+{% endmacro %}
+
+{% macro alertBig(message, type = 'default', reactions, icon = 'icon-euro') %}
+    <div class="notification alert alert-big alert-{{ type }} alert-dismissable">
+        <i class="{{ icon }}"></i>
+        <p>{{ message }} </p>
+
+        <div class="pull-right">
+            {{ reactions }}
+        </div>
+
+        <button class="close"></button>
+    </div>
+{% endmacro %}

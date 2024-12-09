@@ -1,0 +1,20 @@
+.box {
+  padding: 30px 30px;
+
+  &.light {
+    background: #fff;
+  }
+
+  @include sub('border') {
+    @extend .text-grey;
+
+    border: 1px solid #dadada;
+    padding: 20px;
+  }
+
+  @include sub('scroll') {
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}

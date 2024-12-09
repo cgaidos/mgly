@@ -1,0 +1,81 @@
+.bookings {
+
+  .booking {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid transparent;
+
+    &:hover, &:active {
+      background: #eff6fc;
+      border: 1px solid #e2ecf5;
+    }
+
+    .user-col {
+      padding-left: 20px;
+    }
+
+    &.marker {
+      &:after {
+        content: '';
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        transform: rotate(45deg);
+      }
+
+      &.marker-confirmed {
+        &:after {
+          background: #00aa5c;
+        }
+      }
+
+      &.marker-history {
+        &:after {
+          background: #818181;
+        }
+      }
+
+      &.marker-open {
+        &:after {
+          background: #1e89db;
+        }
+      }
+
+    }
+
+    .avatar {
+      img {
+        max-width: 100%;
+        max-height: none;
+      }
+    }
+
+    .info-col {
+      color: $grey;
+
+      .month {
+        font-size: $font-size-base;
+      }
+      
+      .day {
+        font-size: $font-size-base + 2;
+        font-weight: bold;
+      }
+
+      .separator {
+        margin: 0 1px;
+      }
+
+      .days {
+        font-style: italic;;
+      }
+
+    }
+  }
+}

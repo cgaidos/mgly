@@ -1,0 +1,137 @@
+{% extends 'layouts/host-card.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/rating.twig' as rating %}
+
+{% block content %}
+    <div class="guest-card">
+        <div class="box light mt-sm-10">
+
+
+            <div class="row middle-row-lg text-center-md">
+
+                <div class="col-lg-4 col-20 middle-col">
+                    <div class="avatar border">
+                        <img class="px-150" src="/moowgly/images/Femme3.jpg" alt="Adelina Ospanis">
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-20 middle-col mt-md-15">
+                    <h4 class="user-name dark mt-5">Adelina Ospanis</h4>
+                    <h5 class="user-address dark">Paris, France <i class="icon-marker"></i></h5>
+
+                    <div class="mt-15">
+                        {{ rating.star(3) }}
+                    </div>
+                    <div class="mt-5">
+                        {{ rating.ball(4) }} <span style="margin-left: 15px" class="text-grey display-block-md text-italic">(rating of moowhly users)</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-30">
+                    <div class="separator-horizontal"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-20">
+                    <h3>Family composition</h3>
+
+                    <ul class="list-line text-center mt-40 gutter-10">
+                        <li><i class="icon-parent dad"></i></li>
+                        <li><i class="icon-parent mom"></i></li>
+                        <li><i class="icon-kid boy"></i></li>
+                        <li><i class="icon-kid girl"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-50">
+                <div class="activites text-center">
+                    <button class="activity cat-sport"></button>
+                    <button class="activity cat-music"></button>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-20">
+                    <h3 class="mb-30">Description</h3>
+                    <p>Our family is composed of Pierre (44), Adelina (37), Julia (11 ) and Samuel (14).</p>
+                    <p>We live in Paris and do many activities and we would be happy to share our interest and life with a teenager with or without his parent(s). Our activities involve horse riding, music and tennis. Peter works in bridge, road, building and stadium infrastructure construction and is very happy to share his know-how and life experience. Adelina is working as a nurse in a private clinic and will be happy to answer any question or interest from guests in the medical field. Samuel and Julia are good in horse and pony riding and we could share our know-how and passion with horses, small horses and ponies.</p>
+                    <p>As well the city of Paris and suburbs as well as music and tennis could be of common interest. Beginners are welcome. We can make the stay of our guests enriching and safe. We have open days in our calendars and will be happy to offer hospitality to national and international guests.</p>
+                </div>
+            </div>
+
+            <div class="row mt-25">
+                <div class="col-md-12 col-20">
+                    <span class="title-inline">Languages:</span>
+                    <ul class="language-list no-edit display-inline-block middle">
+                        <li class="language-list-item flag-france">
+                        </li>
+                        <li class="language-list-item flag-united-kingdom">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-25 mb-25">
+                <div class="col-md-12 col-20">
+                    <span class="title-inline">Type of home:</span>
+                    <span class="text-blue">Appartment</span> with a <span class="text-blue">private room for guest child</span> and a <span class="text-blue">piano</span>.
+                </div>
+            </div>
+
+            <div class="row mt-25 mb-25">
+                <div class="col-md-12 col-20">
+                    <span class="title-inline">Meal specialties:</span>
+                    <span class="text-blue">Vegetarian</span>
+                </div>
+            </div>
+
+            <div class="row mt-25 mb-25">
+                <div class="col-md-12 col-20">
+                    <span class="title-inline">Possibility of welcoming an adult:</span>
+                    <span class="text-blue">Yes</span>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-20">
+                    <h3 class="mb-15">Social references</h3>
+                    <p>For more information about your host. you can see the related profiles</p>
+
+                    <ul class="list-line list-social text-center mt-30 mb-30">
+                        <li class="item"><a href="https://www.facebook.com/"  target="_blank"><i class="social-fb big"></i></a></li>
+                        <li class="item"><a href="https://www.linkedin.com/"  target="_blank"><i class="social-linkedin big"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-20">
+                    <h3 class="mb-15">Certificates</h3>
+
+                    <ul class="list-inline list-gutter-40 mt-30 mb-30 text-center clearfix">
+                        <a href="/moowgly/images/certif.jpg"><li class="item cert-80-psy"></li></a>
+                        <a href="/moowgly/images/casier.pdf"><li class="item cert-80-company"></li></a>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box light mt-sm-10 mt-10">
+            <h3>Reviews</h3>
+
+            <div class="reviews">
+                {% include './guest/reviews/partials/review-host.twig' %}
+                {% include './guest/reviews/partials/review-host.twig' with {answer: true} %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

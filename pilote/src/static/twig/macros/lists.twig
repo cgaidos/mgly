@@ -1,0 +1,37 @@
+{% macro tags(list, classes = '') %}
+    <div class="tags {{ classes }}">
+        {% for key, options in list %}
+            <span class="tag">
+                {{ options }}
+                <button type="button" class="remove"></button>
+            </span>
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro languages(list, classes = '') %}
+    <ul class="language-list {{ classes }}">
+        {% for key, options in list %}
+        <li class="language-list-item flag-{{ options }}">
+            <button type="button" class="remove"></button>
+        </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+
+{% macro style(list, classes = '') %}
+    <ul class="list-style text-grey {{ classes }}">
+        {% for key, options in list %}
+        <li><i></i> {{ options }}</li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro options(list, classes = '') %}
+    <ul class="list-style text-grey {{ classes }}">
+        {% for key, options in list %}
+        <li><i></i> {{ options }}</li>
+        {% endfor %}
+    </ul>
+{% endmacro %}

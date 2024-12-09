@@ -1,0 +1,43 @@
+<div id="slider-head" class="carousel slide slider slider-head background-image" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators slides-navigation">
+        <li data-target="#slider-head" data-slide-to="0" class="active"></li>
+        <li data-target="#slider-head" data-slide-to="1"></li>
+        <li data-target="#slider-head" data-slide-to="2"></li>
+        <li data-target="#slider-head" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="filter"></div>
+
+        <div class="item active">
+            <div style="background-image: url('/moowgly/img/dev/dinosaur.jpg')" class="image"></div>
+            <img src="/moowgly/img/dev/kids.png">
+        </div>
+        <div class="item">
+            <div style="background-image: url('/moowgly/img/dev/gogame.jpg')" class="image"></div>
+            <img src="/moowgly/img/dev/kids.png">
+        </div>
+        <div class="item">
+            <div style="background-image: url('/moowgly/img/dev/horses.jpg')" class="image"></div>
+            <img src="/moowgly/img/dev/kids.png">
+        </div>
+        <div class="item">
+            <div style="background-image: url('/moowgly/img/dev/painting.jpg')" class="image"></div>
+            <img src="/moowgly/img/dev/kids.png">
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="prev left navigation" href="#slider-head" role="button" data-slide="prev">
+        <i class="icon-arrow-prev-circle"></i>
+    </a>
+    <a class="next right navigation" href="#slider-head" role="button" data-slide="next">
+        <i class="icon-arrow-next-circle"></i>
+    </a>
+</div>
+
+<script>
+    window.bind('load', e => $('.carousel').carousel());
+</script>

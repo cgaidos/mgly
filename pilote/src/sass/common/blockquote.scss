@@ -1,0 +1,18 @@
+blockquote {
+  border-left-width: 1px;
+  padding: 0 15px;
+  margin: 0;
+  color: $gray;
+
+  .title {
+    @extend .text-grey;
+
+    font-weight: bold;
+    font-size: $font-size-base;
+    margin-bottom: 5px;
+
+    p + .title {
+      margin-top: 15px;
+    }
+  }
+}

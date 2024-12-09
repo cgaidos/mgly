@@ -1,0 +1,141 @@
+<div class="container">
+    <h2 class="text-center mt-75 mb-60">Details & Charter of good conduct</h2>
+
+    <div class="box light">
+        <div class="col-min-30-md">
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    {{ forms.input('phone', 'width-auto width-full-sm', 'Phone') }}
+                </div>
+
+                <div class="col-md-6 text-right text-left-sm form-group">
+                    {{ forms.input('email', 'width-auto width-full-sm', 'Email') }}
+                </div>
+            </div>
+
+            <div class="row mt-15 mb-5">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <p>Please enter the code you just received on your phone </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 col-sm-3 form-group">
+                    {{ forms.input('code', 'width-auto width-full-sm', 'Code') }}
+                </div>
+                <div class="col-md-10 col-sm-9">
+                    <span class="form-control-content text-grey">
+                        Not received? Please &nbsp;<u><buttin class="btn-link pointer">click to resend</buttin></u>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row mb-10">
+                <div class="col-md-12">
+                    <blockquote>
+                        <h3 class="title">Why verify my phone number?</h3>
+                        <p>
+                            It shows you can be easily contacted to arrange your booking, <br>and
+                            also that you ate trustworthy and reliable
+                        </p>
+                        <h3 class="title">Who will see it?</h3>
+                        <p>
+                            Only the members with whom you have booked. We will never<br> show your
+                            phone publicly.
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="box light mt-30">
+        <div class="col-min-30-md">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">Please read and accept the charter of good conduct to
+                        continue</p>
+
+                    <div class="box-border box-scroll mt-40">
+                        <p>
+                            <strong>Preamble :</strong><br />
+                            Intended for all the Moowgly website stakeholders, the code of conduct comprises a set of rules, courtesies and a protocol.<br /><br />
+                            The current or future interactive areas (e-mails, publication of comments) on the Moowgly site are aimed at developing and maintaining
+                            a friendly online community, while offering members the opportunity to express different opinions.<br /><br />
+                            These interactivity areas and the entire content of the Moowgly website are governed by this code of conduct
+                            and the rules of common sense and good manners we would like you to respect.<br /><br />
+                            Our code of conduct is designed to act as a reminder of some of the key courtesy and legality-related principles
+                            to be borne in mind to guarantee the trouble-free use of our website.
+                        </p>
+                        <p>
+                            <strong>On the understanding that this list is not exhaustive we stress in particular that it is prohibited to publish any message or information, which, owing to its form or content, is likely to result in:</strong><br />
+<li>Being violent in nature, detracting from respect for human beings, their dignity, equal treatment of women and men and the protection of adolescents and children.</li>
+<li>Encouraging or inciting discrimination, hate or violence against an individual or a group of individuals owing to their origin, belonging or not belonging to an ethnic group, a nation, a race or a specific religion, to their disability, their sexual preferences or any other differences.</li>
+<li>Offering encouragement by calling for crimes and/or crimes or offences to be committed, encouraging suicide and/or the use of illegal substances.</li>
+<li>The publication of any content that is indecent, coarse, insulting, denigrating or defamatory vis à vis others.</li>
+<li>Seeking the exchange, sale or purchase of pornographic and/or illegal materials, including photographs, films, videos and images (this list is not exhaustive).</li>
+<li>The identity of another person being stolen.</li>
+<li>Facilitating the forwarding and/or transmission of advertising, promotional messages or any form of unwanted appeals.</li>
+<li>The "e-mail" box, the site's "comments" page, being used as a medium for posting  content designed to spread  propaganda or convert people</li>
+<li>The harassment in any way of one or more site users, the collection and storage of personal data relating to other users.</li>
+<li>The publication of texts or images affecting intellectual property rights, the right to personality and/or to ownership.</li>
+<li>Proposals, by any means, to download files protected by intellectual property rights.</li>
+<li>The creation of hypertext links or comments that refer or link to sites inconsistent with this code of conduct.</li>
+<li>The inclusion of a document, software or any other information or the forwarding of information that could damage any computer, software and/or communication tool of a third party and/or that could affect an automated data processing system.</li>
+                        </p>
+                        <p>
+                            <strong>As a user</strong> ("e-mail", "comments" page), you undertake:
+<li>to let us know straight away (via the "contact" section), to notify the webmaster about any complaint or action by third parties concerning the content of the site.
+<li>to reply as soon as possible to any request we make for information and, in particular, to provide us with any information about content that is presumed to be inconsistent with the code of conduct in respect of your comments.
+
+                        </p>
+                        <p>
+                            The Moowgly company may not be held liable for a failure to apply these basic rules for the "e-mails", and "comments" page "of its users.
+                            The company reserves the right to suspend or withdraw all or some of your contributions and comments without notice
+                            and/or ask you to justify them as soon as content presumed inconsistent with this code of conduct has been identified or brought to the company's notice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-30">
+                <div class="col-md-12 text-center">
+                    <label>
+                        {{ forms.checkbox('accept', 'accept') }}
+
+                        <span class="form-control-content">
+                            I accept this charter of good conduct
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ajax-response mt-15"></div>
+
+    <script>
+        var createHostCallback = function (xhr, message) {
+            switch (xhr.status) {
+                case 201: message.success('Your account was been created.'); break;
+            }
+        }
+    </script>
+
+    <!-- temporary message µµµ -->
+    <div class="alert alert-success alert-host" style="display: none;">
+        <strong>Success!</strong> Your account was been created
+    </div>
+    <div class="text-center mt-70">
+        <!--
+        <button onclick="controllerAjaxForm(event, this.form, '#become-host-form .ajax-response', createHostCallback)" type="submit" class="btn btn-default">Next</button>
+        -->
+        <button onclick="$('.alert-host').show();window.location='/moowgly/dashboard_dashboard';" type="submit" class="btn btn-default">Create Host account</button>
+    </div>
+</div>

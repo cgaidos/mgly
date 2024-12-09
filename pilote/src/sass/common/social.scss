@@ -1,0 +1,22 @@
+.social {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.big {
+    height: 55px;
+    width: 55px;
+  }
+
+  @include sub_extend('fb'){
+    background-image: img('social/facebook_55x55.png');
+  }
+
+  @include sub_extend('linkedin'){
+    background-image: img('social/linkedin_55x55.png');
+  }
+}

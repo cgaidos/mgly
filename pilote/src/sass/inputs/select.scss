@@ -1,0 +1,121 @@
+.select {
+  display: inline-block;
+  background: #fff img("chart.png") no-repeat right 15px center;
+  max-width: 100%;
+
+  select {
+    background: transparent;
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+
+    max-width: 100%;
+
+
+    &.form-control {
+      padding-right: 40px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #000;
+      top: calc(50% - 3px);
+      right: 5px;
+
+    }
+  }
+}
+
+// +------------+
+// | SUMOSELECT |
+// +------------+
+.SumoSelect {
+  $SumoSelect: &;
+  outline: none;
+
+  width: 100%;
+  position: relative;
+
+  select {
+    display: none;
+  }
+
+  .CaptionCont {
+    @extend .form-control;
+
+    margin: 0;
+    background: transparent;
+
+    label {
+      display: none;
+    }
+
+    span,
+    span.placeholder {
+      padding: 0;
+      font-size: $font-size-base;
+      line-height: $line-height-base + 0.35;
+      font-style: normal;
+    }
+  }
+
+  &.open {
+    .optWrapper {
+      display: block;
+    }
+  }
+
+  .optWrapper {
+    top: 100%;
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+    border-style: solid;
+    border-color: $grey-light;
+    border-width: 0 1px 1px 1px;
+
+    &.multiple {
+
+      .options {
+        margin-bottom: 0;
+        padding: 0 20px;
+
+        .opt {
+          display: block;
+
+          &.selected {
+            span {
+              @extend .checkbox.active;
+
+              i {  display: none }
+            }
+          }
+
+          span {
+            @extend .checkbox;
+            display: inline-block;
+            margin-right: 20px;
+          }
+
+          label {
+            @extend .form-control-content;
+            display: inline-block;
+          }
+
+        }
+      }
+
+      .MultiControls {
+        display: none;
+      }
+    }
+  }
+
+}

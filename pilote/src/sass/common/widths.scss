@@ -1,0 +1,14 @@
+.width {
+  @include sub('auto') {
+    @include media_selector(false) {
+      min-width: 0;
+      width: auto !important;
+    }
+  }
+
+  @include sub('full') {
+    @include media_selector(false) {
+      width: 100% !important;
+    }
+  }
+}

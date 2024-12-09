@@ -1,0 +1,38 @@
+{% import 'macros/notification.twig' as notification %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include './layouts/common/head.twig' %}
+</head>
+<body class="bg-grey-light">
+{% include './layouts/common/modals.twig' %}
+
+{% include './layouts/common/pages.twig' %}
+
+<div id="page">
+    {% block header %}{% endblock %}
+
+    <div class="container">
+
+        {% include './layouts/common/notification.twig' with {notification: block('notification')} %}
+
+        <h3 class="mt-40 mb-30 text-center">{% block title %}{% endblock %}</h3>
+
+        <div class="row">
+            <div class="col-md-4 col-lg-3 sidebar sidebar-left">
+                {% block sidebar %}{% endblock %}
+            </div>
+            <div class="col-md-8 col-lg-9 content content-sidebar-left">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% include './layouts/footer/footer.twig' %}
+
+{% include './layouts/common/scripts.twig' %}
+</body>
+</html>

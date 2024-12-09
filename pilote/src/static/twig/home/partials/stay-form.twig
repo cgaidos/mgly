@@ -1,0 +1,38 @@
+<div class="clearfix">
+    <div class="col-sm-9 col-0 middle-col">
+        <div class="row nm">
+            <div class="col-sm-6 col-0">
+                {{ forms.input('place', 'width-full address_city  input-place', 'City') }}
+            </div>
+            <div class="col-sm-6 col-0">
+                {{ forms.input('place', 'width-full address_country input-place', 'Country') }}
+            </div>
+        </div>
+
+        <div class="row nm row-date input-daterange">
+            <div class="col-sm-6 col-0 date date-from">
+                {{ forms.input('date_from', 'date_from text-left width-full', 'From') }}
+            </div>
+            <div class="col-sm-6 col-0 date date-to">
+                {{ forms.input('date_to', 'date_to text-left width-full', 'To') }}
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 middle-col col-0">
+        <div class="row nm">
+            <div class="col-sm-12 col-0">
+                {{ forms.input('kids', 'width-full input-kids', 'Kids','', 'number', 'min=1') }}
+            </div>
+        </div>
+
+        <div class="row nm">
+            <div class="col-sm-12 col-0">
+                <a href="/moowgly/page/search-results_search-results-stay"><!-- µµµ -->
+                    <button type="button" class="btn btn-primary btn-search width-full">
+                        Search
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

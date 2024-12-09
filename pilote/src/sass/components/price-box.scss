@@ -1,0 +1,83 @@
+.price {
+  font-size: 26px;
+  color: #1e89d9;
+  font-weight: bold;
+}
+
+.price-box {
+  @include media_between('lg') {
+    padding-left: 25px;
+  }
+
+  > span {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .price-sum {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 600;
+
+    @include media_between('lg') {
+      padding: 10px;
+    }
+  }
+
+  .price-desc-box {
+    display: inline-block;
+    vertical-align: middle;
+
+    .price-per-day {
+      .per-day {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+    .price-desc {
+      font-style: italic;
+
+      @include media_max('md') {
+        border-left: 1px solid #e2e7eb;
+        border-right: 1px solid #e2e7eb;
+        margin: 0 15px;
+        padding: 0 15px;
+      }
+    }
+
+    & + .price-sum {
+      border-top: 1px solid $separator-price;
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.price-box-horizontal {
+  &.price-box,
+  .price-box {
+    padding: 10px 0;
+
+    .price-desc-box {
+      display: inline-block;
+
+      .price-per-day {
+        display: block;
+      }
+
+      .price-desc {
+        display: block;
+      }
+    }
+
+    .price-sum {
+      line-height: 26px;
+      padding: 6px 0 6px 20px;
+      margin: 0 0 0 20px;
+      border-top: 0;
+      border-left: 1px solid $separator-price;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.btn {
+  font-weight: 600;
+
+  @include sub('default') {
+    color: #fff;
+  }
+
+  @include sub('link') {
+    width: auto;
+    min-width: 0;
+    color: $grey-dark;
+  }
+}
+
+.btn-primary-border {
+  @extend .btn-primary;
+
+  color: $btn-primary-bg;
+  border-color: $btn-primary-bg;
+  background: #fff;
+}
+
+.btn-warning-border {
+  @extend .btn-warning;
+
+  color: $btn-warning-bg;
+  border-color: $btn-warning-bg;
+  background: #fff;
+}
+
+// special
+
+.btn-fb {
+  background: #3a579b;
+  color: #fff;
+  position: relative;
+
+  .fa {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus  {
+    border-color: #3a579b;
+    background-color: #fff;
+    color: #3a579b;
+  }
+}
+
+.btn-google {
+  background: #fff;
+  color: $grey;
+  border-color: $grey;
+  position: relative;
+
+  .icon-google {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+  }
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus  {
+    border-color: $grey;
+    background-color: $grey;
+    color: #fff;
+  }
+}

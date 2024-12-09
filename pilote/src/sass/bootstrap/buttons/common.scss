@@ -1,0 +1,45 @@
+button {
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  min-width: 140px;
+  position: relative;
+  outline: none;
+  padding: 10px 25px;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+
+  @include sub('sm') {
+    @extend .btn-sm;
+  }
+
+  &::before {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: -1;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  &:hover,
+  &:active {
+    outline: none;
+
+    &:before {
+      width: 100%;
+    }
+  }
+}

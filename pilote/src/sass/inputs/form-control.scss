@@ -1,0 +1,40 @@
+.form-control {
+  padding-left: 20px;
+  display: inline-block;
+  vertical-align: inherit;
+  box-shadow: 0 0 0 transparent;
+  max-width: 100%;
+  color: $input-color;
+
+  &:focus {
+    box-shadow: 0 0 0 transparent;
+  }
+}
+
+.form-control-content {
+  @extend .form-control;
+
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+  color: $text-color;
+
+  & + * {
+    display: inline-block !important;
+    margin-top: 0;
+  }
+
+  & + & {
+    margin-left: 5px;
+  }
+
+  line-height: 30px;
+  border: 0;
+  box-shadow: none;
+
+  & + .checkbox .form-control,
+  & + .select .form-control,
+  & + .form-control {
+    margin-left: 20px;
+  }
+}

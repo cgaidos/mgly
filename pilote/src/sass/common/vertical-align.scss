@@ -1,0 +1,45 @@
+.middle {
+
+  @include sub('row') {
+    @include media_selector(true, false) {
+      display: table;
+      width: 100%;
+
+      > .middle-col {
+        float: none;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @include sub('row-between') {
+    @include media_selector() {
+      display: table;
+      width: 100%;
+
+      > .middle-col {
+        float: none;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.vertical-top {
+
+  @include sub('row') {
+    @include media_selector(true, false) {
+      display: table;
+      width: 100%;
+
+      > .vertical-top-col {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+      }
+    }
+  }
+}
+

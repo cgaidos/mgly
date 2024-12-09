@@ -1,0 +1,13 @@
+{% import 'macros/forms.twig' as forms %}
+
+<div class="row">
+    <div class="col-xs-8">
+        <div class="form-group">
+            <input type="text" class="form-control" name="kids[{index}][age]" placeholder="Age">
+        </div>
+    </div>
+    <div class="col-xs-3 text-center text-nowrap">
+        {{ forms.radio('kids[{index}][gender]', 'male', false, 'radio-kid boy', '{ gender == "male" ? "checked=\'checked\'" : "" }') }}
+        {{ forms.radio('kids[{index}][gender]', 'famle', false, 'radio-kid girl', '{ gender == "famle" ? "checked=\'checked\'" : "" }') }}
+    </div>
+</div>

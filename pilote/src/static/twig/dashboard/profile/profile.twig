@@ -1,0 +1,356 @@
+{% extends 'layouts/dashboard.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+
+{% block content %}
+
+    <div class="box light mt-sm-15">
+        <h3 class="text-center">Personal informations</h3>
+
+        <div class="mt-40 col-20">
+
+            <div class="row form-group">
+                <div class="col-sm-3 text-right text-left-xs">
+                    <span class="form-control-content">Address: </span>
+                </div>
+                <div class="col-sm-7">
+                    {{ forms.input('name', '', 'calle de la Montera, 7 - 28013 Madrid, Spain', 'Trogerstrasse 23, 81675 Munich') }}
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-sm-3 text-right text-left-xs">
+                    <span class="form-control-content">Email: </span>
+                </div>
+                <div class="col-sm-7">
+                    {{ forms.input('name', '', 'name@example.org', '', 'email') }}
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-sm-3 text-right text-left-xs">
+                    <span class="form-control-content">Phone number: </span>
+                </div>
+                <div class="col-sm-7">
+                    {{ forms.input('name', '', '+336 45 78 45 12', '+49 12 36 54 01 01') }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="box light mt-10">
+        <h3 class="text-center">About your family and home</h3>
+
+        <div class="row mt-40 middle-row-xs">
+            <div class="col-20">
+                <div class="col-xs-4 col-lg-3 middle-col">
+                    Composition:
+                </div>
+                <div class="col-xs-8 col-lg-9 middle-col">
+                    <ul class="list-line text-center gutter-10 display-inline-block middle">
+                        <li><i class="icon-parent dad"></i></li>
+                        <li><i class="icon-parent mom"></i></li>
+                        <li><i class="icon-kid boy"></i></li>
+                        <li><i class="icon-kid girl"></i></li>
+                    </ul>
+
+                    <button style="margin-left: 30px" type="button" class="btn btn-primary">Add a
+                        member
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-30 middle-row-xs">
+            <div class="col-20">
+                <div class="col-xs-4 col-lg-3 middle-col">
+                    <div class="form-control-content">Activites:</div>
+                </div>
+                <div class="col-xs-8 col-lg-9 middle-col">
+                    <div class="activites">
+                        <button data-edit="true" class="activity cat-pet"></button>
+                        <button data-edit="true" class="activity cat-sport"></button>
+                        <button data-edit="true" class="activity cat-music"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-40">
+            <div class="col-20">
+                <div class="col-md-12">
+                    <label class="mb-5">Habits of the family:</label>
+                    <textarea name="" id="" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-40">
+            <div class="col-20">
+                <div class="col-md-2">
+                    <label class="form-control-content">Type of home:</label>
+                </div>
+                <div class="col-md-4">
+                    {{ forms.select('type-of-home', ['A type']) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-40">
+            <div class="col-20">
+                <div class="col-lg-2">
+                    <span class="title-inline">Languages:</span>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-sm-10 mt-md-10">
+                    <ul class="language-list no-edit display-inline-block middle">
+                        <li class="language-list-item flag-france">
+                        </li>
+                        <li class="language-list-item flag-belgium">
+                        </li>
+                        <li class="language-list-item flag-russia">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-sm-10 mt-md-10">
+                    {{ forms.select('lang', ['Add a language']) }}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-40">
+
+            <div class="col-sm-6">
+                <div class="col-20">
+                    <label for="">Food preferences</label>
+                    <div class="mt-10">
+                        {{ forms.select('lang', ['Add a language'], 'width-full') }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-20">
+                <div class="col-20">
+                    <label for="">Apartament features</label>
+                    <div class="mt-10">
+                        {{ forms.select('lang', ['Add a language'], 'width-full') }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="box light mt-15">
+        <h3 class="text-center">Social references</h3>
+
+        <div class="row mt-40">
+            <div class="col-xs-2 col-sm-1 col-sm-offset-2 text-center">
+                <span class="form-control-content">
+                    <i class="social-fb"></i>
+                </span>
+            </div>
+            <div class="col-xs-10 col-sm-7">
+                {{ forms.input('fb') }}
+            </div>
+        </div>
+
+        <div class="row mt-30 mb-20">
+            <div class="col-xs-2 col-sm-1 col-sm-offset-2 text-center">
+                <span class="form-control-content">
+                    <i class="social-linkedin"></i>
+                </span>
+            </div>
+            <div class="col-xs-10 col-sm-7">
+                {{ forms.input('linkedin') }}
+            </div>
+        </div>
+    </div>
+
+    <div class="box light mt-15">
+        <h3 class="text-center">Certificates</h3>
+
+        <div class="row mt-40">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline list-gutter-40">
+                    <li class="item cert-80-bank"></li>
+                    <li class="item cert-80-company"></li>
+                    <li class="item cert-80-moogly"></li>
+                    <li class="item cert-80-police"></li>
+                    <li class="item cert-80-psy"></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="box light mt-30">
+        <h3 class="text-center">Photos & videos</h3>
+        <div class="row mt-50 mb-20">
+            <div class="row-md-12 text-center">
+                <ul class="uploaded-list">
+                    <li class="uploaded-list-item">
+                        <img src="/moowgly/img/a-file.jpg">
+                        <button type="button" class="remove"></button>
+                    </li>
+                    <li class="uploaded-list-item">
+                        <img src="/moowgly/img/a-video.jpg">
+                        <button type="button" class="remove"></button>
+                    </li>
+                    <li class="uploaded-list-item">
+                        <img src="/moowgly/img/a-video.jpg">
+                        <button type="button" class="remove"></button>
+                    </li>
+                    <li class="uploaded-list-item play">
+                        <img src="/moowgly/img/a-video.jpg">
+                        <button type="button" class="remove"></button>
+                    </li>
+                    <li class="uploaded-list-item">
+                        <img src="/moowgly/img/a-video.jpg">
+                        <button type="button" class="remove"></button>
+                    </li>
+                    <li class="uploaded-list-item">
+                        <img src="/moowgly/img/a-video.jpg">
+                        <button type="button" class="remove"></button>
+                    </li>
+                </ul>
+
+                <button class="btn btn-primary mt-20" type="button">Upload a photo</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="box light mt-30">
+       <div class="col-20">
+           <h3 class="text-center mb-40">Photos & videos</h3>
+           <div class="row">
+
+               <div class="col-md-6">
+                   <div class="form-group">
+                       <label class="label-input">How many children can you welcome home?</label>
+                       {% with {options: [1,2,3]} %}
+                       {{ forms.select_multi('test', options) }}
+                       {% endwith %}
+                   </div>
+               </div>
+
+               <div class="col-md-6 mt-sm-20">
+                   <div class="form-group">
+                       <label class="label-input mb-40">What about their age?</label>
+
+                       <div id="slider-range"></div>
+                   </div>
+               </div>
+
+           </div>
+
+           <div class="row mt-20">
+               <div class="col-sm-5 mt-sm-20">
+                   <label class="form-control-content">Can you welcome an adult?</label>
+               </div>
+
+               <div class="col-sm-7">
+                   <label>
+                       {{ forms.radio('adult', 'yes') }}
+
+                       <span class="form-control-content text-grey">
+                        Yes
+                    </span>
+                   </label>
+                   <label style="margin-left: 15px">
+                       {{ forms.radio('adult', 'no', true) }}
+
+                       <span class="form-control-content text-grey">
+                        No
+                    </span>
+                   </label>
+               </div>
+           </div>
+       </div>
+    </div>
+
+
+    <div class="box light mt-30">
+        <div class="col-20">
+            <h3 class="text-center mb-40">Price</h3>
+            <div class="row">
+
+                <div class="col-md-3 col-md-offset-2">
+                    <label class="text-uppercase text-grey text-nowrap row width-full">
+                        <div class="top col-xs-2 text-right">
+                            {{ forms.radio('housing', 'free') }}
+                        </div>
+                        <div class="col-xs-10">
+                        <span class="form-control-content text-grey">
+                            Free
+                        </span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="col-md-7 mt-sm-30">
+
+                    <label class="text-nowrap text-left row width-full">
+                        <div class="top col-xs-2 col-xs-2 text-right">
+                            {{ forms.radio('housing', 'price') }}
+                        </div>
+
+                        <div class="text-nowrap col-xs-10">
+                            <div class="row">
+                                <div class="col-sm-9 col-md-7">
+                                    {{ forms.input('price') }}
+                                </div>
+                                <div class="col-sm-3 col-md-5 mt-xs-10">
+                                    {{ forms.select('currency', ['Euro', 'USD'], 'width-full') }}
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <p class="col-xs-10 col-xs-offset-2 text-grey">(daily price)</p>
+
+                </div>
+            </div>
+
+
+            <div class="row mt-20">
+
+                <div class="col-md-5 text-right text-left-sm">
+                    <div class="row">
+                        <div class="col-xs-2">
+                        </div>
+
+                        <div class="text-nowrap col-xs-10">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7 ">
+
+                    <label class="text-nowrap text-left row width-full">
+                        <div class="top col-xs-2 col-xs-2 text-right">
+                            <div style="left: -20px; position: relative;" class="form-control-content">Your IBAN: </div>
+                        </div>
+
+                        <div class="text-nowrap col-xs-10">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    {{ forms.input('iban', 'width-full') }}
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-50">
+        <button class="btn btn-default">Apply changes</button>
+    </div>
+
+
+{% endblock %}

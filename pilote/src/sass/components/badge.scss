@@ -1,0 +1,13 @@
+.badge {
+  display: inline-block;
+  word-spacing: 0;
+  letter-spacing: 0;
+
+  @include sub_extend('blue') {
+    background: $cornflower;
+
+    .btn & {
+      margin-left: 5px;
+    }
+  }
+}

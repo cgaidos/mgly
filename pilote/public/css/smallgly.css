@@ -1,0 +1,150 @@
+#sun {
+    position: relative;
+    z-index: 0;
+    width: 1400px;
+    height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#logo {
+    position: absolute;
+    top: 8px;
+    left: 270px;
+    width: 149px;
+    z-index: 20;
+}
+
+#slogan {
+    position: absolute;
+    top: 256px;
+    left: 546px;
+    width: 600px;
+    height: 30px;
+    font-family: "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    color: white;
+    z-index: 20;
+}
+
+#pave {
+    position: absolute;
+    top: 330px;
+    left: 377px;
+    width: 646px;
+    height: 117px;
+    background-color: #599AB0;
+    opacity: 0.2;
+    z-index: 10;
+}
+
+#search {
+    position: absolute;
+    top: 338px;
+    left: 386px;
+    width: 630px;
+    height: 102px;
+    z-index: 20;
+}
+
+#ligne {
+    background-color: #507794;
+    position: absolute;
+    top: 58px;
+    right: 0px;
+    width: 584px;
+    height: 1px;
+    z-index: 20;
+}
+
+.optmenu {
+    position: absolute;
+    width: 100px;
+    height: 18px;
+    font-family: "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+    z-index: 20;
+}
+
+#optlogin {
+    top: 24px;
+    left: 818px;
+}
+
+#optregister {
+    top: 24px;
+    left: 900px;
+}
+
+#optmission {
+    top: 24px;
+    left: 1000px;
+}
+
+#opthelp {
+    top: 24px;
+    left: 1127px;
+}
+
+#cities {
+    position: absolute;
+    top: 671px;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-image: url("../images/citiesfrise.png");
+    animation: cities 6s infinite linear;
+}
+
+#cities-shadows {
+    position: absolute;
+    top: 671px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-image: url("../images/citiesfrise_shadows.png");
+    animation: cities 6s infinite linear, brightness 6s infinite linear;
+}
+
+.brightness {
+  -webkit-animation: brightness 60s infinite;
+}
+
+@keyframes cities {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -1749px;
+  }
+}
+
+.sunhue {
+  -webkit-animation: hue 60s infinite;
+}
+@-webkit-keyframes hue {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(270deg);
+  }
+}
+
+@-webkit-keyframes brightness {
+  0%, 100% {
+    filter: brightness(none);
+  }
+
+  50% {
+    filter: brightness(2);
+  }
+}

@@ -1,0 +1,31 @@
+<div class="sidebar sidebar-slider">
+
+    <div class="widget clearfix">
+        {% include 'dashboard/common/profile-guest.twig' with {edit: false} %}
+    </div>
+
+    <div class="widget clearfix">
+        <div class="text-center clearfix">
+            <button data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#shakehand" class="btn btn-warning mb-20">Confirm booking</button>
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="shakehand">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div style="position:relative;width:100%;height:194px;">
+                        <img src="/moowgly/images/shakehand.jpg" style="position:absolute;top:0;bottom:0;left:0;right:0;width:auto;height:auto;max-height:100%;max-width:100%;margin:auto;" />
+                    </div>
+                    <h4>Thank you for confirming the booking, we wish you and your guests a pleasant time!</h4>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-warning mt-10" data-dismiss="modal">Okay</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>

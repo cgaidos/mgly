@@ -1,0 +1,111 @@
+// base
+@import "varlibes/moowgly";
+@import "varlibes/bootstrap";
+@import "typography/fonts";
+
+@import "reset";
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../../node_modules/font-awesome/scss/font-awesome";
+
+//mixines
+@import "mixines/media";
+@import "mixines/sub";
+@import "mixines/img";
+@import "mixines/step";
+
+@import "dev";
+
+// bootstrap
+@import "bootstrap/index";
+
+// jquery ui
+@import "jquery-ui/jquery-ui";
+
+// design
+@import "inputs/checkbox";
+@import "inputs/radio";
+@import "inputs/form-control";
+@import "inputs/placeholder";
+@import "inputs/label";
+@import "inputs/select";
+@import "inputs/help-block";
+@import "inputs/states";
+@import "inputs/file";
+
+// common 1
+@import "common/remove";
+@import "common/checkmark";
+
+// components
+@import "components/page";
+@import "components/header";
+@import "components/logo";
+@import "components/count-points";
+@import "components/lists";
+@import "components/footer";
+@import "components/maps";
+@import "components/tags";
+@import "components/uploaders";
+@import "components/uploaded-list";
+@import "components/language-list";
+@import "components/calender";
+@import "components/widgets";
+@import "components/rating";
+@import "components/dropdown";
+@import "components/badge";
+@import "components/navbar";
+@import "components/alert";
+@import "components/message";
+@import "components/chat";
+@import "components/kids";
+@import "components/activites";
+@import "components/search-form";
+@import "components/results";
+@import "components/pagination";
+@import "components/home";
+@import "components/sidebar";
+@import "components/slider-head";
+@import "components/price-box";
+@import "components/guest-card";
+@import "components/payment";
+@import "components/offers";
+@import "components/chart";
+@import "components/days";
+@import "components/modal";
+@import "components/modal";
+@import "components/cropper";
+
+// common 2
+@import "common/backgrounds";
+@import "common/boxes";
+@import "common/col";
+@import "common/container";
+@import "common/displayes";
+@import "common/text-algines";
+@import "common/widths";
+@import "common/row";
+@import "common/separators";
+@import "common/margin";
+@import "common/vertical-align";
+@import "common/body";
+@import "common/flags";
+@import "common/social";
+@import "common/certificates";
+@import "common/blockquote";
+@import "common/icons";
+@import "common/content";
+@import "common/online";
+@import "common/user-info";
+@import "common/statuses";
+@import "common/payment";
+@import "common/template";
+@import "common/languages";
+
+// components
+@import "components/bookings";
+@import "components/reviews";
+@import "components/modal";
+
+// typography
+@import "typography/text";
+@import "typography/title";

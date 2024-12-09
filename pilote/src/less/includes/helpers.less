@@ -1,0 +1,118 @@
+/*IMAGES*/
+
+img.squared{
+  border-radius: 3px;
+}
+
+.label-moowgly{
+  background-color: @colorMain;
+}
+
+
+/**TEXT**/
+
+span.orange{
+  color:orange;
+}
+
+.grey{
+  color:#666;
+}
+
+.big-figure{
+  font-size:xx-large;
+
+  @media (max-width: 992px)
+  {
+    font-size:16px;
+    font-weight:bolder;
+  }
+}
+
+.very-big-figure{
+  font-size:48px;
+  font-weight: bold;
+}
+
+
+a.link{
+  color:@colorMain;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.small-txt{
+  font-size:10px;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/**MISC**/
+
+.tiny-square{
+  display: inline-block;
+  height:8px;
+  width: 8px;
+  float:right;
+  margin:0 3px;
+  background-color: #ccc;
+}
+
+
+
+/**BUTTONS**/
+.btn-moowgly{
+  border-radius:3px;
+  font-size:12px;
+  font-weight:bold;
+  border-bottom:2px solid rgba(0,0,0,0.25);
+  margin:0 5px;
+
+  &.green{
+    color:#fff;
+    background-color: @colorMain;
+  }
+
+  &.grey{
+      color:#999;
+      background-color: #eee;
+  }
+
+  &.red{
+    color:#fff;
+    background-color: @red;
+  }
+
+  &.orange{
+    color:#fff;
+    background-color: @orange;
+  }
+}
+
+
+.no-decoration{
+  color:initial;
+  text-decoration: none;
+
+  &:hover{
+    color:initial;
+    text-decoration: none;
+  }
+
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+input.calendar{
+  &:after{
+    content:'\f073';
+    font-family: FontAwesome;
+  }
+}

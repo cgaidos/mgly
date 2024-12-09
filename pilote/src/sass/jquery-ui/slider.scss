@@ -1,0 +1,23 @@
+.ui-slider {
+  background: #c1c1c1;
+  border: 0 !important;
+  height: 4px;
+
+  .ui-widget-header {
+    background: #1e89db;
+    border: 0;
+  }
+
+  .ui-state-default {
+    background: #1e89db;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+
+  .ui-slider-handle {
+    top: -7px;
+    width: 18px;
+    height: 18px;
+    outline: none;
+  }
+}

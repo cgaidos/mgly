@@ -1,0 +1,73 @@
+ID;Nom;Prénom;mail;TJM;type;role;boite_id;sous boite;Compétence
+CA0001;Hulard;Laurent;lhulard@ca-crf.fr;1000;SNF;contributeur;boite003;Animation;Architecte réseaux
+CA0001;Hulard;Laurent;lhulard@ca-crf.fr;1000;SNF;contributeur;boite003;Animation;Webmaster
+CA0001;Hulard;Laurent;lhulard@ca-crf.fr;1000;SNF;contributeur;boite003;Animation;Responsable de trafic
+CA0001;Hulard;Laurent;lhulard@ca-crf.fr;1000;SNF;contributeur;boite003;Animation;Analyste
+CA0001;Hulard;Laurent;lhulard@ca-crf.fr;1000;SNF;contributeur;boite003;Animation;Technicien Réseaux
+CA0001;Hulard;Laurent;lhulard@ca-crf.fr;1000;SNF;contributeur;boite003;Animation;Ingénieur qualité méthode
+CA0001;Hulard;Laurent;lhulard@ca-crf.fr;1000;SNF;contributeur;boite003;Animation;Ingénieur système et réseaux
+CA0001;Hulard;Laurent;lhulard@ca-crf.fr;1000;SNF;contributeur;boite003;Animation;Consultant SAP
+CA0002;Lemagie;Arnaud;alemagie@ca-cf.fr;1000;SNF;contributeur;boite001;Opérations;Architecte réseaux
+CA0002;Lemagie;Arnaud;alemagie@ca-cf.fr;1000;SNF;contributeur;boite001;Opérations;Webmaster
+CA0002;Lemagie;Arnaud;alemagie@ca-cf.fr;1000;SNF;contributeur;boite001;Opérations;Responsable de trafic
+CA0002;Lemagie;Arnaud;alemagie@ca-cf.fr;1000;SNF;contributeur;boite001;Opérations;Analyste
+CA0002;Lemagie;Arnaud;alemagie@ca-cf.fr;1000;SNF;contributeur;boite001;Opérations;Technicien Réseaux
+CA0002;Lemagie;Arnaud;alemagie@ca-cf.fr;1000;SNF;contributeur;boite001;Opérations;Ingénieur qualité méthode
+CA0002;Lemagie;Arnaud;alemagie@ca-cf.fr;1000;SNF;contributeur;boite001;Opérations;Ingénieur système et réseaux
+CA0002;Lemagie;Arnaud;alemagie@ca-cf.fr;1000;SNF;contributeur;boite001;Opérations;Consultant SAP
+CA0003;Grimonpon;Laurence;lgrimonpond@ca-cf.fr;1000;SNF;contributeur;boite002;Exploitation;Architecte réseaux
+CA0003;Grimonpon;Laurence;lgrimonpond@ca-cf.fr;1000;SNF;contributeur;boite002;Exploitation;Webmaster
+CA0003;Grimonpon;Laurence;lgrimonpond@ca-cf.fr;1000;SNF;contributeur;boite002;Exploitation;Responsable de trafic
+CA0003;Grimonpon;Laurence;lgrimonpond@ca-cf.fr;1000;SNF;contributeur;boite002;Exploitation;Analyste
+CA0003;Grimonpon;Laurence;lgrimonpond@ca-cf.fr;1000;SNF;contributeur;boite002;Exploitation;Technicien Réseaux
+CA0003;Grimonpon;Laurence;lgrimonpond@ca-cf.fr;1000;SNF;contributeur;boite002;Exploitation;Ingénieur qualité méthode
+CA0003;Grimonpon;Laurence;lgrimonpond@ca-cf.fr;1000;SNF;contributeur;boite002;Exploitation;Ingénieur système et réseaux
+CA0003;Grimonpon;Laurence;lgrimonpond@ca-cf.fr;1000;SNF;contributeur;boite002;Exploitation;Consultant SAP
+CA0004;Delerue;Béatrice;bdelerue@ca-cf.fr;1000;SNF;contributeur;boite005;Coordination et Programmes;Architecte réseaux
+CA0004;Delerue;Béatrice;bdelerue@ca-cf.fr;1000;SNF;contributeur;boite005;Coordination et Programmes;Webmaster
+CA0004;Delerue;Béatrice;bdelerue@ca-cf.fr;1000;SNF;contributeur;boite005;Coordination et Programmes;Responsable de trafic
+CA0004;Delerue;Béatrice;bdelerue@ca-cf.fr;1000;SNF;contributeur;boite005;Coordination et Programmes;Analyste
+CA0004;Delerue;Béatrice;bdelerue@ca-cf.fr;1000;SNF;contributeur;boite005;Coordination et Programmes;Technicien Réseaux
+CA0004;Delerue;Béatrice;bdelerue@ca-cf.fr;1000;SNF;contributeur;boite005;Coordination et Programmes;Ingénieur qualité méthode
+CA0004;Delerue;Béatrice;bdelerue@ca-cf.fr;1000;SNF;contributeur;boite005;Coordination et Programmes;Ingénieur système et réseaux
+CA0004;Delerue;Béatrice;bdelerue@ca-cf.fr;1000;SNF;contributeur;boite005;Coordination et Programmes;Consultant SAP
+CA0005;Berghof;Hughes;hberghof@ca-cf.fr;1000;SNF;contributeur;boite004;Circuit court;Architecte réseaux
+CA0005;Berghof;Hughes;hberghof@ca-cf.fr;1000;SNF;contributeur;boite004;Circuit court;Webmaster
+CA0005;Berghof;Hughes;hberghof@ca-cf.fr;1000;SNF;contributeur;boite004;Circuit court;Responsable de trafic
+CA0005;Berghof;Hughes;hberghof@ca-cf.fr;1000;SNF;contributeur;boite004;Circuit court;Analyste
+CA0005;Berghof;Hughes;hberghof@ca-cf.fr;1000;SNF;contributeur;boite004;Circuit court;Technicien Réseaux
+CA0005;Berghof;Hughes;hberghof@ca-cf.fr;1000;SNF;contributeur;boite004;Circuit court;Ingénieur qualité méthode
+CA0005;Berghof;Hughes;hberghof@ca-cf.fr;1000;SNF;contributeur;boite004;Circuit court;Ingénieur système et réseaux
+CA0005;Berghof;Hughes;hberghof@ca-cf.fr;1000;SNF;contributeur;boite004;Circuit court;Consultant SAP
+CA0006;Carcaillet;Alexandre;acarcaillet@ca-cf.fr;1000;SNF;contributeur;boite005;Labo Sofinco-Innovation;Architecte réseaux
+CA0006;Carcaillet;Alexandre;acarcaillet@ca-cf.fr;1000;SNF;contributeur;boite005;Labo Sofinco-Innovation;Webmaster
+CA0006;Carcaillet;Alexandre;acarcaillet@ca-cf.fr;1000;SNF;contributeur;boite005;Labo Sofinco-Innovation;Responsable de trafic
+CA0006;Carcaillet;Alexandre;acarcaillet@ca-cf.fr;1000;SNF;contributeur;boite005;Labo Sofinco-Innovation;Analyste
+CA0006;Carcaillet;Alexandre;acarcaillet@ca-cf.fr;1000;SNF;contributeur;boite005;Labo Sofinco-Innovation;Technicien Réseaux
+CA0006;Carcaillet;Alexandre;acarcaillet@ca-cf.fr;1000;SNF;contributeur;boite005;Labo Sofinco-Innovation;Ingénieur qualité méthode
+CA0006;Carcaillet;Alexandre;acarcaillet@ca-cf.fr;1000;SNF;contributeur;boite005;Labo Sofinco-Innovation;Ingénieur système et réseaux
+CA0006;Carcaillet;Alexandre;acarcaillet@ca-cf.fr;1000;SNF;contributeur;boite005;Labo Sofinco-Innovation;Consultant SAP
+CA0007;Semaoune;Zahia;zsemaoune@ca-cf.fr;1000;SNF;contributeur;boite004;Assurances;Architecte réseaux
+CA0007;Semaoune;Zahia;zsemaoune@ca-cf.fr;1000;SNF;contributeur;boite004;Assurances;Webmaster
+CA0007;Semaoune;Zahia;zsemaoune@ca-cf.fr;1000;SNF;contributeur;boite004;Assurances;Responsable de trafic
+CA0007;Semaoune;Zahia;zsemaoune@ca-cf.fr;1000;SNF;contributeur;boite004;Assurances;Analyste
+CA0007;Semaoune;Zahia;zsemaoune@ca-cf.fr;1000;SNF;contributeur;boite004;Assurances;Technicien Réseaux
+CA0007;Semaoune;Zahia;zsemaoune@ca-cf.fr;1000;SNF;contributeur;boite004;Assurances;Ingénieur qualité méthode
+CA0007;Semaoune;Zahia;zsemaoune@ca-cf.fr;1000;SNF;contributeur;boite004;Assurances;Ingénieur système et réseaux
+CA0007;Semaoune;Zahia;zsemaoune@ca-cf.fr;1000;SNF;contributeur;boite004;Assurances;Consultant SAP
+CA0008;Szijj;Franck;fszijj@ca-cf.fr;1000;SNF;contributeur;boite001;Crédit et Corporate;Architecte réseaux
+CA0008;Szijj;Franck;fszijj@ca-cf.fr;1000;SNF;contributeur;boite001;Crédit et Corporate;Webmaster
+CA0008;Szijj;Franck;fszijj@ca-cf.fr;1000;SNF;contributeur;boite001;Crédit et Corporate;Responsable de trafic
+CA0008;Szijj;Franck;fszijj@ca-cf.fr;1000;SNF;contributeur;boite001;Crédit et Corporate;Analyste
+CA0008;Szijj;Franck;fszijj@ca-cf.fr;1000;SNF;contributeur;boite001;Crédit et Corporate;Technicien Réseaux
+CA0008;Szijj;Franck;fszijj@ca-cf.fr;1000;SNF;contributeur;boite001;Crédit et Corporate;Ingénieur qualité méthode
+CA0008;Szijj;Franck;fszijj@ca-cf.fr;1000;SNF;contributeur;boite001;Crédit et Corporate;Ingénieur système et réseaux
+CA0008;Szijj;Franck;fszijj@ca-cf.fr;1000;SNF;contributeur;boite001;Crédit et Corporate;Consultant SAP
+CA0009;Annereau;Jean-Philippe;jpannereau;1000;SNF;contributeur;boite002;Exploitation;Architecte réseaux
+CA0009;Annereau;Jean-Philippe;jpannereau;1000;SNF;contributeur;boite002;Exploitation;Webmaster
+CA0009;Annereau;Jean-Philippe;jpannereau;1000;SNF;contributeur;boite002;Exploitation;Responsable de trafic
+CA0009;Annereau;Jean-Philippe;jpannereau;1000;SNF;contributeur;boite002;Exploitation;Analyste
+CA0009;Annereau;Jean-Philippe;jpannereau;1000;SNF;contributeur;boite002;Exploitation;Technicien Réseaux
+CA0009;Annereau;Jean-Philippe;jpannereau;1000;SNF;contributeur;boite002;Exploitation;Ingénieur qualité méthode
+CA0009;Annereau;Jean-Philippe;jpannereau;1000;SNF;contributeur;boite002;Exploitation;Ingénieur système et réseaux
+CA0009;Annereau;Jean-Philippe;jpannereau;1000;SNF;contributeur;boite002;Exploitation;Consultant SAP

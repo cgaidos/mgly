@@ -1,0 +1,96 @@
+<div class="container">
+    <h2 class="text-center mt-75 mb-60">What about your housing?</h2>
+
+    <div class="box light">
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="col-min-30-sm">
+
+                    <label class="label-input">Your address</label>
+
+                    <input id="addres-longitude" type="hidden"
+                           name="geo_location[lon]">
+                    <input id="addres-latitude" type="hidden"
+                           name="geo_location[lat]">
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            {{ forms.input('address[country]', 'width-full', 'Country') }}
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            {{ forms.input('address[city]', 'width-full', 'City') }}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            {{ forms.input('address[street]', 'width-full', 'Complete address') }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-min-30-sm map-container-fluid">
+                <div id="become-host-map" class="map map-fluid"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="box light mt-30">
+
+        <div class="row">
+
+            <div class="col-md-6 clearfix">
+                <div class="col-min-30-sm">
+                    <label class="mb-20">Type of home</label>
+
+                    <div class="width-full form-group">
+                        {% with {options: ['Apartment', 'House']} %}
+                        {{ forms.select_multi('type_of_home', options, 'width-full') }}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mt-sm-10 clearfix">
+                <div class="col-min-30-sm">
+                    <label class="mb-20">Apartment features</label>
+
+                    <div class="width-full form-group">
+                        {% with {options: ['Garden', 'Pool']} %}
+                        {{ forms.select_multi('home_features', options, 'width-full') }}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-30 mt-sm-10">
+
+            <div class="col-md-6">
+                <div class="col-min-30-sm">
+                    <label class="mb-20">Meal specialties</label>
+
+                    <div class="width-full form-group">
+                        {% with {options: ['Vegetarian', 'Kosher', 'Halal']} %}
+                        {{ forms.select_multi('meal_specialties', options, 'width-full') }}
+                        {% endwith %}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="text-center mt-70">
+        <a href="#bh-family" class="btn btn-default btn-become-who" role="tab" data-toggle="tab">Next</a>
+    </div>
+</div>
+

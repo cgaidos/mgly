@@ -1,0 +1,26 @@
+.datepicker {
+  padding: 3px;
+
+  &.dropdown-menu {
+    z-index: 999999;
+  }
+
+  table.table-condensed {
+
+    thead {
+      th {
+        padding: 5px;
+        font-weight: bold;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 5px;
+        }
+      }
+    }
+
+  }
+}

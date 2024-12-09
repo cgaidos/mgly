@@ -1,0 +1,97 @@
+.conversation-list {
+  font-size: 0;
+}
+
+.conversation-item {
+  vertical-align: middle;
+  position: relative;
+  padding: 20px 20px 20px 100px;
+  font-size: $font-size-base;
+  border-top: 1px solid #e6e6e6;
+
+  &.to-read {
+    background: #e9f3fc;
+    color: grey;
+  }
+
+  .conversation-avatar {
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 28px);
+
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid #dedede;
+    display: inline-block;
+    color: #fff;
+
+    .alt-avatar {
+      border-radius: 50%;
+      line-height: 48px;
+      font-size: 20px;
+      font-weight: 600;
+      background-image: none;
+      text-align: center;
+      width: 50px;
+      height:50px;
+      display: block;
+      background: #5763c5;
+    }
+
+    img {
+      border-radius: 50%;
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+
+  .conversation-user {
+    padding-right: 50px;
+    position: relative;
+
+    &.online {
+      @include media_max('md') {
+        padding-left: 15px;
+      }
+
+      &:after {
+        position: absolute;
+        top: 6px;
+        left: 0;
+
+        @include media_min('lg') {
+          right: 30px;
+          left:auto;
+          top: calc(50% - 5px);
+        }
+      }
+    }
+  }
+
+  .conversation-user-name {
+    display: block;
+    font-weight: bold;
+    color: $grey;
+  }
+
+  .conversation-user-address {
+    display: block;
+    color: $grey;
+  }
+
+  .conversation-last-message {
+
+  }
+
+  .conversation-date {
+    color: #a7a7a7;
+  }
+
+  .conversation-remove {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 6px);
+    line-height: 10px;
+  }
+
+}

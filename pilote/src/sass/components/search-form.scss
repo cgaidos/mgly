@@ -1,0 +1,185 @@
+.search {
+  background: img('bg/frise_enfants-cache.jpg') repeat top center;
+  min-height: 170px;
+}
+
+.input-place {
+  background: #fff img('icon/marker_inactive_11x15.png') no-repeat center right 15px;
+  padding-right: 35px;
+}
+
+.search-form-sidebar {
+  .widget {
+    padding-top: 25px;
+  }
+}
+
+@include media_min('sm') {
+  .row-date {
+    background: transparent img('arrow/arrow_right_long.png') no-repeat center center;
+  }
+
+  .row-date-dark {
+    background: #fff img('arrow/arrow_right_long_dark.png') no-repeat center center;
+
+    .form-control {
+      max-height: 49px;
+      line-height: 51px;
+    }
+  }
+
+  .date-to {
+    .form-control {
+      background: transparent;
+    }
+  }
+
+  .date-from {
+    padding-right: 0 !important;
+
+    .form-control {
+      padding-right: 30px;
+      background: transparent;
+
+      @include media_min('sm') {
+        border-right: 0 !important;
+      }
+    }
+  }
+
+  .date-to {
+    padding-left: 0 !important;
+
+    .form-control {
+      text-indent: 15px;
+
+      @include media_min('sm') {
+        border-left: 0 !important;
+      }
+    }
+  }
+}
+
+.search-form {
+  padding: 34px 0;
+
+  .tab-content {
+    position: relative;
+    top: -1px;
+  }
+
+  .tab-nav {
+    margin-bottom: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      background: rgba(255, 255, 255, 0.42);
+
+      &.active {
+        background: rgba(255, 255, 255, 0.67);
+      }
+
+      a {
+        display: block;
+        text-align: center;
+        color: $grey-dark;
+        text-decoration: none;
+        padding: 17px 0;
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .select,
+  .form-control {
+    border: 0;
+    margin: 0;
+    height: 50px;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: 0;
+    height: 50px;
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+  }
+
+  .separate,
+  .row .row:not(.row-date-dark) [class*='col'] {
+    padding: 1px 1px 0 0;
+
+    @include media_max('xs') {
+      padding-right: 0;
+    }
+  }
+
+  .date-from {
+    padding-right: 0;
+  }
+
+  .btn-search {
+    background: #ffa300;
+  }
+}
+
+.filter-form {
+  background: #fff;
+  padding: 10px 25px;
+  border: 1px solid #e6e6e6;
+
+  span {
+    vertical-align: middle;
+  }
+
+  ul {
+    display: inline-block;
+    margin-left: 20px;
+
+    li {
+      display: inline-block;
+
+      & + li {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.filter-icon {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  margin-top: 2px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+
+  @include sub_extend('distance') {
+    background-image: img('icon/marker_inactive_11x15.png');
+
+    &.active {
+      background-image: img('icon/marker_11x15.png');
+    }
+  }
+
+  @include sub_extend('cost') {
+    background-image: img('icon/euro_50x50.png');
+
+    &.active {
+      background-image: img('icon/euro_50x50.png');
+    }
+  }
+
+  @include sub_extend('rating') {
+    background-image: img('icon/star_blue_28x28.png');
+
+    &.active {
+      background-image: img('icon/star_blue_28x28.png');
+    }
+  }
+}

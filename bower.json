@@ -1,0 +1,20 @@
+{
+  "name": "moowgly",
+  "description": "Install ====",
+  "main": "index.js",
+  "authors": [
+    "Patryk <patryk.trocho@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MTeam2016/moowgly",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "typeahead.js": "^0.11.1"
+  }
+}

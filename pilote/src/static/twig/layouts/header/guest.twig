@@ -1,0 +1,12 @@
+{% include './layouts/header/common/no-login.twig' %}
+
+<div class="wrapper navbar-dashboard-bg">
+    <div class="container">
+        {% include './layouts/navs/guest.twig' %}
+    </div>
+</div>
+<div class="wrapper navbar-tab-bg">
+    <div class="container">
+        {{ menu|raw }}
+    </div>
+</div>

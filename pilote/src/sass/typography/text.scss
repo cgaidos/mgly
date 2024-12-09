@@ -1,0 +1,48 @@
+.text {
+
+  // colors
+  @include sub('dark') {
+    color: $dark;
+  }
+
+  @include sub('blue') {
+    color: $blue;
+  }
+
+  @include sub('grey-dark') {
+    color: $grey-dark;
+  }
+
+  @include sub('grey') {
+    color: $grey;
+  }
+
+  @include sub('grey-light') {
+    color: lighten($grey, 10%);
+  }
+
+  @include sub('white') {
+    color: #fff;
+  }
+
+  @include sub('italic') {
+    font-style: italic;
+  }
+
+  @include sub('bold') {
+    font-weight: bold;
+  }
+
+  // sizes
+  @include sub('small') {
+    font-size: $font-size-small;
+  }
+
+  @include sub('big') {
+    font-size: $font-size-large - 1px;
+  }
+
+  @include sub('biggest') {
+    font-size: $font-size-large + 1px;
+  }
+}

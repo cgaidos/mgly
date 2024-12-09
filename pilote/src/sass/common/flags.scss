@@ -1,0 +1,56 @@
+.flag {
+  display: inline-block;
+  height: 27px;
+  width: 40px;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center;
+
+  @include sub_extend('belgium'){
+    background-image: img('flags/belgium.png');
+  }
+
+  @include sub_extend('china'){
+    background-image: img('flags/china.png');
+  }
+
+  @include sub_extend('france'){
+    background-image: img('flags/france.png');
+  }
+
+  @include sub_extend('germany'){
+    background-image: img('flags/germany.png');
+  }
+
+  @include sub_extend('italy'){
+    background-image: img('flags/italy.png');
+  }
+
+  @include sub_extend('japan'){
+    background-image: img('flags/japan.png');
+  }
+
+  @include sub_extend('portugal'){
+    background-image: img('flags/portugal.png');
+  }
+
+  @include sub_extend('russia'){
+    background-image: img('flags/russia.png');
+  }
+
+  @include sub_extend('spain'){
+    background-image: img('flags/spain.png');
+  }
+
+  @include sub_extend('sweden'){
+    background-image: img('flags/sweden.png');
+  }
+
+  @include sub_extend('united-kingdom'){
+    background-image: img('flags/unitedKingdom.png');
+  }
+
+  @include sub_extend('usa'){
+    background-image: img('flags/usa.png');
+  }
+}

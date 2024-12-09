@@ -1,0 +1,32 @@
+{% import 'macros/chart.twig' as chart %}
+
+<div class="offer">
+    <div class="row middle-row-xs">
+        <div class="col-xs-2 col-avatar text-center middle-col">
+            <div class="avatar border">
+                <img src="/moowgly/img/dev/avatar.png" alt="Michael Keller">
+            </div>
+        </div>
+        <div class="col-xs-3 user middle-col">
+            <span class="user-name">
+                Chess Play<br />
+                Weekly course
+            </span>
+            <span class="user-address mt-5">
+                Munich, Germany
+            </span>
+        </div>
+        <div class="col-xs-3 term middle-col">
+            Tuesday<br />
+            17:00 - 18:30
+        </div>
+
+        <div class="col-xs-2 places middle-col">
+            12 places
+        </div>
+        <div class="col-xs-3 chart middle-col">
+            {{ chart.circle(66) }}
+            <span class="percent">66%</span>
+        </div>
+    </div>
+</div>

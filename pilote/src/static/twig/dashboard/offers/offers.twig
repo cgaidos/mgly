@@ -1,0 +1,19 @@
+{% extends 'layouts/dashboard.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+
+{% block content %}
+
+    <div class="offers mt-sm-10">
+        {% include './dashboard/offers/partials/offer01.twig' %}
+        {% include './dashboard/offers/partials/offer02.twig' %}
+        {% include './dashboard/offers/partials/offer03.twig' %}
+        {% include './dashboard/offers/partials/offer04.twig' %}
+    </div>
+
+    <div class="text-center mt-50">
+        <a href="/moowgly/page/dashboard_offers_create-offer"><!-- µµµ -->
+            <button class="btn btn-default">Create a new activity</button>
+        </a>
+    </div>
+{% endblock %}

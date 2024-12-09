@@ -1,0 +1,43 @@
+{% extends 'layouts/sidebar.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+
+{% block title %}
+    Search results for stay
+{% endblock %}
+
+{% block header %}
+    {% include './layouts/header/search-stay.twig' %}
+{% endblock %}
+
+{% block sidebar %}
+    {% include './search-results/common/search-sidebar-stay.twig' %}
+{% endblock %}
+
+{% block content %}
+    <div class="row mb-15">
+        <div class="col-md-12">
+            <div class="pull-right">
+                {% include './search-results/common/filter-form-stay.twig' %}
+            </div>
+        </div>
+    </div>
+
+    <div class="results">
+        {#}
+        {% include 'search-results/common/result-stay.twig' %}
+        #}
+
+        {% include 'search-results/common/result-stay01.twig' %}
+        {% include 'search-results/common/result-stay02.twig' %}
+        {% include 'search-results/common/result-stay03.twig' %}
+        {% include 'search-results/common/result-stay04.twig' %}
+        {% include 'search-results/common/result-stay05.twig' %}
+        {% include 'search-results/common/result-stay06.twig' %}
+        {% include 'search-results/common/result-stay07.twig' %}
+    </div>
+
+    <div class="text-center mt-30">
+        {% include 'components/pagination.twig' %}
+    </div>
+{% endblock %}

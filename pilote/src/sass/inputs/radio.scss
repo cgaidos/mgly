@@ -1,0 +1,75 @@
+.radio {
+  @extend .checkbox;
+
+  border-radius: 50%;
+
+  &.active {
+    &:before {
+      background: $radio-bg;
+    }
+  }
+
+  &.active {
+    &:before {
+      border-radius: 50%;
+    }
+  }
+
+  @include sub('parent') {
+    background-position: center;
+    width: 20px;
+    height: 43px;
+    border: 0;
+    padding: 0;
+    margin: -4px 0 0 0;
+
+    &:before,
+    &:after {
+      display: none !important;
+
+        &.active {
+          display: none !important;
+        }
+    }
+
+    &.dad {
+      background-image: img('icon/dad_inactive_20x43.png');
+
+      &.active {
+        background-image: img('icon/dad_20x43.png');
+      }
+    }
+
+    &.mom {
+      background-image: img('icon/mom_inactive_20x43.png');
+
+      &.active {
+        background-image: img('icon/mom_20x43.png');
+      }
+    }
+
+  }
+
+  @include sub('kid') {
+    @extend .radio-parent;
+
+    width: 22px;
+    height: 42px;
+
+    &.boy {
+      background-image: img('icon/boy_inactive_20x41.png');
+
+      &.active {
+        background-image: img('icon/boy_20x41.png');
+      }
+    }
+
+    &.girl {
+      background-image: img('icon/girl_inactive_20x41.png');
+
+      &.active {
+        background-image: img('icon/girl_20x41.png');
+      }
+    }
+  }
+}

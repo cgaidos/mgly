@@ -1,0 +1,204 @@
+{% import './macros/lists.twig' as lists %}
+{% import './macros/forms.twig' as forms %}
+
+<div class="search-form-sidebar mt-70 mt-sm-0 mb-sm-15">
+    <form action="" id="search-form-sidebar" class="demo-sidebar-stay">
+        <div class="widget">
+
+            <div class="form-group">
+                <label>Distance (in km):</label>
+                <div class="mt-15">
+                    <div id="slider"></div>
+                    <input type="text" name="radius" value="0" style="color:#1E89DB;border:none;margin-top:5px;margin-left:-4px;" readonly>
+                </div>
+
+                <script>
+                    /*
+                    window.bind('load', function () {
+                        values = function (value) {
+                            $('#search-form-sidebar [name="radius"]').val(value);
+                        };
+
+                        new sliderController('#search-form-sidebar #slider', {
+                            min: 0,
+                            max: 100
+                        }, values);
+                    })
+                    */
+                </script>
+
+            </div>
+
+            <div class="form-group mt-50">
+                <label>Kids age (range):</label>
+                <div class="mt-15">
+                    <div id="slider-range"></div>
+                    <input type="hidden" name="age_min">
+                    <input type="hidden" name="age_max">
+                </div>
+
+                <script>
+                    window.bind('load', function () {
+                        values = function (value) {
+                            $('#search-form-sidebar [name="age_min"]').val(value[0]);
+                            $('#search-form-sidebar [name="age_max"]').val(value[1]);
+                        };
+
+                        new sliderController('#search-form-sidebar #slider-range', {
+                            range: true,
+                            min: 0,
+                            max: 21,
+                            values: [0, 21]
+                        }, values);
+                    })
+                </script>
+            </div>
+
+            <div class="form-group row mt-50">
+                <div class="col-md-12">
+                    <label>Possibility of welcoming an adult:</label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-xs-6">
+                        {{ forms.radio('adult', 'yes') }}
+
+                        <span class="form-control-content text-grey">
+                        Yes
+                    </span>
+                    </label>
+                    <label class="col-xs-6">
+                        {{ forms.radio('adult', 'no', true) }}
+
+                        <span class="form-control-content text-grey">
+                        No
+                    </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="mb-5">Type of stay</label>
+                {{ forms.select('', ['', 'Family', 'Holiday camp'], 'type-stay-select width-full mt-5', '', 'placeholder=\"\"') }}
+                {{ lists.tags([], 'mt-15 type-stay-list') }}
+
+                <script>
+                    window.bind('load', function () {
+                        new libs.tags('#search-form-sidebar .type-stay-select select', '#search-form-sidebar .type-stay-list', 'type_of_stay', true);
+                    });
+                </script>
+            </div>
+
+        </div>
+
+        <div class="widget">
+            <div class="form-group">
+                <label class="mb-5">Activities:</label>
+                {% set attr = 'placeholder="&nbsp" data-ll-resource="activities" data-ll-text="act_en" data-ll-key="act_code"' %}
+                {{ forms.select('', [], 'width-full activities-list', '', attr) }}
+
+                <script>
+                    window.bind('load', function () {
+                        new libs.tags('#search-form-sidebar .activities-list select', '#search-form-sidebar #activities-tags', 'activity', true);
+                    });
+                </script>
+
+                <div id="activities-tags" class="tags mt-10"></div>
+            </div>
+        </div>
+
+        <div class="widget">
+            <label class="mb-5">Languages:</label>
+            <div class="form-group mb-30">
+                {{ forms.select('', [''], 'width-full languages-select', '', 'data-ll-resource="languages" data-ll-key="language_code" data-ll-text="language_name" id="become-host-languages-select"') }}
+
+                <div class="mt-10">
+                    {{ lists.languages([]) }}
+                </div>
+
+                <script>
+                    window.bind('load', function () {
+                        var template = function (par, list) {
+                            var li = $('<li class="language-list-item flag-lang">').addClass('flag-lang-' + par.key.toLowerCase());
+                            var button = $('<button type="button" class="remove"></button>');
+                            var input = $('<input>').attr({
+                                type: "hidden",
+                                name: "languages[" + par.index + "]",
+                                value: par.key,
+                            });
+
+                            button.click(function () {
+                                list.remove(par.name)
+                            });
+
+                            return li.append(button).append(input);
+                        };
+
+                        new libs.list('#search-form-sidebar .languages-select select', template, '#search-form-sidebar .language-list', true);
+                    })
+                </script>
+
+            </div>
+
+            <div class="form-group mb-30">
+                <label>Apartment features:</label>
+
+                {{ forms.select('', ['', 'Garden', 'Pool'], 'apartament-features-select width-full mt-5', '', 'placeholder=\"\"') }}
+                {{ lists.tags([], 'mt-15 apartament-features-list') }}
+
+                <script>
+                    window.bind('load', function () {
+                        new libs.tags('#search-form-sidebar .apartament-features-select select', '#search-form-sidebar .apartament-features-list', 'apartament_features', true);
+                    });
+                </script>
+            </div>
+
+            <div class="form-group mb-30">
+                <label>Food preferences:</label>
+
+                {{ forms.select('', ['', 'Vegetarian', 'Kosher', 'Halal'], 'food-preferences-select width-full mt-5') }}
+                {{ lists.tags([], 'mt-15 food-preferences-list') }}
+
+                <script>
+                    window.bind('load', function () {
+                        new libs.tags('#search-form-sidebar .food-preferences-select select', '#search-form-sidebar .food-preferences-list', 'food_preferences', true);
+                    });
+                </script>
+            </div>
+
+            <div class="form-group mb-30">
+                <label>Photo:</label>
+
+                <div class="text-grey">
+                    <label class="width-full">
+                        {{ forms.checkbox('photo_with', true) }}
+                        With
+                    </label>
+                </div>
+
+                <div style="margin-top: -15px" class="text-grey">
+                    <label class="width-full">
+                        {{ forms.checkbox('photo_without', false) }}
+                        Without
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="widget">
+            <label>Transport possibilities:</label>
+
+            <div class="text-center mt-20 mb-10">
+                <a href="https://www.blablacar.fr/" target="_blank">
+                    <img width="180" src="/moowgly/images/blablacar.jpg">
+                </a>
+            </div>
+            <div class="text-center mt-20 mb-10">
+                <a href="https://www.voyages-sncf.com/" target="_blank">
+                    <img width="180" src="/moowgly/images/logo-vsncf.jpg">
+                </a>
+            </div>
+        </div>
+    </form>
+</div>

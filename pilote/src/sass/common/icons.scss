@@ -1,0 +1,109 @@
+.icon {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -1px;
+
+  @include sub_extend('settings') {
+    width: 16px;
+    height: 16px;
+    background-image: img('icon/settings_16x16.png');
+  }
+
+  @include sub_extend('google') {
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    background-image: img('icon/g.svg');
+  }
+
+  @include sub_extend('marker') {
+    width: 11px;
+    height: 15px;
+    background-image: img('icon/marker_11x15.png');
+    vertical-align: middle;
+  }
+
+  @include sub_extend('caret') {
+    width: 13px;
+    height: 13px;
+    background-image: img('icon/chart_13x13.png');
+    vertical-align: middle;
+  }
+
+  @include sub_extend('caret-small') {
+    width: 11px;
+    height: 11px;
+    background-image: img('icon/chart_11x11.png');
+    vertical-align: middle;
+  }
+
+  @include sub_extend('star') {
+    width: 28px;
+    height: 28px;
+    background-image: img('icon/star_blue_28x28.png');
+    vertical-align: middle;
+  }
+
+  @include sub_extend('euro') {
+    width: 50px;
+    height: 50px;
+    background-image: img('icon/euro_50x50.png');
+    vertical-align: middle;
+  }
+
+  @include sub_extend('remove-grey') {
+    width: 10px;
+    height: 10px;
+    background-image: img('icon/close_grey_10x10.png');
+    vertical-align: middle;
+  }
+
+  @include sub_extend('arrow-prev-circle') {
+    width: 35px;
+    height: 35px;
+    background-image: img('arrow/arrow_prev_circle.png');
+    vertical-align: middle;
+  }
+
+  @include sub_extend('arrow-next-circle') {
+    width: 35px;
+    height: 35px;
+    background-image: img('arrow/arrow_next_circle.png');
+    vertical-align: middle;
+  }
+
+  @include sub_extend('parent') {
+    background-position: center;
+    width: 34px;
+    height: 75px;
+    border: 0;
+    padding: 0;
+    margin: -4px 0 0 0;
+
+    &.dad {
+      background-image: img('icon/dad.png');
+    }
+
+    &.mom {
+      background-image: img('icon/mom.png');
+    }
+
+  }
+
+  @include sub_extend('kid') {
+    @extend .radio-parent;
+
+    width: 25px;
+    height: 52px;
+
+    &.boy {
+      background-image: img('icon/boy.png');
+    }
+
+    &.girl {
+      background-image: img('icon/girl.png');
+    }
+  }
+
+}

@@ -1,0 +1,47 @@
+
+{% macro categiries() %}
+<div class="activites">
+    <button data-edit="true" class="activity cat-pet"></button>
+    <button data-edit="true" class="activity cat-sport"></button>
+    <button data-edit="true" class="activity cat-music"></button>
+</div>
+{% endmacro %}
+
+{% macro where() %}
+    {% import 'macros/forms.twig' as forms %}
+
+    <div class="row">
+        <div class="col-sm-6">
+            {{ forms.input('place', 'width-full input-place', 'City') }}
+        </div>
+        <div class="col-sm-6">
+            {{ forms.input('place', 'width-full input-place', 'Country') }}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro when() %}
+    {% import 'macros/forms.twig' as forms %}
+
+    <div class="row nm row-date-dark">
+        <div class="col-sm-6 col-0 date date-from">
+            {{ forms.input('place', 'width-full', 'From') }}
+        </div>
+        <div class="col-sm-6 col-0 date date-to">
+            {{ forms.input('place', 'width-full', 'To') }}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro days() %}
+    {% import 'macros/forms.twig' as forms %}
+
+    <div class="days">
+        {% for day in ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'] %}
+            <div class="text-center display-inline-block day">
+                <div class="display-inline-block">{{ forms.checkbox('day', day) }}</div>
+                <div class="">{{ day|capitalize }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

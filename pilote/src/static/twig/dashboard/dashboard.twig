@@ -1,0 +1,35 @@
+{% extends 'layouts/dashboard.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+
+{% block notification %}
+    {% set reactions %}
+        <a href="" class=" btn btn-primary width-auto">Action</a>
+        <a href="" class=" btn btn-primary btn-primary-border width-auto text-grey-dark">Action</a>
+    {% endset %}
+    {{ notification.alertBig('a test alefrt with a messagdfd', 'info', reactions) }}
+{% endblock %}
+
+{% block content %}
+
+    {% set reaction %}
+        <a href="dashboard_messages_messages" class=" btn btn-primary width-auto pull-right">See</a>
+    {% endset %}
+    {{ notification.alert('a test allert message', 'default', reaction) }}
+
+    <div class="separator-horizontal dark"></div>
+
+    <form action="" method="post" id="dashboard-calender-form">
+        <div class="box bg-white">
+            <div class="row">
+                <div class="col-lg-8 clearfix">
+                    {% include 'components/calender/calender.twig' %}
+                </div>
+                <div class="col-lg-4 mt-100 mt-md-30 ">
+                    {% include 'components/calender/legend-2.twig' %}
+                </div>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

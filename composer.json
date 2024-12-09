@@ -1,0 +1,27 @@
+{
+	"name" : "moowgly",
+	"description" : "moowgly",
+	"autoload" : {
+		"psr-4" : {
+			"Moowgly\\" : [
+				"lib/src/",
+				"pilote/src",
+				"silo/src"
+			]
+		}
+	},
+	"require" : {
+		"php" : "^7.0",
+		"guzzlehttp/guzzle" : "6.*",
+		"psr/log" : "dev-master",
+		"zaphpa/zaphpa" : "^2.0.0",
+		"twig/twig" : "~1.0",
+		"aws/aws-sdk-php": "3.*",
+		"elasticsearch/elasticsearch": "~5.0",
+		"symfony/http-foundation" : "3.2"
+	},
+	"require-dev" : {
+		"friendsofphp/php-cs-fixer" : "1.1",
+		"phpunit/phpunit" : "~4.4.0@stable"
+	}
+}

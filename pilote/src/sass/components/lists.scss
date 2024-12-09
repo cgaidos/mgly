@@ -1,0 +1,95 @@
+.list {
+
+  @include sub('line') {
+    &.gutter-10 {
+      li + li {
+        margin-left: 10px;
+      }
+    }
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  @include sub('style') {
+    i {
+      width: 8px;
+      height:8px;
+      background: $cornflower;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    &.separator-big {
+      li {
+        line-height: 35px;
+      }
+    }
+    
+    &.sub-span {
+      li {
+        span {
+          color: $grey-dark;
+          margin-left: 15px;
+        }
+      }
+    }
+
+    &.before {
+      li {
+        &:before {
+          content: '';
+          width: 8px;
+          height:8px;
+          background: $cornflower;
+          display: inline-block;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    li {
+      display: block;
+      line-height: 25px;
+    }
+  }
+
+  @include sub('inline') {
+    margin: -10px 0 0 -10px;
+
+    li {
+      vertical-align: middle;
+    }
+
+    .item {
+      display: inline-block;
+      margin: 10px 0 0 10px;
+    }
+  }
+
+  @include sub('gutter-30') {
+    margin-left: -30px;
+
+    .item {
+      margin-left: 30px;
+    }
+  }
+
+  @include sub('gutter-15') {
+    margin-left: -15px;
+
+    .item {
+      margin-left: 15px;
+    }
+  }
+
+  @include sub('gutter-40') {
+    margin-left: -40px;
+
+    .item {
+      margin-left: 40px;
+    }
+  }
+
+}

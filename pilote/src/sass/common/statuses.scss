@@ -1,0 +1,25 @@
+.status-title {
+  font-size: $font-size-base;
+  margin-bottom: 20px;
+}
+
+.status {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -3px;
+  border-radius: 50%;
+  margin-right: 5px;
+
+  @include sub_extend('open') {
+    background: #1e89db;
+  }
+  @include sub_extend('confirmed') {
+    background: #00aa5c;
+  }
+  @include sub_extend('history') {
+    background: #818181;
+  }
+}
+

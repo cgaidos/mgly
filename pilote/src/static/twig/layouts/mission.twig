@@ -1,0 +1,81 @@
+{% import 'macros/notification.twig' as notification %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include './layouts/common/head.twig' %}
+</head>
+<body class="home" onclick="document.getElementById('music').muted = true;">
+{% include './layouts/common/modals.twig' %}
+
+<div class="bg bg-mission"></div>
+
+{% include './layouts/common/pages.twig' %}
+
+<header>
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#home-nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling µµµ(style) -->
+            <div class="collapse navbar-collapse" id="home-nav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-toggle="modal" data-target="#login-modal" style="cursor: pointer;">Login</a></li>
+                    <li>
+                        <!-- <a href="/moowgly/become-host_start">Register</a> -->
+                        <a data-dismiss="modal" data-toggle="modal" data-target="#register-modal" style="cursor: pointer;">Register</a>
+                    </li>
+                    <li><a data-toggle="modal" data-target="#mission-modal" style="cursor: pointer;">Our mission</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+
+            <div class="container">
+                <a class="logo-brand" href="/moowgly"><img class="img-responsive logo" src="/moowgly/images/logo/logoMoowgly.png" alt="Moowgly"></a>
+            </div>
+
+            <div class="row mt-145 text-justify">
+                <div class="col-md-7">
+                    <div id="missiondiv" onMouseOver="pauseDiv()" onMouseOut="resumeDiv()" style="float:right;width:70%;height:510px;margin-left:auto;margin-right:auto;color:#FFFFFF;overflow-x:hidden;overflow-y:scroll;padding-right:10px;font-size:24px;">
+                        <p>We have all heard the saying that it take two to make a child but it takes a village to make a man.</p>
+                        <p>This is the spirit of life collaboration. Moowgly is designed for all people that are not focused on sharing objects (such as apartments, cars, transport) but sharing life experience. Often we are in our own environment with our own colors and we seek to learn but we have no easy access to other colors from other places and other social environments.</p>
+                        <p style="font-style:italic;font-weight:bold;">Moowgly is designed to share nothing but life!</p>
+                        <p>You will see two main functionalities in Moowgly, that are stay and activities and which are designed to offer children and adults the possibility to travel and to share life experience with other human beings. The users of Moowgly can register either as HOST or as GUEST. The person or familiy registered as hosts make their homes, their time and their individual skills available to share by offering stays or activities such as chess, card games, football, math, geology, banking, acting, etc. The hosts can be located in different places all over the world.
+                            <br />The guests on their side can access these offers and they have the option to contact the host and book their stay or activity.  This cultural, linguistic and life-style exchange is for sure very enriching for mind, spirit, soul and know-how. The sharing of time and experience can even be done in the same city or region. One can learn from a fireman, engineer in construction, musician, painter, singer, IT specialist, mathematician, manual worker or ex-policeman, each and every's life matters.
+                            <br />If someone could draw from the ocean of life and dive into these new experiences he could at once realize that life is more gratifying and rich when the rainbow assembles all its colors.</p>
+                        <p>These colors are all there to be taken and life is to be lived with increased opportunities and increased know-how and emotions.</p>
+                        <p style="font-style:italic;font-weight:bold;">Join and discover the first and unique world site that is designed to share life experiences.</p>
+                        <p>Become rich inside and become bigger than you are… become MOOWGLY</p>
+                        <p>THE SUN IS RISING, ARE YOU?<span style="font-weight:bold;"> MOOWGLY!</span></p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <iframe width="450" height="253" src="https://www.youtube.com/embed/JBhCd9GYbqk" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="450" height="253" src="https://www.youtube.com/embed/NtJLzBQeAUI" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="hide">
+                <audio id="music" controls autoplay>
+                  <source src="/moowgly/images/nero.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+
+</header>
+
+{% include './layouts/common/scripts.twig' %}
+</body>
+</html>

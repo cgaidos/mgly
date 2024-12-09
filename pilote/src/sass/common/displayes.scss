@@ -1,0 +1,38 @@
+.float-none {
+    float: none !important;
+}
+
+.display {
+    @include sub('inline-block') {
+        @include media_selector(false, true) {
+            display: inline-block !important;
+        }
+    }
+
+    @include sub('block') {
+        @include media_selector(false, true) {
+            display: block !important;
+        }
+    }
+}
+
+.middle {
+    vertical-align: middle;
+}
+
+.top {
+    vertical-align: top;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+.text-top {
+    vertical-align: text-top;
+}
+
+.text-bottom {
+    vertical-align: text-bottom;
+}
+

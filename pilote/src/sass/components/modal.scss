@@ -1,0 +1,9 @@
+.modal {
+  max-height: calc(100vh - 15px);
+  overflow-y: scroll;
+
+  .modal-header,
+  .modal-footer {
+    border: 0;
+  }
+}

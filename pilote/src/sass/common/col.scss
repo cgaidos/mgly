@@ -1,0 +1,76 @@
+// 0
+.col-min-0 {
+  @include media_selector(true, false) {
+    padding: 0;
+  }
+}
+
+.col-max-0 {
+  @include media_selector(false, true) {
+    padding: 0;
+  }
+}
+
+.col-0 {
+  @include media_selector(true, true) {
+    padding: 0;
+  }
+}
+
+// 30
+.col-min-30 {
+  @include media_selector(true, false) {
+    padding: 0 30px;
+  }
+}
+
+.col-max-30 {
+  @include media_selector(false, true) {
+    padding: 0 30px;
+  }
+}
+
+.col-30 {
+  @include media_selector(true, true) {
+    padding: 0 30px;
+  }
+}
+
+// 15
+.col-min-15 {
+  @include media_selector(true, false) {
+    padding: 0 15px;
+  }
+}
+
+.col-max-15 {
+  @include media_selector(false, true) {
+    padding: 0 15px;
+  }
+}
+
+.col-15 {
+  @include media_selector(true, true) {
+    padding: 0 15px;
+  }
+}
+
+// 20
+.col-min-20 {
+  @include media_selector(true, false) {
+    padding: 0 20px;
+  }
+}
+
+.col-max-20 {
+  @include media_selector(false, true) {
+    padding: 0 20px;
+  }
+}
+
+.col-20 {
+  @include media_selector(true, true) {
+    padding: 0 20px;
+  }
+}
+

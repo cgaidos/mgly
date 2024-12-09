@@ -1,0 +1,9 @@
+<script>
+    var me = document.currentScript;
+
+    window.bind('load', function () {
+        var navigation = libs.calenderNav();
+        $(me).after(navigation.getCalenderBody()).after(navigation.getNavigationBody())
+    })
+</script>
+

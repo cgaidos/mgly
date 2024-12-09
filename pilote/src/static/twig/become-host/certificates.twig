@@ -1,0 +1,81 @@
+
+        <div class="container">
+            <h2 class="text-center mt-75 mb-60">What about your certificates?</h2>
+
+            <div class="box light">
+                <div class="col-min-30-md">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-center">In order to have more information about you, we advise to copy the url of your profiles facebook and linkedin</p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-50">
+                        <div class="col-xs-2 col-sm-1 col-sm-offset-2 text-center">
+                            <span class="form-control-content">
+                                <i class="social-fb"></i>
+                            </span>
+                        </div>
+                        <div class="col-xs-10 col-sm-7">
+                            {{ forms.input('facebook') }}
+                        </div>
+                    </div>
+
+                    <div class="row mt-30">
+                        <div class="col-xs-2 col-sm-1 col-sm-offset-2 text-center">
+                            <span class="form-control-content">
+                                <i class="social-linkedin"></i>
+                            </span>
+                        </div>
+                        <div class="col-xs-10 col-sm-7">
+                            {{ forms.input('linkedin') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box light mt-30">
+                <div class="col-min-30-md">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-center">Now you have to upload your certificates</p>
+                        </div>
+                    </div>
+
+                    {#<div class="row mt-40">#}
+                        {#<div class="col-md-12 text-center">#}
+                            {#<button type="button" class="btn btn-primary permanent-file-input">#}
+                                {#Upload#}
+                                {#<input onchange="fileController(event, this, previewCertificate, {name: 'certificates'})" type="file">#}
+                            {#</button>#}
+                        {#</div>#}
+                    {#</div>#}
+
+                    <script>
+                        window.bind('load', function () {
+                            var previewCertificate = function (urlData, formFile, template) {
+                                template.addClass('checked');
+
+                                template.button.click(function () {
+                                    template.removeClass('checked');
+                                    formFile.remove();
+                                });
+                            };
+
+                            certificateController.list(list => $('#become-host-form #certificates-list').html(list), previewCertificate);
+                        });
+                    </script>
+
+                    <div class="row mt-40 mb-45">
+                        <div id="certificates-list" class="col-md-12 text-center"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-70">
+                <a href="#bh-price" class="btn btn-default btn-become-who" role="tab" data-toggle="tab">Next</a>
+            </div>
+        </div>
+

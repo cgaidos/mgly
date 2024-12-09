@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include './layouts/common/head.twig' %}
+</head>
+<body class="bg-grey-light">
+<div id="app">
+    {% include './layouts/common/modals.twig' %}
+
+    {% include './layouts/common/pages.twig' %}
+
+    <div id="page">
+        {% include './layouts/header/become-host.twig' %}
+
+        {% include './layouts/common/notification.twig' with {notification: block('notification')} %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    {% include './layouts/footer/footer.twig' %}
+</div>
+
+    {% include './layouts/common/scripts.twig' %}
+</body>
+</html>

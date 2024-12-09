@@ -1,0 +1,91 @@
+.navbar {
+  border: 0;
+
+  .navbar-toggle {
+    border-color: $grey-light;
+
+    .icon-bar {
+      background: $grey-light;
+    }
+  }
+
+  margin: 0;
+
+  .navbar-collapse {
+    .navbar-nav {
+      li {
+        margin-right: 20px;
+
+        &.active {
+          font-weight: bold;
+        }
+
+        a {
+          padding-left: 15px;
+          padding-right: 15px;
+
+          @include media_max('sm') {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          @include media_max('xs') {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          &:focus,
+          &:active,
+          &:hover {
+            background: transparent;
+          }
+        }
+
+        &:first-child {
+          a {
+            margin-left: 0;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    a {
+      color: $dashboard-color;
+    }
+  }
+
+  @include sub_extend('tab') {
+    @include sub('bg') {
+      background: $tab-navbar;
+
+      .navbar {
+        .navbar-collapse {
+          .navbar-nav {
+            li {
+              margin: 0;
+
+              &.active {
+                background: $bg-color;
+              }
+
+              a {
+                font-weight: normal;
+                color: $dashboard-navbar;
+                font-style: italic;
+                padding-left: 20px;
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include sub_extend('dashboard') {
+    @include sub('bg') {
+      background: $dashboard-navbar;
+    }
+  }
+}

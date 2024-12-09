@@ -1,0 +1,77 @@
+
+        <div class="container">
+            <h2 class="text-center mt-75 mb-60">What about your price?</h2>
+
+            <div class="box light">
+                <div class="row">
+                    <div class="col-md-12 col-min-30-sm">
+
+                        <p class="text-center mt-15">
+                            Now you have to choose if your service comes free of charge or if you want to be paid
+                        </p>
+
+                        <div class="row mt-75 mb-75">
+
+                            <div class="col-md-3 col-md-offset-2">
+
+                                <label class="text-uppercase text-grey text-nowrap row width-full">
+
+                                    <div class="top col-xs-2 text-right">
+                                        {{ forms.radio('daily_price', 0, true) }}
+                                    </div>
+
+                                    <div class="col-xs-10">
+                                        <span class="form-control-content text-grey">
+                                            Free
+                                        </span>
+                                    </div>
+
+                                </label>
+
+                            </div>
+
+                            <div class="col-md-6 mt-sm-30">
+
+                                <label class="text-nowrap text-left row width-full">
+
+                                    <div class="top col-xs-2 col-xs-2 text-right">
+                                        {{ forms.radio('daily_price', 'price') }}
+                                    </div>
+
+                                    <div class="text-nowrap col-xs-10">
+                                        <div class="row" onclick="setPrice()">
+
+                                            <script>
+                                                function setPrice () {
+                                                    $('[name="daily_price"][value="price"]').prop('checked', true).trigger('change');
+                                                }
+                                            </script>
+
+                                            <div class="col-sm-8 col-md-7">
+                                                {{ forms.input('daily_price', 'become-host-price', '', '', '', 'onchange="setPrice()" ') }}
+                                            </div>
+
+                                            <div class="col-sm-4 col-md-5 mt-xs-10">
+                                                {{ forms.select('currency', [''], 'width-full', '', 'onchange="setPrice()"" data-ll-resource="currencies" data-ll-key="currency_code" data-ll-text="currency_code" id="become-host-currencies-select"') }}
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </label>
+
+                                <p class="col-xs-10 col-xs-offset-2 text-grey">(daily price)</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-70">
+                <a href="#bh-summary" class="btn btn-default btn-become-who" role="tab" data-toggle="tab">Next</a>
+            </div>
+        </div>
+

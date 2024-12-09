@@ -1,0 +1,26 @@
+{% import 'macros/notification.twig' as notification %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include './layouts/common/head.twig' %}
+</head>
+<body class="bg-grey-light">
+{% include './layouts/common/modals.twig' %}
+
+{% include './layouts/common/pages.twig' %}
+
+<div id="page">
+    {% include './layouts/header/payment.twig' %}
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+</div>
+
+{% include './layouts/footer/footer.twig' %}
+
+{% include './layouts/common/scripts.twig' %}
+</body>
+</html>

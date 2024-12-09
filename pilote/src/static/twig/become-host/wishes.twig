@@ -1,0 +1,142 @@
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/lists.twig' as lists %}
+
+
+<div class="container">
+    <h2 class="text-center mt-75 mb-60">What about your wishes?</h2>
+
+    <div class="box light">
+        <div class="col-min-30-md">
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="label-input">How many children can you welcome home?</label>
+                        {{ forms.select('nb_welcomed_kids', [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]) }}
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-sm-20">
+                    <div class="form-group">
+                        <label class="label-input mb-40">What about their age?</label>
+
+                        <script>
+                            window.bind('load', function () {
+                                values = function (values) {
+                                    $('[name="age_min"]').val(values[0]);
+                                    $('[name="age_max"]').val(values[1]);
+                                };
+
+                                new sliderController('#become-host-slider-range', {
+                                    range: true,
+                                    min: 0,
+                                    max: 21,
+                                    values: [ 0, 21 ]
+                                }, values);
+                            })
+                        </script>
+                        <div id="become-host-slider-range"></div>
+
+                        <input type="hidden" name="age_min">
+                        <input type="hidden" name="age_max">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-20">
+
+                <div class="col-md-6">
+                    <label class="label-input">What language is spoken at home?</label>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-md-5">
+                            <div class="form-group">
+
+                                <script id="template-languages-list" type="text/html">
+
+                                        </script>
+
+                                <script>
+                                    window.bind('load', function () {
+                                        var template = function (par, list) {
+                                            var li = $('<li class="language-list-item flag-lang">').addClass('flag-lang-' + par.key.toLowerCase());
+                                            var button = $('<button type="button" class="remove"></button>');
+                                            var input = $('<input>').attr({
+                                                type: "hidden",
+                                                name: "languages[" + par.index + "]",
+                                                value: par.key,
+                                            });
+
+                                            button.click(function () {
+                                                list.remove(par.name)
+                                            });
+
+                                            return li.append(button).append(input);
+                                        };
+
+                                        new libs.list('#become-host-languages-select', template, '#become-host-form .language-list', true);
+                                    })
+                                </script>
+
+                                {{ forms.select('', [''], 'width-full', '', 'data-ll-resource="languages" data-ll-key="language_code" data-ll-text="language_name" id="become-host-languages-select"') }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-7">
+                            <div class="mt-10 mt-xs-20">
+                                {{ lists.languages([]) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-sm-20">
+                    <label class="label-input">Can you welcome an adult?</label>
+
+                    <div class="form-group">
+                        <label class="col-xs-6">
+                            {{ forms.radio('welcomed_adult', 1, true) }}
+
+                            <span class="form-control-content text-grey">
+                                Yes
+                            </span>
+                        </label>
+                        <label class="col-xs-6">
+                            {{ forms.radio('welcomed_adult', 0) }}
+
+                            <span class="form-control-content text-grey">
+                                No
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="box light mt-30">
+        <div class="col-min-30-md">
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    {% include 'components/calender/legend.twig' %}
+                </div>
+
+                <div class="col-md-6">
+                    {% include 'components/calender/calender.twig' %}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="text-center mt-70">
+        <a href="#bh-certificates" class="btn btn-default btn-become-who" role="tab"
+           data-toggle="tab">Next</a>
+    </div>
+</div>

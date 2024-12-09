@@ -1,0 +1,101 @@
+{% extends 'layouts/dashboard.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+{% import 'macros/chart.twig' as chart %}
+
+{% block content %}
+    <div class="offer-details box bg-white mt-sm-15">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="col-avatar text-center middle-col">
+                    <div class="avatar border">
+                        <img src="/moowgly/img/dev/avatar.png" alt="Michael Keller">
+                    </div>
+                </div>
+
+                <div class="col-details mt-10 clearfix">
+                    <span class="price">
+                        20€
+                    </span>
+
+                    <span class="">
+                        <span class="user-name dark">
+                            Paleontology guided tour
+                        </span>
+                        <span class="user-address dark">
+                            Munich, Germany
+                        </span>
+                    </span>
+
+                    <div class="mt-25">
+                        <span class="date date-start">September 16, 2017</span>
+                        <span > to </span>
+                        <span class="date date-end">September 17, 2017</span>
+                    </div>
+
+                    <ul class="list-style before mt-20">
+                        <li>Daily: 13:00 - 16:00</li>
+                        <!--
+                        <li>No meal included</li>
+                        -->
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="separator-horizontal dark"></div>
+
+        <div class="row">
+            <div class="col-sm-5">
+                <ul class="list-style separator-big mt-10 sub-span">
+                    <li>Occupancy: <span>0/10</span></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 text-center-xs mt-xs-10">
+                {{ chart.circle(0) }}
+                <span class="percent">0%</span>
+            </div>
+        </div>
+
+        <div class="separator-horizontal dark"></div>
+        <div class="row">
+            <div class="col-md-12 col-20">
+                <h4>Guided Tour through the "Paläontologisches Museum München".</h4>
+                <p>Plants and animals leave behind more than just their bodies for paleontologists to study. Trace fossils are the preserved remains of plant or animal activity, like footprints, teeth marks or burrows, holes dug by animals. Each fossil tells a story about the life of the organism that left it behind and about life on Earth when it was alive. The fossil of an oyster can tell you how old the organism was when it died and what the climate, or weather, was like at that time.</p>
+                <p>Discover this huge universe and learn a lot of informations about what life was like on Earth millions of years ago.</p>
+                <p>Participants: Children and adults</p>
+                <p>Date and Time: Saturday 16. September and Sunday 17. September 13:00 - 16:00</p>
+                <p>Meeting Point: 12:50 at Bayerische Sammlung für Paläontologie, Main Entry, Richard-Wagner-Str. 10, München</p>
+                <p>Price: 20€ p.p. payment on site</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-20">
+                <img src="/moowgly/images/paleon.jpg" alt="Paleontology">
+            </div>
+        </div>
+        <!--
+        <div class="row">
+            <div class="col-sm-5">
+                <ul class="list-style separator-big mt-10 sub-span">
+                    <li>Payment: <span>Effected</span></li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <ul class="list-style separator-big mt-10">
+                    <li>
+                        <button class="btn btn-primary-border">Details</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        -->
+    </div>
+
+    <div class="text-center mt-50">
+        <button class="btn btn-default">Back</button>
+    </div>
+{% endblock %}

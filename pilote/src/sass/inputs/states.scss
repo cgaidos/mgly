@@ -1,0 +1,48 @@
+@mixin form-control-state($image) {
+  // Color the label and help text
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label  {
+
+  }
+
+  // Set the border and box shadow on specific inputs to match
+  &.form-control,
+  .form-control {
+    background-position: center right 15px;
+    background-image: img($image);
+    background-repeat: no-repeat;
+
+    padding-right: 30px;
+
+    &:focus {
+    }
+  }
+
+  // Set validation states also for addons
+  .input-group-addon {
+  }
+
+  // Optional feedback icon
+  .form-control-feedback {
+  }
+}
+
+.state {
+  @include sub('success') {
+    @include form-control-state('icon/check_20x15.png');
+  }
+
+  @include sub('error') {
+    //@include form-control-state('states/error.png');
+  }
+}
+
+

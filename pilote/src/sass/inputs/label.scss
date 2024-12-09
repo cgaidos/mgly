@@ -1,0 +1,18 @@
+label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.label {
+  @include sub('input') {
+    margin-bottom: 20px;
+
+    .form-group & {
+      display: block;
+    }
+  }
+}
+
+.help-block {
+  margin: 0;
+}

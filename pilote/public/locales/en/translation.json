@@ -1,0 +1,183 @@
+{
+  "app": {
+    "name": "Kering"
+  },
+  "login": {
+    "pageTitle": "Kering",
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "signin": "Sign in",
+    "staySignedIn": "Stay sign in"
+  },
+  "footer": {
+    "itemsLabel": "Items",
+    "custotmersLabel" : "Customers",
+    "clientBookLabel": "Client Book",
+    "settingsLabel": "Settings",
+    "moreLabel": "More"   
+  },
+  "header": {
+    "back": "Back",
+    "localName": "Local name",
+    "globalName": "Global name",
+    "customerInfo": "Customer info",
+    "settings": "Settings",
+    "more": "More",
+    "selectItem": "Select one item",
+    "itemResults": "Item results"
+  },
+  "search": {
+    "clear" : "Clear",
+    "done" : "Done",
+    "filter" : "Filter",
+    "itemSearch": "Item lookup",
+    "customerSearch": "Customer lookup",
+    "myClientSearch": "My Clients",
+    "results" : "result(s)",
+    "seconds" : "seconds",
+    "advancedSearch" : "Advanced search"
+  },
+  "searchItems": {    
+    "sku": "SKU",
+    "styleCode": "Style code",
+    "styleNumber": "Style number",
+    "productName": "Product name",
+    "fabric" : "Fabric",
+    "color": "Color",
+    "size" : "Size",
+    "department": "Department",
+    "subDepartment" : "Sub department",
+    "class": "Class",
+    "subClass" : "Sub class",
+    "selectSize": "Select a size",
+    "hierarchy_department" : "Department hierarchy",
+    "hierarchy_class" : "Class hierarchy"
+  },
+  "searchStores": {
+    "store" : "Store",
+    "store_number" : "Number",
+    "store_name" : "Name",
+    "store_address" : "Address",
+    "store_city" : "City",
+    "store_province" : "Province",
+    "store_country" : "Country",
+    "store_zip" : "Zip",
+    "store_phone" : "Phone",
+    "store_fax" : "Fax",
+    "store_region_number" : "Region number",
+    "store_manager" : "Manager"
+  },
+  "searchCustomers": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phoneNumber": "Phone Number",
+    "mail" : "Email",
+    "profil_title_detailed": "Title",
+    "profil_profession": "Profession",
+    "attribute_last_purchase": "Last purchase",
+    "attribute_registration_date": "First purchase",
+    "attribute_store": "Preferred shop",
+    "preferred_sa": "Preferred SA",
+    "address": "Address",
+    "country": "Country"
+  },
+  "filter": {
+    "label": "Filters",
+    "sizes": "Sizes",
+    "attributes": "Attributes",
+    "classification": "Classification",
+    "nationality": "Nationality",
+    "sizeJacket": "Size jacket",
+    "sizePants": "Size pants",
+    "sizeSkirt": "Size skirt",
+    "sizeShirt": "Size shirt",
+    "sizeRing": "Size ring",
+    "sizeBelt": "Size belt",
+    "sizeShoes": "Size shoes",
+    "birthday": "Birthday",
+    "birthdayBeginRange": "Birthday begin range",
+    "birthdayEndRange": "Birthday end range",
+    "recentCustomer" : "Recent customer",
+    "brand" : "Brand",
+    "missingClient" : "Missing Client",
+    "lastSixMonths" : "Last 6 months",
+    "lastThreeMonths" : "Last 3 months",
+    "topFrequentClient" : "Top frequent Client",
+    "myStore" : "My store",
+    "otherStore" : "Other store",
+    "save" : "Save",
+    "done": "Done"
+  },
+  "customerInfo": {
+    "sizes": "Sizes",
+    "information": "INFORMATION",
+    "purchases": "PURCHASES",
+    "campaigns": "CAMPAIGNS",
+    "title": "Title",
+    "profession": "Profession",
+    "birthDate": "Birth date",
+    "lastPurchase": "Last purchase",
+    "firstPurchase": "First purchase",
+    "preferredShop": "Preferred shop and S.A.",
+    "address": "Address",
+    "countryOrigin": "Country of origin"
+   },
+  "itemCard": {
+    "instore": "In store",
+    "similaritems": "Similar items",
+    "othersizes": "Other sizes",
+    "othercolors": "Other colors",
+    "bestclient": "Best client"
+   },
+  "settings":{     
+    "username": "Username",
+    "store": "Store",
+    "changePwd": "Change password",
+    "user_email": "Email",
+    "name": "Name",
+    "firstname": "Fistname",
+    "brand": "Brand"
+  },
+  "history":{     
+    "mytopclient": "My top client",
+    "mytopproduct": "My top product",
+    "item": "Item code",
+    "item_descr": "Item description",
+    "style": "Style",
+    "style_descr": "Style description",
+    "size_code": "Size code",
+    "size_label": "Size description",
+    "departement_code": "Department code",
+    "departement_description": "Departement description",
+    "filter": "Filter",
+    "filterpersalesperiod": "Filter per sales period",
+    "filterpercategory": "Filter per category",
+    "filterpernationality": "Filter per nationality",
+    "filterperreturningclient": "Returning clients",
+    "salespersegment": "Sales per segment",
+    "salesnumber": "Sales number",
+    "noformat": "No Format",
+    "scientific": "Scientific",
+    "decimal": "Decimal",
+    "short": "Short",
+    "onlysales": "Only Sales",
+    "onlyexpense": "Only Expense",
+    "all": "All",
+    "clear": "Clear"
+  },
+  "stock":{     
+    "notification": "Notification"
+  },
+  "more":{     
+    "tips": "Tips",
+    "survey": "Survey",
+    "history": "History",
+    "logout": "Logout"
+  },
+  "similarItems":{     
+    "sameStyleNumber": "Same style number",
+    "sameDepartement": "Same departement",
+    "cancel": "Cancel"
+  }
+}

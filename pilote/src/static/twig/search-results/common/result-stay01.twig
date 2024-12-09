@@ -1,0 +1,47 @@
+{% import './macros/rating.twig' as rating %}
+
+<a href="host-card_host-card">
+
+<div class="result result-stay box light mb-15">
+    <div class="row middle-row-lg">
+
+        <div class="col-lg-3 col-md-12 col-user text-center text-grey-dark middle-col clearfix">
+            <div class="row middle-row-between-md middle-row-between-sm">
+                <div class="col-lg-12 col-sm-4 col-xs-12 middle-col">
+                    <div class="avatar border">
+                        <img src="/moowgly/images/Femme3.jpg" alt="Adelina Ospanis">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-sm-4 col-xs-6 mt-20 mt-xs-10 middle-col">
+                    <span class="user-name display-block">
+                        <strong>Adelina Ospanis</strong>
+                    </span>
+                    <span class="user-address display-block">
+                        Paris, France <i class="icon-marker"></i>
+                    </span>
+                </div>
+                <div class="col-lg-12 col-sm-4 col-xs-6 middle-col mt-xs-10">
+                    <div class="mt-15 mt-md-5">
+                        {{ rating.ball(3) }}
+                    </div>
+                    <div class="">
+                        {{ rating.star(3.5) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="col-lg-7 mt-md-20 col-desc middle-col clearfix">
+            {% include 'components/calender/calender-short01.twig' %}
+        </div>
+
+        <div class="col-lg-2 middle-col mt-md-25 clearfix">
+            {% include 'components/price01.twig' %}
+        </div>
+
+    </div>
+</div>
+
+</a>

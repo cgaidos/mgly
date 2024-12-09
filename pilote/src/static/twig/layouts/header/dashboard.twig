@@ -1,0 +1,20 @@
+<div class="wrapper header bg-white">
+    <header class="container dashboard">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-4 logo-col text-center-md">
+                {% include './layouts/header/common/logo.twig' %}
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-8 nav-col">
+                <ul class="list-inline mt-25 mt-xs-5 mb-xs-10">
+                    <li>{% include './layouts/header/common/profile-menu.twig' %}</li>
+                    <li><a class="btn btn-link" href="">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</div>
+<div class="wrapper navbar-dashboard-bg">
+    <div class="container">
+        {% include './layouts/navs/dashboard.twig' %}
+    </div>
+</div>

@@ -1,0 +1,44 @@
+.language-list {
+  margin: -10px 0 0 -10px;
+  display: block;
+
+  @include sub('item') {
+    margin: 10px 0 0 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    background: $grey;
+
+    .remove {
+      background: #1e89db;
+      border: 0;
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      //background-image: img('');
+      background-position: center;
+    }
+
+    &:active,
+    &:hover {
+      img {
+        display: none;
+      }
+
+      .remove {
+        display: block;
+      }
+    }
+  }
+
+  &.no-edit {
+    &:active,
+    &:hover {
+      img {
+        display: block;
+      }
+    }
+  }
+}

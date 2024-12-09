@@ -1,0 +1,43 @@
+<div class="clearfix">
+    <div class="row nm">
+        <div class="col-sm-6 col-0 separate">
+            {{ forms.input('place', 'width-full input-place address_city', 'City') }}
+        </div>
+        <div class="col-sm-6 col-0 separate">
+            {{ forms.input('place', 'width-full input-place address_country', 'Country') }}
+        </div>
+    </div>
+
+    <script>
+        // µµµ window.bind('load', function () {
+        //    libs.typeahead.TypeaheadActivity('.activity-typeahead')
+        //})
+    </script>
+
+    <div class="row nm">
+        <div class="col-sm-12 col-0 separate">
+            {{ forms.input('activity', 'activity-typeahead width-full', 'Activity') }}
+        </div>
+    </div>
+
+    <div class="row nm">
+        <div class="col-sm-9 col-0 middle-col">
+            <div class="row nm input-daterange row-date">
+                <div class="col-sm-6 col-0 date date-from">
+                    {{ forms.input('place', 'date_from text-left width-full', 'From') }}
+                </div>
+                <div class="col-sm-6 col-0 middle-col date date-to">
+                    {{ forms.input('place', 'date_to text-left width-full', 'To') }}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 col-0 separate">
+            <a href="/moowgly/page/search-results_search-results-actrequest"><!-- µµµ -->
+                <button type="button" class="btn btn-primary btn-search width-full">
+                    Search
+                </button>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+$cert-path-90: 'cert/70x90/';
+$cert-path-80: 'cert/62x80/';
+
+.cert {
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+
+  .checkmark {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 17px;
+  }
+
+  &.checked {
+
+    .checkmark {
+      display: block;
+    }
+
+    &:hover {
+      .remove {
+        display: block;
+      }
+    }
+  }
+
+  @include sub_extend('90'){
+    width: 70px;
+    height: 90px;
+
+    &.checkmark {
+      left: 30px;
+    }
+
+    @include sub_extend('eco'){
+      background-image: img('#{$cert-path-90}certif_bank.jpg');
+    }
+
+    @include sub_extend('company'){
+      background-image: img('#{$cert-path-90}certif_company.jpg');
+    }
+
+    @include sub_extend('moo'){
+      background-image: img('#{$cert-path-90}certif_moogly.jpg');
+    }
+
+    @include sub_extend('jus'){
+      background-image: img('#{$cert-path-90}certif_police.jpg');
+    }
+
+    @include sub_extend('police'){
+      background-image: img('#{$cert-path-90}certif_psy.jpg');
+    }
+  }
+
+  @include sub_extend('80'){
+    width: 62px;
+    height: 80px;
+
+    &.checkmark {
+      //left: 16px;
+    }
+
+    @include sub_extend('eco'){
+      background-image: img('#{$cert-path-80}certif_bank.jpg');
+    }
+
+    @include sub_extend('company'){
+      background-image: img('#{$cert-path-80}certif_company.jpg');
+    }
+
+    @include sub_extend('moo'){
+      background-image: img('#{$cert-path-80}certif_moogly.jpg');
+    }
+
+    @include sub_extend('jus'){
+      background-image: img('#{$cert-path-80}certif_police.jpg');
+    }
+
+    @include sub_extend('psy'){
+      background-image: img('#{$cert-path-80}certif_psy.jpg');
+    }
+  }
+
+}

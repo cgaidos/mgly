@@ -1,0 +1,51 @@
+<script>
+    window.bind('load', function () {
+        $('[href^="#bh-"]').on('show.bs.tab', function (e) {
+            var hash = e.currentTarget.hash;
+            var siblings = $('.count-points [href^="#bh-"]');
+            var target = siblings.filter('[href="'+hash+'"]');
+
+            siblings.parents('li').removeClass('active').addClass('completed');
+            target.parents('li').find('~ .completed').removeClass('completed');
+            target.parents('li').addClass('active').removeClass('completed');
+        })
+    });
+</script>
+
+<ul class="count-points mt-20">
+    <li class="{{ point > 1 ? 'completed' : '' }} {{ point == 1 ? 'focus' : '' }}">
+        <span class="cp-point">1</span> <span class="cp-label">
+            <a href="#bh-housing" role="tab" data-toggle="tab">Housing</a>
+        </span>
+    </li>
+    <li class="{{ point > 2 ? 'completed' : '' }} {{ point == 2 ? 'focus' : '' }}">
+        <span class="cp-point">2</span>  <span class="cp-label">
+            <a href="#bh-family" role="tab" data-toggle="tab">Family</a>
+        </span>
+    </li>
+    <li class="{{ point > 3 ? 'completed' : '' }} {{ point == 3 ? 'focus' : '' }}">
+        <span class="cp-point">3</span>  <span class="cp-label">
+            <a href="#bh-activities" role="tab" data-toggle="tab">Activities</a>
+        </span>
+    </li>
+    <li class="{{ point > 4 ? 'completed' : '' }} {{ point == 4 ? 'focus' : '' }}">
+        <span class="cp-point">4</span>  <span class="cp-label">
+            <a href="#bh-media" role="tab" data-toggle="tab">Photos/Videos</a>
+        </span>
+    </li>
+    <li class="{{ point > 5 ? 'completed' : '' }} {{ point == 5 ? 'focus' : '' }}">
+        <span class="cp-point">5</span>  <span class="cp-label">
+            <a href="#bh-wishes" role="tab" data-toggle="tab">Wishes</a>
+        </span>
+    </li>
+    <li class="{{ point > 6 ? 'completed' : '' }} {{ point == 6 ? 'focus' : '' }}">
+        <span class="cp-point">6</span>  <span class="cp-label">
+            <a href="#bh-certificates" role="tab" data-toggle="tab">Certificates</a>
+        </span>
+    </li>
+    <li class="{{ point > 7 ? 'completed' : '' }} {{ point == 7 ? 'focus' : '' }}">
+        <span class="cp-point">7</span>  <span class="cp-label">
+            <a href="#bh-price" role="tab" data-toggle="tab">Price</a>
+        </span>
+    </li>
+</ul>

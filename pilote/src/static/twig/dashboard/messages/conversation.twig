@@ -1,0 +1,69 @@
+{% extends 'layouts/dashboard.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+
+{% block content %}
+
+    <div class="bg-white">
+        <div class="row">
+            <div class="col-md-12 chat">
+
+                <div class="profile clearfix">
+                    <span class="chat-avatar">
+                        {#<span class="alt-avatar">D</span>#}
+                        <img src="/moowgly/img/dev/avatar.png" alt="D">
+                    </span>
+                    <div class="col-xs-12 clearfix">
+                        <span class="chat-user-name mt-25">
+                            Adelina Ospanis
+                        </span>
+                        <span class="chat-user-address">
+                            Adelina Ospanis
+                        </span>
+                    </div>
+                </div>
+
+                <div class="messages mt-50">
+
+                    <section class="message sender">
+                        <div class="content">
+                            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.
+                        </div>
+                        <span class="date">10:30am on November 2, 2016</span>
+                    </section>
+
+                    <section class="message recipient">
+                        <div class="content">
+                            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.
+                        </div>
+                        <span class="date">10:30am on November 2, 2016</span>
+                    </section>
+
+                    <section class="message sender">
+                        <div class="content">
+                            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.
+                        </div>
+                        <span class="date">10:30am on November 2, 2016</span>
+                    </section>
+
+                </div>
+
+                <script>
+                    var replyCallback = function (xhr, message) {
+                        switch (xhr.status) {
+                            case 200: message.success('Your account was been created.'); break;
+                        }
+                    }
+                </script>
+
+                <form id="reply-form" method="post" onsubmit="controllerAjaxForm(event, this, '#reply-form .ajax-response', replyCallback)" class="answer mt-50">
+                    <textarea name="message" rows="5" class="form-control" placeholder="Your answer"></textarea>
+                    <div class="ajax-response mt-15"></div>
+                    <button type="submit" class="btn btn-primary mt-15 pull-right">Reply</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

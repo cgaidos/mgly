@@ -1,0 +1,157 @@
+
+        <div class="container">
+            <h2 class="text-center mt-75 mb-60">Upload your photos & videos</h2>
+
+            <div class="box light">
+                <div class="col-min-30-md">
+                    <div class="row middle-row-md">
+
+                        <div class="col-md-4 middle-col mb-md-20 text-center-sm">
+                            <label>Profile picture</label>
+                            <label class="help-block">(.jpeg, .png ou .pdf / maximum size: 5 Mb)</label>
+                        </div>
+
+                        <div class="col-md-4 text-center middle-col">
+                            <div id="become-host-profile-image" class="uploader uploader-circle"></div>
+                        </div>
+
+                        <div class="col-md-4 middle-col text-center mt-sm-30">
+                            <script>
+                                /**
+                                 * Global vars
+                                 */
+                                var buttonRemove;
+
+                                /**
+                                 * Clear old file elements if exists
+                                 */
+                                var clear = function () {
+                                    buttonRemove && buttonRemove.trigger('click');
+                                };
+
+                                /**
+                                 * Callback after crop save
+                                 *
+                                 * @param $crop
+                                 * @param $formFile
+                                 * @param $img
+                                 */
+                                var cropCallback = function ($crop, $formFile, $img) {
+                                    var dataURL = $crop.adapter().cropper('getCroppedCanvas').toDataURL('image/jpeg');
+                                    $img.css('backgroundImage', 'url('+dataURL+')');
+
+                                    $crop.adapter().cropper('getCroppedCanvas').toBlob(function (blob) {
+                                        $formFile.replace(blob);
+                                    });
+                                };
+
+                                /**
+                                 * Callback after file preview render when file selected
+                                 *
+                                 * @param blobUrl
+                                 * @param formFile
+                                 */
+                                var previewProfile = function (blobUrl, formFile) {
+                                    // clear old elements
+                                    clear();
+
+                                    // preview
+                                    var img = $('<div class="img">').css('backgroundImage', 'url('+blobUrl+')');
+                                    buttonRemove = $('<button class="btn btn-danger mt-10">').text('Remove').bind('click', function () {
+                                        buttonRemove.remove();
+                                        buttonCrop.remove();
+                                        crop.remove();
+                                        img.remove();
+                                        formFile.remove();
+                                    });
+
+                                    // crop
+                                    var crop = new libs.cropp(blobUrl);
+                                    crop.modal.previewBody.addClass('uploader-circle');
+                                    crop.onSave(function ($crop) {cropCallback($crop, formFile, img)});
+                                    crop.open();
+
+                                    var buttonCrop = $('<button class="btn btn-info mt-10">').text('Crop & resize').bind('click', function () {
+                                        crop.open();
+                                    });
+
+                                    // appends
+                                    $('#become-host-profile-image').append(img);
+                                    $('#become-host-profile-upload').after(buttonRemove, buttonCrop);
+                                }
+                            </script>
+
+                            <button id="become-host-profile-upload" class="btn btn-primary permanent-file-input" type="button">
+                                Upload
+                                <input onchange="fileController(event, this, previewProfile, {aggregator: 'profile', name: 'profile_picture', multiple: false})" type="file">
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="box light mt-30">
+                <div class="col-min-30-md">
+
+                    <div class="row middle-row-md">
+
+                        <div class="col-md-4 middle-col mb-md-20 text-center-sm">
+                            <label>Photos & videos of your family and house</label>
+                            <label class="help-block">(.jpeg, .png ou .pdf / maximum size: 15 Mb)</label>
+                        </div>
+
+
+                        <div class="col-md-4 text-center middle-col">
+                            <div class="uploader uploader-square permanent-file-input">
+                                <input multiple onchange="fileController(event, this, previewFiles, {aggregator: 'files', name: 'photos', multiple: true})" type="file">
+                            </div>
+                        </div>
+
+                        <script>
+                            var previewFiles = function (urlData, formFile) {
+                                var template = $(`<li class="uploaded-list-item"></li>`);
+                                var button = $('<button type="button" class="remove"></button>').bind('click', function () {
+                                    formFile.remove();
+                                    button.remove();
+                                    template.remove();
+                                });
+
+                                if (formFile.matchType('video')) {
+                                    template.addClass('play');
+                                    template.append(`<video width="100%" height="100%" id="video"><source src="`+urlData+`"></video>`);
+                                } else {
+                                    template.css('backgroundImage', 'url('+urlData+')')
+                                }
+
+                                $('.uploaded-list').append(template.append(button));
+                            }
+                        </script>
+
+                        <div class="col-md-4 middle-col text-center mt-sm-30">
+                            <button id="become-host-files-upload" class="btn btn-primary permanent-file-input" type="button">
+                                Upload a photo
+                                <input accept="image/*" multiple onchange="fileController(event, this, previewFiles, {aggregator: 'files', name: 'photos', multiple: true})" type="file">
+                            </button>
+
+                            <button id="become-host-files-upload" class="btn btn-primary permanent-file-input mt-10" type="button">
+                                Upload a video
+                                <input accept="video/*" multiple onchange="fileController(event, this, previewFiles, {aggregator: 'files', name: 'photos', multiple: true})" type="file">
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-50 mb-20">
+                        <div class="row-md-12 text-center">
+                            <ul class="uploaded-list"></ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-70">
+                <a href="#bh-wishes" class="btn btn-default btn-become-who" role="tab" data-toggle="tab">Next</a>
+            </div>
+        </div>

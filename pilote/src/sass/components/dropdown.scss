@@ -1,0 +1,65 @@
+.dropdown {
+  display: inline-block;
+
+  @include sub('moo') {
+    min-width: 180px;
+
+    .avatar {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .dropdown-toggle {
+      width: 100%;
+      background: transparent;
+      border: 1px solid $grey-light;
+      color: $grey;
+      text-align: left;
+      position: relative;
+      padding: 8px 40px 8px 10px;
+
+      .icon-caret-small {
+        position: absolute;
+        margin: 0 5px;
+        top: 50%;
+        margin-top: -8px;
+        right: 12px;
+      }
+    }
+
+    .dropdown-menu {
+      width: 100%;
+      min-width: 0;
+      margin: 0;
+      border-top: 0;
+      box-shadow: none;
+      border-color: $grey-light;
+
+      li {
+        width: 100%;
+
+        .btn.btn-link {
+          color: $grey;
+          text-align: left;
+          padding: 5px 25px;
+          white-space: normal;
+        }
+
+        .sign-out {
+          margin: 15px 15px 8px 15px;
+          padding: 8px 12px;
+          color: #fff;
+        }
+      }
+    }
+
+    &.open {
+      .dropdown-toggle {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}

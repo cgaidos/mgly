@@ -1,0 +1,62 @@
+{% extends 'layouts/become-host.twig' %}
+{% import 'macros/forms.twig' as forms %}
+
+{% block content %}
+<!-- µµµ
+    {% for activityCategory in activityCat %}
+        <li>{{ activityCategory.act_cat_en }}</li>
+    {% endfor %}
+-->
+    <form method="post" id="become-host-form" onsubmit="return false">
+
+        <div class="tab-content">
+
+            {# start #}
+            <div role="tabpanel" class="tab-pane {{ menuActive('start') }}" id="bh-start">
+                {% include 'become-host/start.twig' %}
+            </div>
+
+            {# housing #}
+            <div role="tabpanel" class="tab-pane fade {{ menuActive('housing') }}" id="bh-housing">
+                {% include 'become-host/housing.twig' %}
+            </div>
+
+            {# family #}
+            <div role="tabpanel" class="tab-pane fade {{ menuActive('family') }}" id="bh-family">
+                {% include 'become-host/family/family.twig' %}
+            </div>
+
+            {# activites #}
+            <div role="tabpanel" class="tab-pane fade {{ menuActive('activities') }}" id="bh-activities">
+                {% include 'become-host/activities.twig' %}
+            </div>
+
+            {# media #}
+            <div role="tabpanel" class="tab-pane fade {{ menuActive('media') }}" id="bh-media">
+                {% include 'become-host/media.twig' %}
+            </div>
+
+            {# wishes #}
+            <div role="tabpanel" class="tab-pane fade {{ menuActive('wishes') }}" id="bh-wishes">
+                {% include 'become-host/wishes.twig' %}
+            </div>
+
+            {# certificates #}
+            <div role="tabpanel" class="tab-pane fade {{ menuActive('certificates') }}" id="bh-certificates">
+                {% include 'become-host/certificates.twig' %}
+            </div>
+
+            {# pirice #}
+            <div role="tabpanel" class="tab-pane fade {{ menuActive('price') }}" id="bh-price">
+                {% include 'become-host/price.twig' %}
+            </div>
+
+            {# summary #}
+            <div role="tabpanel" class="tab-pane fade {{ menuActive('summary') }}" id="bh-summary">
+                {% include 'become-host/summary.twig' %}
+            </div>
+
+        </div>
+
+    </form>
+{% endblock %}

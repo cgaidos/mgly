@@ -1,0 +1,202 @@
+@mixin day($dayOdWeek: 1) {
+  &:nth-child(7n+#{$dayOdWeek}) {
+    @content;
+  }
+}
+
+@mixin weekend() {
+  @include day(7) {
+    @content;
+  }
+  @include day(6) {
+    @content;
+  }
+}
+
+$day-colsize: 100% / 7;
+
+.calender {
+  width: 100%;
+  user-select: none;
+
+  .days {
+    width: 100%;
+
+    li {
+      position: relative;
+      font-size: $font-size-base;
+      display: block;
+      float: left;
+      width: $day-colsize;
+      text-align: center;
+      color: $cal-inactive-color;
+      margin: $cal-margin;
+      height: 30px;
+      line-height: 30px;
+      z-index: 0;
+      cursor: pointer;
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        z-index: -1;
+      }
+
+      &.from {
+        &:before {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          left: 5px;
+        }
+      }
+
+      &.to {
+        &:before {
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+          right: 5px;
+        }
+      }
+
+      &.unavailable {
+        color: $cal-inactive-color;
+
+        &:before {
+          background: $cal-inactive-bg;
+        }
+      }
+
+      &.available {
+        color: $cal-available-color;
+
+        &:before {
+          background: $cal-available-bg;
+        }
+      }
+
+      &.rez {
+        color: $cal-booked-color;
+
+        &:after {
+          border-radius: 10px 0 0 10px;
+          background: $cal-booked-bg;
+        }
+
+        & + .rez {
+          &:after {
+            border-radius: 0;
+          }
+        }
+
+        & + .rez-radius {
+          &:after {
+            border-radius: 0 10px 10px 0;
+          }
+        }
+
+      }
+
+      @include day(1) {
+        &.radius {
+          &:before {
+            left: 0;
+
+            //border-bottom-left-radius: 0;
+            //border-top-left-radius: 0;
+          }
+        }
+      }
+
+      @include day(7) {
+        &.radius {
+          &:before {
+            right: 0;
+
+            //border-bottom-right-radius: 0;
+            //border-top-right-radius: 0;
+          }
+        }
+      }
+
+      @include weekend() {
+      }
+    }
+  }
+}
+
+// nav
+.calender-nav {
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  user-select: none;
+
+  button {
+    text-transform: uppercase;
+  }
+
+  .current {
+    font-size: 17px;
+    white-space: nowrap;
+    text-align: center;
+    color: #747474;
+  }
+
+  .prev {
+    text-align: left;
+    color: #b4b4b4;
+    padding-left: 30px;
+    min-height: 17px;
+    min-width: 10px;
+    background: img('arrow/arrow_prev_10x17.png') no-repeat left center;
+  }
+
+  .next {
+    text-align: right;
+    color: #b4b4b4;
+    padding-right: 30px;
+    min-height: 17px;
+    min-width: 10px;
+    background: img('arrow/arrow_next_10x17.png') no-repeat right center;
+  }
+
+  &.short {
+    padding: 25px 0;
+
+    .current {
+      font-size: 15px;
+    }
+  }
+}
+
+// legend
+.legend {
+  .available {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: top;
+    background: $cal-available-bg;
+    margin-right: 15px;
+    margin-top: 3px;
+  }
+  .unavailable {
+    @extend .available;
+
+    background: $cal-inactive-color;
+  }
+
+  .booked {
+    @extend .available;
+
+    background: $cal-booked-bg;
+  }
+}
+

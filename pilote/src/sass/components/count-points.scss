@@ -1,0 +1,131 @@
+.count-points {
+  white-space: nowrap;
+  max-width: 100%;
+
+  li {
+    display: inline-block;
+    position: relative;
+    max-width: 110px;
+    width: 12vw;
+    text-align: center;
+    transform: scale(1);
+    white-space: normal;
+
+    &:before {
+      z-index: 1;
+      content: '';
+      display: block;
+      position: absolute;
+      background: $grey;
+      height: 1px;
+      max-width: 110px;
+      width: 12vw;
+      top: 15px;
+      left: calc(50% + 13px); // 30px / 2 - 2px (border)
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    .cp-point {
+      position: relative;
+      display: inline-block;
+      max-width: 30px;
+      max-height: 30px;
+      text-indent: -2px;
+
+      width: 12vw;
+      height: 12vh;
+
+      border: 1px solid $grey;
+      color: $grey;
+      border-radius: 50%;
+      font-weight: bold;
+      line-height: 26px;
+      text-align: center;
+      background: #fff;
+      z-index: 1;
+    }
+
+    .cp-label {
+      display: inline-block;
+      margin-top: 15px;
+      width: 100%;
+
+      a {
+        color: $grey;
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      .cp-point {
+          border: 1px solid $count-points-color;
+          color: $count-points-color;
+          transform: scale(1.33);
+      }
+
+      .cp-label {
+        a {
+          color: $count-points-color;
+        }
+      }
+    }
+
+    &.completed {
+      .cp-point {
+        border: 1px solid $count-points-color;
+        background: $count-points-color;
+        color: #fff;
+        text-indent: -1px;
+      }
+
+      .cp-label {
+        a {
+          color: $count-points-color;
+        }
+      }
+
+      &:before {
+        background: $count-points-color;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+      &:before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .cp-label {
+        a {
+          color: transparent;
+        }
+      }
+
+      &.completed {
+        .cp-label {
+          a {
+            color: transparent;
+          }
+        }
+      }
+
+      &.focus {
+        .cp-label {
+          a {
+            color: $count-points-color;
+          }
+        }
+
+        .cp-point {
+          transform: scale(1);
+        }
+      }
+    }
+
+  }
+}

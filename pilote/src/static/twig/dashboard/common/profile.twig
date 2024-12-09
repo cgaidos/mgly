@@ -1,0 +1,30 @@
+{% import 'macros/rating.twig' as rating %}
+
+<section class="profile-widget">
+    <div class="profile-widget-content">
+        {% if edit != false %}
+        <nav class="manage-nav">
+            <button title="Settings"><span class="sr-only">Settings</span><i class="icon-settings"></i></button>
+        </nav>
+        {% endif %}
+
+        <h4 class="profile-username">Michael Keller</h4>
+
+        <div class="clearfix"></div>
+
+        <div class="profile-avatar">
+            <img src="/moowgly/img/dev/avatar.png" alt="Michael Keller">
+        </div>
+
+        <div class="clearfix"></div>
+
+        <span class="profile-address">Munich, Germany &nbsp;<i class="icon-marker"></i></span>
+
+        <div class="mt-25">
+            {{ rating.ball(3) }}
+        </div>
+        <div class="mt-5 mb-10">
+            {{ rating.star(3.5) }}
+        </div>
+    </div>
+</section>

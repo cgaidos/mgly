@@ -1,0 +1,8 @@
+body .tooltip {
+  .tooltip-inner {
+    border-radius: 2px;
+    padding: 5px 15px;
+    font-size: $font-size-base;
+    text-transform: lowercase;
+  }
+}

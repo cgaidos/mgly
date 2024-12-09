@@ -1,0 +1,14 @@
+.content {
+
+  @include sub('sidebar') {
+    @include sub('left') {
+      @include media_min('md') {
+        padding-left: 10px;
+      }
+    }
+
+    @include sub('right') {
+
+    }
+  }
+}

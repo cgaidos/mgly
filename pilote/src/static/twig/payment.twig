@@ -1,0 +1,159 @@
+{% extends 'layouts/payment.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+
+{% block content %}
+    <h3 class="mt-50 mb-60 text-center">Payment</h3>
+
+    <div class="box light payment">
+        <div class="row">
+            <div class="col-xs-12 text-center mt-10 mb-30">
+                Recapitulative
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <div class="mb-5">
+                    <span>At</span>
+                    <span class="text-primary">Laurent Lambda</span>
+                </div>
+                <div class="mb-5">
+                    <span>in</span>
+                    <span class="text-primary">[complete adress] Marseille, Paris</span>
+                </div>
+                <div class="mb-5">
+                    <span>for</span>
+                    <span class="text-primary">1</span>
+                    <span>kid who is</span>
+                    <span class="text-primary">8</span>
+                    <span>years old</span>
+                </div>
+            </div>
+            <div class="col-md-6 text-center border-left mt-sm-15">
+                <div class="mb-10">
+                    <span>from</span>
+                    <span class="text-primary">02/09</span>
+                    <span>to</span>
+                    <span class="text-primary">08/09</span>
+                </div>
+                <div class="mb-5">
+                    <span class="text-small text-grey-light text-italic">15€ x 7 days</span>
+                </div>
+                <div>
+                    <span class="text-primary cost text-bold">105€</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box light payment mt-20">
+        <div class="col-30">
+            <form>
+                <div class="row">
+                    <div class="col-xs-12 text-right mb-30">
+                        <span class="text-grey-light text-italic">Secure payment</span>
+                    </div>
+                </div>
+                <div class="row pb-40">
+                    <div class="col-md-3 mt-10">
+                        <span>Chose your payment method:</span>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="top col-xs-2 text-right text-left-sm">
+                                {{ forms.radio('method', 'card') }}
+                            </div>
+
+                            <div class="col-xs-10">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="top col-xs-2 text-right text-left-sm">
+                                {{ forms.radio('method', 'paypal') }}
+                            </div>
+
+                            <div class="col-xs-10">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator-horizontal"></div>
+
+                <div class="row mt-40">
+                    <div class="col-md-3">
+                        <label class="form-control-content">
+                            Card number:
+                        </label>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-10">
+                    <div class="col-md-3">
+                        <label class="form-control-content">
+                            Expires:
+                        </label>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            {{ forms.select('mm', {1:01,2:02}, 'width-full') }}
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            {{ forms.select('yyyy', {1:2000,2:2001}, 'width-full') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-10">
+                    <div class="col-md-3">
+                        <label class="form-control-content">
+                            Security code:
+                        </label>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            {{ forms.input('code', 'width-full') }}
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+
+                            <label class="form-control-content text-grey text-italic">
+                                (3 numbers at the back)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-20">
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-9">
+                        <label>
+                            <span>{{ forms.checkbox('yyyy', true) }}</span>
+                            <span class="form-control-content text-grey">Save this card for your next bookings</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row mt-80 mb-30">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-warning">Pay 105€</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

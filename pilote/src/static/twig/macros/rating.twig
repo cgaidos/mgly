@@ -1,0 +1,31 @@
+{% macro ball(value, editable = false, upto = 5) %}
+    {% if editable == true %}{% set editable = 'editable' %}{% endif %}
+
+    <div class="rating-balls {{ editable }}">
+        {% for val in 1..upto %}
+
+            {% if val <= value %}{% set active = 'active' %} {% else %} {% set active = '' %} {% endif %}
+            {% if (val - value > 0 and val - value < 1) %} {% set half = 'half' %} {% else %} {% set half = '' %} {% endif %}
+
+            <i class="ball {{ active }} {{ half }}"></i>
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro star(value, editable = false, upto = 5) %}
+    {% if editable == true %}{% set editable = 'editable' %}{% endif %}
+
+    <div class="rating-stars {{ editable }}">
+        {% for val in 1..upto %}
+
+            {% if val <= value %} {% set active = 'active' %} {% else %} {% set active = '' %} {% endif %}
+            {% if (val - value > 0 and val - value < 1) %} {% set half = 'half' %} {% else %} {% set half = '' %} {% endif %}
+
+            <i class="star {{ active }} {{ half }}"></i>
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro desc(value, editable = false, upto = 5) %}
+    <span class="rating-desc">(rating of Moogly users)</span>
+{% endmacro %}

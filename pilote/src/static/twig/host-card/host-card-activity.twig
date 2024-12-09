@@ -1,0 +1,100 @@
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/rating.twig' as rating %}
+{% import 'macros/chart.twig' as chart %}
+{% import 'macros/notification.twig' as notification %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include './layouts/common/head.twig' %}
+</head>
+<body class="bg-grey-light">
+{% include './layouts/common/modals.twig' %}
+
+{% include './layouts/common/pages.twig' %}
+
+<div id="page">
+    {% include './layouts/header/host-card.twig' %}
+    {% include './layouts/common/head-slider.twig' %}
+    {% include './layouts/common/notification.twig' with {notification: block('notification')} %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-lg-4">
+                {% include 'host-card/common/sidebar.twig' %}
+            </div>
+            <div class="col-md-7 col-lg-8 content content-sidebar-left">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-md-7 col-lg-8 content content-sidebar-left">
+                <div class="guest-card">
+                    <div class="box light mt-sm-10">
+
+
+                        <div class="row middle-row-lg text-center-md">
+
+                            <div class="col-lg-4 col-20 middle-col">
+                                <div class="avatar border">
+                                    <img class="px-150" src="/moowgly/images/Femme3.jpg" alt="Adelina Ospanis">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8 col-20 middle-col mt-md-15">
+                                <h4 class="user-name dark mt-5">Horse riding</h4>
+                                <h5 class="dark mt-5 display-block">Adelina Ospanis</h5>
+                                <h5 class="user-address dark">Paris, France <i class="icon-marker"></i></h5>
+
+                                <div class="mt-15">
+                                    {{ rating.star(3) }}
+                                </div>
+                                <div class="mt-5">
+                                    {{ rating.ball(4) }} <span style="margin-left: 15px" class="text-grey display-block-md text-italic">(rating of moowhly users)</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-30">
+                                <div class="separator-horizontal"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12 col-20">
+                                <h3 class="mb-20">Horse riding</h3>
+                                <p>We offer 2 horse riding lessons of 4 hours on horses and ponies.</p>
+                                <p>Saturday and Sunday afternoon from 1pm to 5pm.</p>
+                                <p>These 2 sessions are offered for a modest price of 105 euro per person all inclusive. Boots and equipment will be provided. Drink and course are inclusive. Horse riding in Boulogne woods following special circuit will be done. This offer is limited to 4 people.</p>
+                                <p>Meeting place : Centres équestres, équitation  Cartoucherie bois de Vincennes, 75012 PARIS</p>
+                                <p>Meeting time: 1pm</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-70 mb-50">
+                            <div class="col-md-12 text-center">
+                                {{ chart.circleRange(2, 4, 250) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box light mt-sm-10 mt-10">
+                        <h3>Reviews</h3>
+
+                        <div class="reviews">
+                            {% include './guest/reviews/partials/review-host.twig' %}
+                            {% include './guest/reviews/partials/review-host.twig' with {answer: true} %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include './layouts/footer/footer.twig' %}
+
+{% include './layouts/common/scripts.twig' %}
+</body>
+</html>

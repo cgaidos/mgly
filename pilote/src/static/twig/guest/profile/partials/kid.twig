@@ -1,0 +1,69 @@
+{% import './macros/rating.twig' as rating %}
+{% import './macros/forms.twig' as forms %}
+
+<div class="kid">
+
+    {# kid rating #}
+    <div class="pull-right text-right text-small text-nowrap">
+        {{ rating.star(3.5) }}
+        <span class="help-block text-nowrap">(rating of Moogly users)</span>
+    </div>
+
+    <div class="clearfix"></div>
+
+
+
+
+    {# kid photo #}
+    <div class="row middle-row-sm">
+        <div class="col-sm-5 text-right text-center-xs middle-col">
+            <div class="kid-image-preview uploader uploader-circle"></div>
+        </div>
+
+        <div class="col-sm-7 middle-col text-left text-center-xs mt-sm-30 middle-col">
+            <button class="btn btn-primary permanent-file-input" type="button">
+                Upload
+                <input class="kid-image" type="file">
+            </button>
+            <span class="help-block mt-5">(.jpeg, .png ou .pdf / maximum size: 5 Mb)</span>
+        </div>
+    </div>
+
+    {# kid name #}
+    <div class="row mt-30">
+        <div class="col-lg-4 col-sm-5 col-lg-offset-2 text-center">
+            {{ forms.input('name') }}
+        </div>
+
+        <div class="col-lg-2 col-sm-4 col-xs-8 col-min-20-sm mt-xs-15">
+            {{ forms.select('name', [1,2,3], 'width-full') }}
+        </div>
+
+        <div class="col-lg-2 col-sm-3 col-xs-4 mt-xs-15">
+            <span class="form-control-content">hears old</span>
+        </div>
+    </div>
+
+    {# kid activites #}
+    <div class="row mt-50">
+        <div class="activites text-center">
+            <span class="activity cat-pet"></span>
+            <span class="activity cat-sport"></span>
+            <span class="activity cat-music"></span>
+
+            <button type="button" class="activites-add"><span class="sr-only">Add</span></button>
+        </div>
+    </div>
+
+    <div class="row mt-30">
+        <div class="col-lg-7 col-20-lg mt-5 text-right text-left-md">
+            <div class="tags kid-tags"></div>
+        </div>
+
+        <div class="col-lg-4 mt-md-15">
+            {% set attr = 'placeholder="Activities" data-ll-resource="activities" data-ll-text="act_en" data-ll-key="act_code"' %}
+            {{ forms.select('', [], 'width-full activities-list', '', attr) }}
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,41 @@
+.separator {
+
+  @include sub('horizontal') {
+    height: $separator-h-size;
+    display: block;
+    background-color: $separator-h-bg;
+    margin: $separator-h-margin;
+
+    &.dark {
+      background-color: $separator-h-bg-dark;
+    }
+  }
+
+
+  @include sub('title') {
+    display: block;
+    position: relative;
+
+    span {
+      background: #fff;
+      display: inline-block;
+      position: relative;
+      padding: 0 8px;
+    }
+
+    &:before {
+      @extend .separator-horizontal;
+
+      content: '';
+      display: block;
+      height: 1px;
+      margin: 0;
+      right: 0;
+      left: 0;
+
+      position: absolute;
+      top: 50%;
+    }
+  }
+
+}

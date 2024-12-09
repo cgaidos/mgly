@@ -1,0 +1,11 @@
+{% extends 'layouts/guest-card.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/rating.twig' as rating %}
+
+{% block content %}
+    <div class="guest-card mt-sm-10">
+        <div class="kids boxes">
+            {% include 'guest-card/common/kid.twig' %}
+        </div>
+    </div>
+{% endblock %}

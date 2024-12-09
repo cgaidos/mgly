@@ -1,0 +1,100 @@
+{% extends 'layouts/guest.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+
+{% block menu %}
+    {% include './guest/profile/nav.twig' %}
+{% endblock %}
+
+{% block content %}
+    <form id="guest-profile-form" action="guest_profile_kids">
+
+        <div class="box light mt-sm-15">
+            <h2 class="text-center">Personal informations</h2>
+
+                <div class="mt-40">
+
+                <div class="row form-group">
+                    <div class="col-sm-3 text-right text-left-xs">
+                        <span class="form-control-content">Address: </span>
+                    </div>
+                    <div class="col-sm-7">
+                        {{ forms.input('name', '', 'calle de la Montera, 7 - 28013 Madrit, Spain') }}
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-sm-3 text-right text-left-xs">
+                        <span class="form-control-content">Email: </span>
+                    </div>
+                    <div class="col-sm-7">
+                        {{ forms.input('name', '', 'name@example.org', '', 'email') }}
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-sm-3 text-right text-left-xs">
+                        <span class="form-control-content">Phone number: </span>
+                    </div>
+                    <div class="col-sm-7">
+                        {{ forms.input('name', '', '+336 45 78 45 12') }}
+                    </div>
+                </div>
+                </div>
+
+        </div>
+
+        <div class="box light mt-10">
+
+            <h2 class="text-center">Profile picture</h2>
+            <div class="text-grey text-center">(.jpeg, .png ou .pdf / maximum size: 5 Mb)</div>
+
+            <div class="row middle-row-sm mt-40">
+
+                <script>
+                    var previewProfile = function (urlData, formFile) {
+                        var img = $('<div class="img">').css('backgroundImage', 'url('+urlData+')');
+                        var button = $('<br><button style="clear: both" class="btn btn-danger mt-10">').text('Remove').bind('click', function () {
+                            button.remove();
+                            img.remove();
+                            formFile.remove();
+                        });
+
+                        $('#guest-profile-form .image-preview').append(img);
+                        $('#guest-profile-image-input').after(button);
+                    };
+                </script>
+
+                <div class="col-sm-6 text-right text-center-xs middle-col">
+                    <div class="image-preview uploader uploader-circle"></div>
+                </div>
+                <div class="col-sm-1 middle-col">
+
+                </div>
+                <div class="col-sm-5 middle-col text-left text-center-xs mt-sm-30">
+                    <button id="guest-profile-image-input" class="btn btn-primary permanent-file-input" type="button">
+                        Upload
+                        <input onchange="fileController(event, this, previewProfile, {aggregator: 'guest_profile', name: 'guest_profile', multiple: false})" type="file" accept="image/*">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            var questProfileCallback = function (xhr, message) {
+                switch (xhr.status) {
+                    case 200: message.success('Your account was been created.'); break;
+                }
+            }
+        </script>
+
+        <div class="ajax-response mt-15"></div>
+        <div class="text-center mt-50">
+            <button onclick="controllerAjaxForm(event, this.form, '#guest-profile-form .ajax-response', questProfileCallback)" type="submit" class="btn btn-default">Apply changes</button>
+        </div>
+
+    </form>
+
+{% endblock %}
+

@@ -1,0 +1,62 @@
+.reviews {
+  @include media_between('lg') {
+    //margin-left: -20px;
+  }
+
+  .review {
+    padding: 20px 0;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid transparent;
+
+    .col-avatar {
+      padding-right: 15px;
+    }
+
+    & + .review {
+      margin-top: 10px;
+    }
+
+    & + .review.answer {
+      margin-top: 0;
+
+      .col-avatar {
+        border-left: 1px solid $grey-light;
+        padding-left: 15px;
+      }
+    }
+
+    .avatar {
+      img {
+        max-width: 60px;
+        max-height: 60px;
+      }
+    }
+
+    .user-name {
+      display: block;
+      font-weight: bold;
+      color: $grey;
+    }
+
+    .date {
+      color: $grey;
+      font-style: italic;
+    }
+
+    .col-kid {
+      border-left: 1px solid $grey-light;
+    }
+
+
+    @include media_max('xs') {
+      padding: 20px;
+
+      .avatar {
+        padding: 0 5px;
+      }
+    }
+
+  }
+}

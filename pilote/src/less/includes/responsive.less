@@ -1,0 +1,145 @@
+/* Medium devices (desktops, 992px and up) */
+
+.visible-mobile-inline{
+  display:none;
+}
+
+.visible-mobile{
+  display:none;
+}
+
+.burger{
+  display:none;
+}
+
+@navbar-mobile-height:50px;
+@media (max-width: 992px)
+{
+
+  .panel-projets{
+    overflow-y:hidden;
+  }
+
+  .visible-mobile-inline{
+    display: inline-block;
+  }
+
+  .visible-mobile{
+    display: block;
+  }
+
+  @sidebarWidth:250px;
+
+  body{
+    padding-top: ~'calc( 50px + 15px )';
+  }
+  .main{
+    padding-left: 15px!important;
+  }
+  .sidebar{
+    left:-@sidebarWidth;
+    top:@navbar-mobile-height;
+    width:@sidebarWidth;
+    z-index: 3;
+
+    br{
+      display:none;
+    }
+
+    .user-info a{
+      color:@colorMain;
+    }
+    
+    .item a{
+      text-align: left;
+      padding-left: 15px;
+
+      i{
+        padding-right: 15px;
+      }
+    }
+
+    .item-text{
+      position:relative;
+      bottom: 5px;
+    }
+
+    &.show{
+      left:0;
+    }
+
+  }
+
+  .navbar-moowgly
+  {
+    background-color: #1d262b;
+    height: @navbar-mobile-height;
+    border:0;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+
+    .navbar-container{
+      display: none;
+    }
+
+    .navbar-header{
+      height:@navbar-mobile-height;
+      background-color: initial;
+    }
+
+    .navbar-brand{
+      height:@navbar-mobile-height;
+      line-height: @navbar-mobile-height;
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      width: 75%;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+
+  .burger{
+    display:block;
+    position:absolute;
+    left:0px;
+    top:0;
+    padding: 10px;
+    color:#fff;
+    cursor: pointer;
+  }
+
+  .panel-icon{
+    padding-left: initial;
+
+    .icon-container{
+      display:none;
+    }
+  }
+
+  .panel-projets{
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: -15px;
+    .subtitle{
+      display:none;
+    }
+
+    h4{
+        padding:15px 0;
+        text-align: center;
+        margin-right: -15px;
+        margin-left: -15px;
+        margin-top: -15px!important;
+        background-color: @blue;
+        color:#fff;
+    }
+  }
+
+  .project-overview{
+    margin-bottom:0px;
+  }
+
+
+}

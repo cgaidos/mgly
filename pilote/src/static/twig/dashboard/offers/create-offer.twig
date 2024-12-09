@@ -1,0 +1,257 @@
+{% extends 'layouts/dashboard.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/form-components.twig' as formComponents %}
+{% import 'macros/notification.twig' as notification %}
+{% import 'macros/chart.twig' as chart %}
+
+{% block content %}
+    <div class="offer-create box bg-white mt-sm-15">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center mb-30 mt-0 title">Create an activity</h3>
+
+                <div class="row mt-30 box-border mb-50">
+                    <div class="col-md-3">
+                        <div class="form-control-content">Type of request:</div>
+                    </div>
+                    <div class="col-md-3 text-grey">
+                        <label style="color: #278AD7;">{{ forms.radio('Request', '', true) }} I offer an activity</label>
+                    </div>
+
+                    <div class="col-md-3 text-grey">
+                        <label style="color: #278AD7;">{{ forms.radio('Request') }} I seek an activity</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Short description of activity:</label>
+                    {{ forms.input('title', '', 'Title') }}
+                </div>
+                <!--
+                <div class="form-group">
+                    {{ forms.input('code', '', 'Code') }}
+                </div>
+                -->
+            </div>
+        </div>
+        <!--
+        <div class="row mt-30">
+            <div class="col-md-12">
+                <ul class="list-inline">
+                    <li>Categories:</li>
+                    <li>{{ formComponents.categiries() }}</li>
+                </ul>
+            </div>
+        </div>
+        -->
+        <div class="row mt-30">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Where?</label>
+                </div>
+                {{ formComponents.where() }}
+            </div>
+        </div>
+
+
+        <div class="row mt-30">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>When?</label>
+                </div>
+                {{ formComponents.when() }}
+            </div>
+        </div>
+        <!--
+        <div class="row mt-30">
+            <div class="col-md-3">
+                <div class="form-control-content">Type:</div>
+            </div>
+            <div class="col-md-3 text-grey">
+                <label>{{ forms.radio('type') }} Camp</label>
+            </div>
+
+            <div class="col-md-3 text-grey">
+                <label>{{ forms.radio('type') }} Activity</label>
+            </div>
+        </div>
+
+        <div class="row mt-30">
+            <div class="col-md-3">
+                <div class="form-control-content">Meals:</div>
+            </div>
+            <div class="col-md-3 text-grey">
+                <label>{{ forms.radio('meals') }} Included</label>
+            </div>
+
+            <div class="col-md-3 text-grey">
+                <label>{{ forms.radio('meals') }} Excluded</label>
+            </div>
+        </div>
+
+        <div class="row mt-30">
+            <div class="col-md-3">
+                <div class="form-control-content">Accommodation:</div>
+            </div>
+            <div class="col-md-3 text-grey">
+                <label>{{ forms.radio('accommodation') }} Included</label>
+            </div>
+
+            <div class="col-md-3 text-grey">
+                <label>{{ forms.radio('accommodation') }} Excluded</label>
+            </div>
+        </div>
+        -->
+        <div class="row mt-30">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <label>Price?</label>
+                        {{ forms.input('price') }}
+                    </div>
+
+                    <div class="col-sm-3 col-md-4 mt-xs-10">
+                        <label>Currency?</label>
+                        {{ forms.select('currency', ['Euro', 'USD']) }}
+                    </div>
+
+                    <div class="col-sm-3 col-md-4 mt-xs-10">
+                        <label style="margin-top:30px;">Per hour?</label>
+                        {{ forms.checkbox() }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-30">
+            <div class="col-md-3">
+                <div class="form-control-content">Number of participants:</div>
+            </div>
+            <div class="col-md-3 text-grey-dark">
+                {{ forms.select('currency', [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]) }}
+            </div>
+        </div>
+
+        <div class="row mt-30 schedule">
+            <div class="col-md-2">
+                <div class="form-control-content">Timetable:</div>
+            </div>
+
+            <div class="col-md-3 text-grey-dark">
+                <label>{{ forms.radio('timetable') }} Fulltime</label>
+            </div>
+
+            <div class="col-md-1 text-grey-dark">
+                {{ forms.radio('timetable') }}
+            </div>
+
+            <div class="col-md-6 text-grey-dark">
+                {{ formComponents.when() }}
+            </div>
+        </div>
+
+        <div class="row mt-30 periodic">
+            <div class="col-md-2">
+                <div class="form-control-content">Type of event:</div>
+            </div>
+
+            <div class="col-md-3 text-grey-dark">
+                <label>{{ forms.radio('periodicity', 'single', true) }} Single</label>
+            </div>
+
+            <div class="col-md-3 text-grey-dark">
+                <label>{{ forms.radio('periodicity', 'repeat', false) }} Repetitive</label>
+            </div>
+        </div>
+
+        <div class="row mt-15 weeks hide">
+        <!--
+            <div class="col-md-2">
+                <div class="form-control-content">Frequency:</div>
+            </div>
+            <div class="col-md-3 text-grey">
+                <label>{{ forms.radio('timetable') }} Daily</label>
+            </div>
+
+            <div class="col-md-1">
+                <div class="form-control-content text-grey">or</div>
+            </div>
+        -->
+            <div class="col-md-12">
+                <div class="form-control-content">Choose weekday(s):</div>
+            </div>
+            <div class="col-md-8 text-grey-dark">
+                {{ formComponents.days() }}
+            </div>
+        </div>
+
+        <div class="row mt-30">
+            <div class="col-md-12">
+                <textarea class="form-control" name="desc" style="margin: 0px; height: 273px; width: 672px;"></textarea>
+            </div>
+        </div>
+
+        <div class="row mt-30">
+            <div class="col-md-12 mb-20">
+                <label>Photos & videos to illustrate your activity</label>
+                <label class="help-block">(.jpeg, .png ou .pdf / maximum size: 15 Mb)</label>
+            </div>
+        </div>
+
+        <div class="row mt-30 middle-row-sm">
+            <div class="col-sm-8 text-center mt-30 middle-col">
+                <div id="activity-image" class="uploader uploader-square" style="border-radius:0;"></div>
+            </div>
+
+            <div class="col-sm-4 text-left text-center-sm mt-30 middle-col">
+                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                    <script>
+                        var previewAct = function (blobUrl, formFile) {
+                            // preview
+                            var img = $('<div class="img">').css('backgroundImage', 'url('+blobUrl+')');
+                            // appends
+                            $('#activity-image').append(img);
+                        }
+                    </script>
+                    <button id="activity-upload" class="btn btn-primary permanent-file-input" type="button">
+                        Upload
+                        <input onchange="fileController(event, this, previewAct, {aggregator: 'profile', name: 'profile_picture', multiple: false})" type="file">
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-50 mb-20">
+            <div class="row-md-12 text-center">
+                <ul class="uploaded-list selectable">
+                    <li class="uploaded-list-item">
+                        <img src="/moowgly/img/a-video.jpg">
+                        <button type="button" class="remove"></button>
+                        {{ forms.checkbox('media', 'name', true) }}
+                    </li>
+                    <li class="uploaded-list-item">
+                        <img src="/moowgly/img/a-video.jpg">
+                        <button type="button" class="remove"></button>
+                        {{ forms.checkbox('media', 'name', false) }}
+                    </li>
+                    <li class="uploaded-list-item play">
+                        <img src="/moowgly/img/a-video.jpg">
+                        <button type="button" class="remove"></button>
+                        {{ forms.checkbox('media', 'name', false) }}
+                    </li>
+                </ul>
+
+                <span class="mt-10 display-inline-block text-grey-dark text-italic">Choose the profile picture of your offer</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="alert alert-success alert-act" style="display: none;">
+        <strong>Success!</strong> Your activity was been created
+    </div>
+    <div class="text-center mt-50">
+        <button onclick="$('.alert-act').show();" class="btn btn-default">Create</button>
+    </div>
+{% endblock %}

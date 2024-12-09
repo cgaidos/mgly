@@ -1,0 +1,43 @@
+{% macro input(name, classes = '', placeholder = '', value = '', type = 'text', attr = '') %}
+    <input {{ attr }} type="{{ type }}" value="{{ value }}" placeholder="{{ placeholder }}" name="{{ name }}" class="form-control {{ classes }}">
+{% endmacro %}
+
+{% macro select(name, options, classes = '', value = '', attr = '') %}
+    <span class="select {{ classes }}">
+        <select name="{{ name }}" {{ attr|raw }} class="form-control">
+            {% for key, options in options %}
+                <option {{ (key == value ? 'selected="selected"' : '' ) }} value="{{ key }}">{{ options }}</option>
+            {% endfor %}
+        </select>
+    </span>
+{% endmacro %}
+
+{% macro select_multi(name, options, classes = '', value = '') %}
+    <span class="select {{ classes }}">
+        <select multiple name="name" class="form-control">
+            {% for key, options in options %}
+                <option value="{{ key }}">{{ options }}</option>
+            {% endfor %}
+        </select>
+    </span>
+{% endmacro %}
+
+{% macro radio(name, value, checked = false, classes = '', attr = '') %}
+    {% if checked == true %}{% set checked = 'checked="checked"' %}{% endif %}
+
+    <div class="form-control-content">
+        <span class="radio {{ classes }}">
+            <input {{ attr|raw }} type="radio" {{ checked }} value="{{ value }}" name="{{ name }}">
+        </span>
+    </div>
+{% endmacro %}
+
+{% macro checkbox(name, value, checked = false, classes = '') %}
+    {% if checked == true %}{% set checked = 'checked="checked"' %}{% endif %}
+
+    <div class="form-control-content">
+        <span class="checkbox {{ classes }}">
+            <input type="checkbox" {{ checked }} value="{{ value }}" name="{{ name }}">
+        </span>
+    </div>
+{% endmacro %}

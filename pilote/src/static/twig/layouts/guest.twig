@@ -1,0 +1,35 @@
+{% import 'macros/notification.twig' as notification %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include './layouts/common/head.twig' %}
+    </head>
+    <body class="bg-grey-light">
+    {% include './layouts/common/modals.twig' %}
+
+    {% include './layouts/common/pages.twig' %}
+
+    <div id="page">
+        {% include './layouts/header/guest.twig' with {menu: block('menu')} %}
+
+        {% include './layouts/common/notification.twig' with {notification: block('notification')} %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-3 sidebar sidebar-left">
+                    {% include 'dashboard/common/profile.twig' %}
+                </div>
+                <div class="col-md-8 col-lg-9 content content-sidebar-left">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {% include './layouts/footer/footer.twig' %}
+
+    {% include './layouts/common/scripts.twig' %}
+    </body>
+</html>

@@ -1,0 +1,63 @@
+{% extends 'layouts/guest.twig' %}
+
+{% block menu %}
+    {% include './guest/profile/nav.twig' %}
+{% endblock %}
+
+{% block content %}
+    <script>
+        window.bind('load', function () {
+
+            $('.kids .kid').each(function () {
+
+                // activities
+                var tagList = $(this).find('.kid-tags');
+                var tagInput = $(this).find('.activities-list select');
+                this.tags = new libs.tags(tagInput, tagList, 'activity', true);
+
+                // profile image
+                var fileInput = $(this).find('.kid-image');
+                var imagePreview = $(this).find('.kid-image-preview');
+
+                var previewProfile = function (urlData, formFile) {
+                    var img = $('<div class="img">').css('backgroundImage', 'url('+urlData+')');
+                    var button = $('<br><button style="clear: both" class="btn btn-danger mt-10">').text('Remove').bind('click', function () {
+                        button.remove();
+                        img.remove();
+                        formFile.remove();
+                    });
+
+                    imagePreview.append(img);
+                    fileInput.parent().after(button);
+                };
+
+                fileInput.change(function () {
+                    fileController(event, this, previewProfile, {aggregator: 'kid', name: 'kid[]', multiple: false})
+                });
+            });
+        });
+
+        var createHostCallback = function (xhr, message) {
+            switch (xhr.status) {
+                case 200: message.success('Was updated.'); break;
+            }
+        }
+    </script>
+
+    <form action="" id="kids-form" class="kids mt-sm-15">
+        <div class="box light mb-15">
+            {% include './guest/profile/partials/kid.twig' %}
+        </div>
+
+        <div class="box light mb-15">
+            {% include './guest/profile/partials/kid.twig' %}
+        </div>
+
+        <div class="ajax-response mt-15"></div>
+
+        <div class="text-center mt-50">
+            <button onclick="controllerAjaxForm(event, this.form, '#kids-form .ajax-response', createHostCallback)" type="submit" class="btn btn-default">Apply changes</button>
+        </div>
+    </form>
+{% endblock %}
+

@@ -1,0 +1,9 @@
+.guest-card {
+  .list-social {
+    li {
+      & + li {
+        margin-left: 30px;
+      }
+    }
+  }
+}

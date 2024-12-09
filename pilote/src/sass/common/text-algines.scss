@@ -1,0 +1,11 @@
+.text-left {
+   @include media_selector(false) {
+      text-align: left;
+   }
+}
+
+.text-center {
+   @include media_selector(false) {
+      text-align: center;
+   }
+}

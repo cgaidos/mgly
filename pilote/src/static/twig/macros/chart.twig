@@ -1,0 +1,16 @@
+{% macro circle(percent, size = 56) %}
+    <canvas class="chart chart-circle" data-percent="{{ percent }}" width="{{ size }}" height="{{ size }}"></canvas>
+{% endmacro %}
+
+{% macro circleRange(current, max, size) %}
+    <div class="chart-box-circle-range">
+        <canvas class="chart chart-circle-range" data-current="{{ current }}" data-max="{{ max }}" width="{{ size }}" height="{{ size }}"></canvas>
+
+        <div class="info-box">
+            <span class="info-percent">{{ current * 100 / max }} %</span>
+            <span class="info-place">2 places available</span>
+        </div>
+        <span class="current">{{ current }}</span>
+        <span class="max">{{ max }}</span>
+    </div>
+{% endmacro %}

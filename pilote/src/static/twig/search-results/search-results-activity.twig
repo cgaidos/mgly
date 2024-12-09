@@ -1,0 +1,40 @@
+{% extends 'layouts/sidebar.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+
+{% block title %}
+    Search results for activity offers
+{% endblock %}
+
+{% block header %}
+    {% include './layouts/header/search-activity.twig' %}
+{% endblock %}
+
+{% block sidebar %}
+    {% include './search-results/common/search-sidebar-activity.twig' %}
+{% endblock %}
+
+{% block content %}
+    <div class="row mb-15">
+        <div class="col-md-12">
+            <div class="pull-right">
+                {% include './search-results/common/filter-form-activity.twig' %}
+            </div>
+        </div>
+    </div>
+
+    <div class="results">
+        {#
+        {% include 'search-results/common/result-activity.twig' %}
+        #}
+
+        {% include 'search-results/common/result-activity01.twig' %}
+        {% include 'search-results/common/result-activity02.twig' %}
+        {% include 'search-results/common/result-activity03.twig' %}
+        {% include 'search-results/common/result-activity04.twig' %}
+    </div>
+
+    <div class="text-center mt-30">
+        {% include 'components/pagination.twig' %}
+    </div>
+{% endblock %}

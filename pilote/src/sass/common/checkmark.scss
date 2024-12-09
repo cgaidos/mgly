@@ -1,0 +1,39 @@
+.checkmark {
+  display:inline-block;
+  width: 30px;
+  height:30px;
+  transform: rotate(45deg);
+  border: 2px solid #ccc;
+  border-radius: 50%;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 11px;
+    background-color: #ccc;
+    left: 15px;
+    top: 7px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 2px;
+    background-color: #ccc;
+    left: 9px;
+    top: 16px;
+  }
+
+  &.green {
+    border-color: $brand-success;
+
+    &:after,
+    &:before {
+      background: $brand-success;
+    }
+  }
+}

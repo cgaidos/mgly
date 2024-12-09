@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "Kering"
+  },
+  "login": {
+	"pageTitle": "Kering",
+	"title": "Connexion",
+	"username": "Nom d'utilisateur",
+	"password": "Mot de passe",
+	"signin": "Connexion",
+	"staySignedIn": "Rester connecté"
+  },
+  "footer": {         
+	"itemsLabel": "Articles",  
+	"custotmersLabel" : "Clients",
+	"clientBookLabel": "Livre de client",  
+	"settingsLabel": "Réglages",
+	"moreLabel": "Plus"   
+  },
+  "header":{
+    "back": "Retour",
+  	"localName": "Nom local",
+  	"globalName": "Nom global",      
+  	"customerInfo": "Renseignements client",
+  	"settings": "Parametres",
+  	"more": "Plus",
+  	"selectItem": "Sélectionner un article",
+  	"itemResults": "Résultat d'article"
+  },
+  "search": {
+  	"clear" : "Vider",
+  	"done" : "OK",
+  	"filter": "Filtre",
+  	"itemSearch": "Recherche d'article",
+  	"customerSearch": "Recherche de client",
+  	"myClientSearch": "Mes clients",
+  	"results" : "resultat(s)"
+  },        
+  "searchItems": {    
+    "sku": "SKU",
+  	"styleCode": "Code de style",
+  	"productName": "Nom de produit",
+  	"fabric" : "Tissu",
+  	"color": "Couleur",
+  	"size" : "Taille",
+  	"department": "Rayon",
+  	"subDepartment" : "Sous rayon",
+  	"class": "Promotion",
+  	"subClass" : "Sous promotion",
+  	"selectSize": "Sélectionner une taille"   	        
+  },
+  "searchCustomers": {          
+  	"firstName": "Prénom",
+  	"lastName": "Nom",
+  	"phoneNumber": "Téléphone",
+  	"mail" : "Email",
+  	"country": "Pays"  	  
+  },
+  "filter":{
+      "classification": "Classification",
+      "nationality": "Nationalité",
+      "birthday": "Anniversaire"
+  },
+  "customerInfo":{      
+      "sizes": "Tailles",
+      "information": "INFORMATION",
+      "purchases": "ACHATS",
+      "campaigns": "CAMPAGNES",
+      "title": "Titre",
+      "profession": "Profession",
+      "birthDate": "Date d'anniversaire",
+      "lastPurchase": "Dernier Achat",
+      "firstPurchase": "Premier achat",
+      "preferredShop": "Magasin Préféré et S.A.",
+      "address": "Adresse",
+      "countryOrigin": "Pays D'origine"
+   },
+  "settings":{     
+      "username": "Nom d'utilisateur",
+      "store": "Magasin",
+      "changePwd": "Changer de mot de passe"
+  },
+  "more":{     
+      "tips": "Conseils",
+      "survey": "Enquete",
+      "logout": "Déconnexion"
+  }
+}

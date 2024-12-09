@@ -1,0 +1,60 @@
+@function media_list() {
+  @return (
+          "xs": (0, $screen-xs-max),
+          "sm": ($screen-sm-min, $screen-sm-max),
+          "md": ($screen-md-min, $screen-md-max),
+          "lg": ($screen-lg-min, '')
+  );
+}
+
+@mixin media_between($size, $min: true, $max: true) {
+  $media: media_list();
+
+  $media-end: '';
+  $media-size: map_get($media, $size);
+
+  @if nth($media-size, 1) != '' and $min {
+    $media-end: "(min-width: #{nth($media-size, 1)})";
+  }
+
+  @if nth($media-size, 2) != '' and $max {
+    $media-end: "(max-width: #{nth($media-size, 2)})";
+  }
+
+  @if nth($media-size, 2) != '' and nth($media-size, 1) != '' and $max and $min {
+    $media-end: "(min-width: #{nth($media-size, 1)}) and (max-width: #{nth($media-size, 2)})";
+  }
+
+  @if $media-end != '' {
+    @media #{$media-end} {
+      @content;
+    }
+  }
+}
+
+@mixin media_min($size) {
+  @include media_between($size, true, false) {
+    @content;
+  }
+}
+
+@mixin media_max($size) {
+  @include media_between($size, false, true) {
+    @content;
+  }
+}
+
+@mixin media_selector($min: true, $max: true) {
+  & {
+    @content;
+  }
+
+  @each $name, $var in media_list() {
+    &-#{$name} {
+      @include media_between($name, $min, $max) {
+        @content;
+      }
+    }
+  }
+}
+

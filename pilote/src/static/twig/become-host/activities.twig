@@ -1,0 +1,61 @@
+
+        <div class="container">
+            <h2 class="text-center mt-75 mb-60">What about your activities?</h2>
+
+            <div class="box light">
+                <div class="col-min-30-md">
+
+                    <div class="row mt-20 mb-30">
+                        <div class="col-md-12">
+                            <p class="text-center">Choose from the categories the activities of you family</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            {% set filter = [{act_cat_code: "cul"}]|json_encode %}
+                            {% set attr = 'placeholder="Culture" data-ll-resource="activities" data-ll-text="act_en" data-ll-key="act_code" data-ll-filter=\'' ~ filter ~ '\'' %}
+                            {{ forms.select('', [], 'width-full activities-list', '', attr) }}
+                        </div>
+
+                        <div class="col-md-3 mt-sm-10">
+                            {% set filter = [{act_cat_code: "gam"}]|json_encode %}
+                            {% set attr = 'placeholder="Game" data-ll-resource="activities" data-ll-text="act_en" data-ll-key="act_code" data-ll-filter=\'' ~ filter ~ '\'' %}
+                            {{ forms.select('', [], 'width-full activities-list', '', attr) }}
+                        </div>
+
+                        <div class="col-md-3 mt-sm-10">
+                            {% set filter = [{act_cat_code: "art"}]|json_encode %}
+                            {% set attr = 'placeholder="Art" data-ll-resource="activities" data-ll-text="act_en" data-ll-key="act_code" data-ll-filter=\'' ~ filter ~ '\'' %}
+                            {{ forms.select('', [], 'width-full activities-list', '', attr) }}
+                        </div>
+
+                        <div class="col-md-3 mt-sm-10">
+                            {% set filter = [{act_cat_code: "spo"}]|json_encode %}
+                            {% set attr = 'placeholder="Sport" data-ll-resource="activities" data-ll-text="act_en" data-ll-key="act_code" data-ll-filter=\'' ~ filter ~ '\'' %}
+                            {{ forms.select('', [], 'width-full activities-list', '', attr) }}
+                        </div>
+
+                    </div>
+
+                    <script>
+                        window.bind('load', function () {
+                            new libs.tags('#become-host-form .activities-list select', '#become-host-form #host-tags', 'activity', true);
+                        });
+                    </script>
+
+                    <div class="separator-horizontal"></div>
+
+                    <div class="row mb-30">
+                        <div class="col-md-12">
+                            <div id="host-tags" class="tags"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-70">
+                <a href="#bh-media" class="btn btn-default btn-become-who" role="tab" data-toggle="tab">Next</a>
+            </div>
+        </div>

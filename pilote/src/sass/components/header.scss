@@ -1,0 +1,25 @@
+.people-background {
+  background: img('bg/frise_enfants-cache.jpg') repeat top center;
+  min-height: 170px;
+}
+
+.button-robin, .button-robin:hover {
+  background-color: $robin-egg !important;
+  border-color: $robin-egg !important;
+}
+
+.header {
+  &.wrapper {
+    .container {
+      min-height: 100px;
+
+      &.dashboard {
+        .col-nav {
+          @include media_min('sm') {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

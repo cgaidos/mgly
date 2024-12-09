@@ -1,0 +1,8 @@
+# Url rewriting.
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	# Request are redirected to index.php and the part before ?(GET) is used to create a __route__ GET parameter (needed by the PHP framework Epiphany routing functionality)
+ 	RewriteCond %{REQUEST_FILENAME} !-f
+ 	RewriteCond %{REQUEST_FILENAME} !-d
+ 	RewriteRule ^(.*)\?*$ /ws-moowgly/index.php/$1 [L,QSA]
+</IfModule>

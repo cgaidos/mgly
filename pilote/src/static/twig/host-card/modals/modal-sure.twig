@@ -1,0 +1,32 @@
+{% include 'host-card/modals/modal-done.twig' %}
+
+<div class="modal fade" tabindex="-1" role="dialog" id="book-confirm">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Are you sure you want to book?</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <p>At <span class="text-blue">Adelina Ospanis</span> in <span class="text-blue">rue de Rivoli, Paris, France</span> </p>
+                        <p>for <span class="text-blue">1</span> kid who is <span class="text-blue">8</span> years old</p>
+                        <p>from <span class="text-blue">04/09</span> to <span class="text-blue">12/09</span></p>
+
+                        <textarea name="guest-message" class="form-control mt-20" rows="5">Do you want to say something to your host?</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <button type="button" class="btn btn-warning width-full" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-dismiss="modal" data-target="#book-done">Send my request</button>
+                        <div class="celarfix"></div>
+                        <button type="button" class="btn btn-warning-border width-full mt-10" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-xs-8">
+        <div class="form-group">
+            <input type="text" class="form-control" name="parents[{index}][profession]" value="{profession}" placeholder="Profession">
+        </div>
+    </div>
+    <div class="col-xs-3 text-center text-nowrap">
+        {{ forms.radio('parents[{index}][gender]', 'male', false, 'radio-parent dad', '{ gender == "male" ? "checked=\'checked\'" : "" }') }}
+        {{ forms.radio('parents[{index}][gender]', 'famle', false, 'radio-parent mom', '{ gender == "famle" ? "checked=\'checked\'" : "" }') }}
+    </div>
+</div>

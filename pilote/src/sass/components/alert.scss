@@ -1,0 +1,65 @@
+.notification.alert {
+  position: relative;
+  margin-top: 0;
+
+  .btn + .btn {
+    margin-left: 5px;
+  }
+
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
+  @include sub('dismissable') {
+    .close {
+      top: 20px;
+      right: 20px;
+      position: absolute;
+      opacity: 1;
+
+      width: 12px;
+      height: 12px;
+      background-image: img('icon/close_blue_12x12.png');
+    }
+  }
+
+  @include sub('normal') {
+    padding-left: 90px;
+    padding-right: 50px;
+
+    p {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+
+    [class*='icon'] {
+      position: absolute;
+      left: 30px;
+      top: calc(50% - 15px);
+    }
+  }
+
+  @include sub('big') {
+    min-height: 90px;
+    padding-left: 110px;
+    padding-right: 50px;
+
+    p {
+      margin-top: 0;
+    }
+
+    [class*='icon'] {
+      position: absolute;
+      left: 30px;
+      top: calc(50% - 25px);
+    }
+  }
+
+  @include sub('default') {
+    @include alert-variant(#fff, transparent, $dark);
+  }
+}

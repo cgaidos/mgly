@@ -1,0 +1,54 @@
+{% import 'macros/forms.twig' as forms %}
+{% include './layouts/header/common/no-login.twig' %}
+
+<form action="">
+    <section class="wrapper search-act">
+        <div class="container">
+            <div class="search-form col-md-8 col-md-offset-2 col-sm-12">
+
+                <div class="row">
+
+                    <div class="clearfix">
+                        <div class="row nm">
+                            <div class="col-sm-7 col-0 separate">
+                                {{ forms.input('place', 'width-full input-place address_full', 'Country, City', 'Munich') }}
+                            </div>
+                            <div class="col-sm-5 col-0 separate">
+                                {{ forms.input('activity', 'width-full activity-typeahead', 'Activity') }}
+                            </div>
+
+                            <script>
+                                window.bind('load', function () {
+                                    libs.typeahead.TypeaheadActivity('.activity-typeahead')
+                                })
+                            </script>
+                        </div>
+
+                        <div class="row nm">
+                            <div class="col-sm-9 col-0 middle-col">
+                                <div class="row nm row-date-dark input-daterange">
+                                    <div class="col-sm-6 col-0 date date-from">
+                                        {{ forms.input('place', 'date_from width-full', 'From', '2017-08-01') }}
+                                    </div>
+                                    <div class="col-sm-6 col-0 middle-col date date-to">
+                                        {{ forms.input('place', 'date_to width-full', 'To', '2017-09-30') }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3 col-0 separate">
+                                <button type="button" class="btn btn-primary btn-search width-full">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
+

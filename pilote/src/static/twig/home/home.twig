@@ -1,0 +1,47 @@
+{% extends 'layouts/home.twig' %}
+{% import 'macros/forms.twig' as forms %}
+
+{% block content %}
+
+   <div class="col-md-8 col-md-offset-2 clearfix">
+       <form action="">
+           <section class="search search-home middle-row">
+               <div class="search-form clearfix" style="margin-top: 20%">
+                   {% set title = 'The sun is rising... Moowgly'|split('', 1) %}
+                   <h2 class="title mb-100 mt-30"><span class="sr-only">The sun is rising... Moowgly</span>{% for val in title %}<div>{{ val }}</div>{% endfor %}</h2>
+
+                   <ul role="tablist" class="tab-nav row nm">
+                       <li style="border-right:#737373;border-style:solid;border-right-width:1px;" role="presentation" class="active col-sm-4 nm"><a href="#stay" aria-controls="" role="tab" data-toggle="tab" class="text-uppercase"><strong>Stay</strong></a></li>
+                       <li style="border-right:#737373;border-style:solid;border-right-width:1px;" role="presentation" class="col-sm-4 nm"><a href="#activity" aria-controls="" role="tab" data-toggle="tab" class="text-uppercase"><strong>Activity Offers</strong></a></li>
+                       <li role="presentation" class="col-sm-4 nm"><a href="#actrequest" aria-controls="" role="tab" data-toggle="tab" class="text-uppercase"><strong>Activity Demands</strong></a></li>
+                   </ul>
+
+                   <div class="tab-content">
+                       <div role="tabpanel" class="tab-pane active" id="stay">
+                           {% include 'home/partials/stay-form.twig' %}
+                       </div>
+                       <div role="tabpanel" class="tab-pane" id="activity">
+                           {% include 'home/partials/activity-form.twig' %}
+                       </div>
+                       <div role="tabpanel" class="tab-pane" id="actrequest">
+                           {% include 'home/partials/actrequest-form.twig' %}
+                       </div>
+                   </div>
+
+                   <div class="mb-120">&nbsp;</div>
+               </div>
+           </section>
+       </form>
+   </div>
+
+    <script>
+//        window.bind('load', function () {
+//            $('.tab-nav a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+//                setTimeout(function () {
+//                    $(document).trigger('reload-geolocale');
+//                }, 0);
+//            });
+//        });
+    </script>
+
+{% endblock %}

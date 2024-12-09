@@ -1,0 +1,23 @@
+<nav class="navbar navbar-dashboard">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="row">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="{{ menuActive('guest_dashboard') }}"><a href="/moowgly/guest_dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+                <li class="{{ menuActive('guest_messages') }}"><a href="/moowgly/guest_messages">Messages</a></li>
+                <li class="{{ menuActive('guest_bookings_bookings') }}"><a href="/moowgly/guest_bookings_bookings">Bookings</a></li>
+                <li class="{{ menuActive('guest_reviews') }}"><a href="/moowgly/guest_reviews">Reviews</a></li>
+                <li class="{{ menuActive('guest_profile') }}"><a href="/moowgly/guest_profile_profile">Profile</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>

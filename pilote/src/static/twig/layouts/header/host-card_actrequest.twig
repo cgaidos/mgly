@@ -1,0 +1,28 @@
+<div class="wrapper header bg-white">
+    <header class="container dashboard">
+        <div class="row">
+            <div class="row">
+
+                <div class="col-lg-2 col-md-3 col-sm-4 logo-col text-center-md">
+                    {% include './layouts/header/common/logo.twig' %}
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-8 col-nav">
+                    <ul class="list-line mt-25 mt-xs-5 mb-xs-10">
+                        <li>{% include './layouts/header/common/profile-menu.twig' %}</li>
+                        <li><a class="btn btn-link" href="">Help</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-3 col-sm-12 clearfix">
+                    {% if becomeHost == null or becomeHost != false or becomeHost == true %}
+                        <ul class="list-line mt-25 mt-sm-0 mb-xs-10 clearfix">
+                            <li class="pull-right mt-10 width-full-sm"><a class="btn btn-default width-full-sm" href="/moowgly/become-host_start">Become a host</a></li>
+                        </ul>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </header>
+</div>

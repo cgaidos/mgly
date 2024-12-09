@@ -1,0 +1,21 @@
+{% extends 'layouts/guest.twig' %}
+
+{% block content %}
+
+    <h2 class="status-title"><i class="status-open"></i> Reviews about your kids</h2>
+
+    <div class="reviews">
+        {% include './guest/reviews/partials/review-kids.twig' %}
+    </div>
+
+    <h2 class="status-title mt-30"><i class="status-history"></i> Reviews you left on hosts</h2>
+
+    <div class="reviews">
+        {% include './guest/reviews/partials/review-host.twig' %}
+        {% include './guest/reviews/partials/review-host.twig' with {answer: true} %}
+
+        {% include './guest/reviews/partials/review-host.twig' %}
+        {% include './guest/reviews/partials/review-host.twig' with {answer: true} %}
+    </div>
+
+{% endblock %}

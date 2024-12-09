@@ -1,0 +1,41 @@
+.kids {
+  &.boxes {
+    .kid {
+      padding: 30px;
+      background: #fff;
+
+      @include media_between('lg') {
+        padding-right: 10px;
+      }
+
+      > .col-avatar,
+      > .row > .col-avatar {
+        @include media_between('lg') {
+          margin-right: -20px;
+        }
+      }
+
+      .col-right {
+        @include media_between('md') {
+          padding-left: 15px;
+        }
+      }
+
+      & + .kid {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .kid {
+    .uploader-circle {
+      height: 140px;
+      width: 140px;
+      margin-right: 20px;
+
+      @include media_between('xs') {
+        margin-right: 0;
+      }
+    }
+  }
+}

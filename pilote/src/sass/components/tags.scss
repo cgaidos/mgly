@@ -1,0 +1,46 @@
+.popover {
+  .tags {
+    padding: 15px;
+  }
+}
+
+.tags {
+  margin-left: -10px;
+  margin-top: -10px;
+
+  .tag {
+    position: relative;
+    background: $tag-bg;
+    color: $tag-color;
+    border-radius: $tag-border-radius;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 6px 32px 6px 20px;
+
+    .remove {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      outline: none;
+      display: block;
+      left: auto;
+
+      position: absolute;
+      right: 5px;
+      top: 6px;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+
+      background: img('icon/close_white_10x10.png') no-repeat center;
+    }
+  }
+
+  &.no-edit,
+  &.no-remove {
+    .tag {
+      padding: 6px 20px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{% extends 'layouts/guest.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+
+{% block content %}
+
+<a href="guest_messages_conversation">
+
+    <div class="bg-white">
+        <div class="row">
+            <div class="col-md-12 conversation-list">
+                {% include './dashboard/messages/partials/conversation-item.twig' with {read: true, online: true} %}
+                {% include './dashboard/messages/partials/conversation-item.twig' with {read: true, online: false} %}
+                {% include './dashboard/messages/partials/conversation-item.twig' with {read: false, online: true} %}
+                {% include './dashboard/messages/partials/conversation-item.twig' with {read: false, online: false} %}
+                {% include './dashboard/messages/partials/conversation-item.twig' with {read: false, online: false} %}
+                {% include './dashboard/messages/partials/conversation-item.twig' with {read: false, online: false} %}
+                {% include './dashboard/messages/partials/conversation-item.twig' with {read: false, online: false} %}
+            </div>
+        </div>
+    </div>
+
+</a>
+
+{% endblock %}

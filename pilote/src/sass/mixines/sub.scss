@@ -1,0 +1,14 @@
+@mixin sub($element) {
+  &-#{$element} {
+    @content;
+  }
+}
+
+@mixin sub_extend($element) {
+  $parent: &;
+
+  &-#{$element} {
+    @extend #{$parent};
+    @content;
+  }
+}

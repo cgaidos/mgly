@@ -1,0 +1,43 @@
+Programme/ Enveloppe;Chef de programme;Sponsor du programme;Matricule du projet;Nom du projet;Chef de projet;Sponsor projet;Date de début de projet;Date de fin du projet;Métier;Type projet;Phase;Date de début de phase;Phase validée;Date de fin de phase;Budget alloué pour la phase;Budget consommé pour la phase;Livrable;Échéance du livrable;Date de validation du livrable
+New Business Model;;;SOCLEINSTIT;Mise en oeuvre d'un socle middle partenaires institutionnels;CA0001;N. BONNEFOI;02/06/2014;16/08/2016;API;Projets métiers;ETU;02/06/2014;Oui;15/07/2014;50;24;;;
+New Business Model;;;SOCLEINSTIT;Mise en oeuvre d'un socle middle partenaires institutionnels;CA0001;N. BONNEFOI;02/06/2014;16/08/2016;API;Projets métiers;DEF;15/07/2014;Non;29/02/2016;297;;;;
+New Business Model;;;SOCLEINSTIT;Mise en oeuvre d'un socle middle partenaires institutionnels;CA0001;N. BONNEFOI;02/06/2014;16/08/2016;API;Projets métiers;CTR;01/10/2014;Non;18/04/2016;593;;;;
+New Business Model;;;SOCLEINSTIT;Mise en oeuvre d'un socle middle partenaires institutionnels;CA0001;N. BONNEFOI;02/06/2014;16/08/2016;API;Projets métiers;VAL;20/02/2015;Non;31/05/2016;352;;;;
+New Business Model;;;SOCLEINSTIT;Mise en oeuvre d'un socle middle partenaires institutionnels;CA0001;N. BONNEFOI;02/06/2014;16/08/2016;API;Projets métiers;MES;01/04/2015;Non;16/06/2016;90;;"Solution simplifiée
+BforBank";22/04/2015;22/04/2015
+New Business Model;;;SOCLEINSTIT;Mise en oeuvre d'un socle middle partenaires institutionnels;CA0001;N. BONNEFOI;02/06/2014;16/08/2016;API;Projets métiers;MES;01/04/2015;Non;16/06/2016;90;;Amundi;18/06/2015;18/06/2015
+New Business Model;;;SOCLEINSTIT;Mise en oeuvre d'un socle middle partenaires institutionnels;CA0001;N. BONNEFOI;02/06/2014;16/08/2016;API;Projets métiers;MES;01/04/2015;Non;16/06/2016;90;;"SocleWeb pour
+BforBank";23/11/2015;
+New Business Model;;;SOCLEINSTIT;Mise en oeuvre d'un socle middle partenaires institutionnels;CA0001;N. BONNEFOI;02/06/2014;16/08/2016;API;Projets métiers;MES;01/04/2015;Non;16/06/2016;90;;Offre pour FASTT;13/01/2016;
+New Business Model;;;SOCLEINSTIT;Mise en oeuvre d'un socle middle partenaires institutionnels;CA0001;N. BONNEFOI;02/06/2014;16/08/2016;API;Projets métiers;MES;01/04/2015;Non;16/06/2016;90;;"Offre de crédit
+renouvelable";16/06/2016;
+Autres Projets;;;CADEPLOICR;Déploiement des offres de prêts dans les CR;CA0002;F. AMEILBONNE;10/02/2014;28/02/2016;PBG CA;Projets métiers;DEF;10/02/2014;Non;;694;;;;
+Autres Projets;;;CADEPLOICR;Déploiement des offres de prêts dans les CR;CA0002;F. AMEILBONNE;10/02/2014;28/02/2016;PBG CA;Projets métiers;CTR;30/04/2014;Non;;893;;;;
+Autres Projets;;;CADEPLOICR;Déploiement des offres de prêts dans les CR;CA0002;F. AMEILBONNE;10/02/2014;28/02/2016;PBG CA;Projets métiers;VAL;01/01/2015;Non;;859;;;;
+Autres Projets;;;CADEPLOICR;Déploiement des offres de prêts dans les CR;CA0002;F. AMEILBONNE;10/02/2014;28/02/2016;PBG CA;Projets métiers;MES;09/03/2015;Non;;205;;Déploiement Brie Picardie;09/03/2015;09/03/2015
+Autres Projets;;;CADEPLOICR;Déploiement des offres de prêts dans les CR;CA0002;F. AMEILBONNE;10/02/2014;28/02/2016;PBG CA;Projets métiers;MES;09/03/2015;Non;;205;;Déploiement Pyrénée Gascogne;09/04/2015;09/04/2015
+Autres Projets;;;CADEPLOICR;Déploiement des offres de prêts dans les CR;CA0002;F. AMEILBONNE;10/02/2014;28/02/2016;PBG CA;Projets métiers;MES;09/03/2015;Non;;205;;Pyrénée Gascogne - Recouvrement;30/10/2015;
+Autres Projets;;;CADEPLOICR;Déploiement des offres de prêts dans les CR;CA0002;F. AMEILBONNE;10/02/2014;28/02/2016;PBG CA;Projets métiers;MES;09/03/2015;Non;;205;;Pyrénée Gascogne - Supplétis;15/10/2015;
+Autres Projets;;;CADEPLOICR;Déploiement des offres de prêts dans les CR;CA0002;F. AMEILBONNE;10/02/2014;28/02/2016;PBG CA;Projets métiers;MES;09/03/2015;Non;;205;;Déploiement PACA;;
+AIDA;TRZEPALKOWSKI Lydie;LE BADEZET Olivier;AIDAPVPVS;PVD Vente Sortante;CA0003;S. ROGER;11/03/2014;31/03/2016;FDP;Projets métiers;ETU;11/03/2014;Oui;03/04/2014;;;;;
+AIDA;TRZEPALKOWSKI Lydie;LE BADEZET Olivier;AIDAPVPVS;PVD Vente Sortante;CA0003;S. ROGER;11/03/2014;31/03/2016;FDP;Projets métiers;CTR;;;;;;;;
+CIBLE MULTICANAL;COHEN-SMITH Marie-Paule;DRISSI Selma & ROGER Stéphane;CLMCLCL;Web Multicanal LCL;CA0009;RODIER Nicolas;01/04/2015;30/11/2015;FDP;Activités de Développement;ETU;01/04/2015;Oui;30/11/2015;11,4;11,4;CDC;30/11/2015;30/11/2015
+CIBLE MULTICANAL;COHEN-SMITH Marie-Paule;DRISSI Selma & ROGER Stéphane;CLQWOPTW;Quick Win Optimweb;CA0004;DRISSI Selma & ROGER Stéphane;20/03/2015;07/12/2015;FDP;Projets métiers;DEF;20/03/2015;Oui;20/04/2015;30;32;Livrable 1;20/04/2015;20/04/2015
+CIBLE MULTICANAL;COHEN-SMITH Marie-Paule;DRISSI Selma & ROGER Stéphane;CLQWOPTW;Quick Win Optimweb;CA0004;DRISSI Selma & ROGER Stéphane;20/03/2015;07/12/2015;FDP;Projets métiers;CTR;21/04/2015;Oui;20/06/2015;30;26;Maquette V1;21/04/2015;21/04/2015
+CIBLE MULTICANAL;COHEN-SMITH Marie-Paule;DRISSI Selma & ROGER Stéphane;CLQWOPTW;Quick Win Optimweb;CA0004;DRISSI Selma & ROGER Stéphane;20/03/2015;07/12/2015;FDP;Projets métiers;VAL;20/06/2015;Oui;06/10/2015;19;15;PV de recette;06/10/2015;06/10/2015
+CIBLE MULTICANAL;COHEN-SMITH Marie-Paule;DRISSI Selma & ROGER Stéphane;CLQWOPTW;Quick Win Optimweb;CA0004;DRISSI Selma & ROGER Stéphane;20/03/2015;07/12/2015;FDP;Projets métiers;MES;07/10/2015;Oui;07/12/2015;5;0;MEP;07/12/2015;
+CAPASSUR;DELRIEUX Francois;LAROUMANIE Vincent;CAPCRM;CRM Campagnes;CA0005;LELONG Francois;22/01/2015;29/01/2016;API;Projets métiers;DEF;22/01/2015;Oui;28/05/2015;29,2;15;Livrable 1;28/05/2015;28/05/2015
+CAPASSUR;DELRIEUX Francois;LAROUMANIE Vincent;CAPCRM;CRM Campagnes;CA0005;LELONG Francois;22/01/2015;29/01/2016;API;Projets métiers;CTR;29/05/2015;Oui;30/06/2015;70;50,4;Livrable 2;30/06/2015;30/06/2015
+CAPASSUR;DELRIEUX Francois;LAROUMANIE Vincent;CAPCRM;CRM Campagnes;CA0005;LELONG Francois;22/01/2015;29/01/2016;API;Projets métiers;VAL;01/07/2015;Oui;30/07/2015;50;40,6;PV de recette;30/07/2015;30/07/2015
+CAPASSUR;DELRIEUX Francois;LAROUMANIE Vincent;CAPCRM;CRM Campagnes;CA0005;LELONG Francois;22/01/2015;29/01/2016;API;Projets métiers;MES;30/07/2015;Oui;29/01/2016;10;13;MEP - Retour campagnes-intégration SAS Prod;22/06/2015;31/07/2015
+CAPASSUR;DELRIEUX Francois;LAROUMANIE Vincent;CAPCRM;CRM Campagnes;CA0005;LELONG Francois;22/01/2015;29/01/2016;API;Projets métiers;MES;30/07/2015;Oui;29/01/2016;10;6,4;MEP - Retour campagnes-intégration UNICA Prod;22/09/2015;22/09/2015
+CAPASSUR;DELRIEUX Francois;LAROUMANIE Vincent;CAPCRM;CRM Campagnes;CA0005;LELONG Francois;22/01/2015;29/01/2016;API;Projets métiers;MES;30/07/2015;Oui;29/01/2016;10;;Retour campagnes- MEP CRM;30/10/2015;
+CAPASSUR;DELRIEUX Francois;LAROUMANIE Vincent;CAPCRM;CRM Campagnes;CA0005;LELONG Francois;22/01/2015;29/01/2016;API;Projets métiers;MES;30/07/2015;Oui;29/01/2016;10;;CRM DATA - One Horus Partenariat Bancaire;30/11/2015;
+CAPASSUR;DELRIEUX Francois;LAROUMANIE Vincent;CAPCRM;CRM Campagnes;CA0005;LELONG Francois;22/01/2015;29/01/2016;API;Projets métiers;MES;30/07/2015;Oui;29/01/2016;10;;CRM DATA - One Horus Reserve;30/11/2015;
+CAPASSUR;DELRIEUX Francois;LAROUMANIE Vincent;CAPCRM;CRM Campagnes;CA0005;LELONG Francois;22/01/2015;29/01/2016;API;Projets métiers;MES;30/07/2015;Oui;29/01/2016;10;;CRM DATA - MEP EXCHANGE;30/11/2015;
+CONSO 2.0;LISSOVETZ Fabienne;LE BADEZET Olivier;CABAM;CA -Process de souscription digitalisé en agence et VAD;CA0006;Florent AMEILBONNE;21/09/2015;31/05/2016;PBG CA;Projets métiers;DEF;21/09/2015;non;30/12/2015;;;;;
+CONSO 2.0;LISSOVETZ Fabienne;LE BADEZET Olivier;CABAM;CA -Process de souscription digitalisé en agence et VAD;CA0006;Florent AMEILBONNE;21/09/2015;31/05/2016;PBG CA;Projets métiers;CTR;15/12/2015;non;10/02/2015;;;;;
+CONSO 2.0;LISSOVETZ Fabienne;LE BADEZET Olivier;LCLOFSCR;LCL-Offre Inherente;CA0007;Guillaume TRENTESAUX;07/05/2015;30/10/2015;PBG CA;Activités de Développement;ETU;07/05/2015;non;30/10/2015;;;;;
+DEMAT;BAZIZ Fahima;BURDIN Florence;DEMATCSF;FS - e releve CSF;CA0008;JANE Michael;15/09/2015;31/12/2015;OPE;Projets métiers;ETU;15/09/2015;oui;30/09/2015;15;14;CDC;30/09/2015;30/09/2015
+DEMAT;BAZIZ Fahima;BURDIN Florence;DEMATCSF;FS - e releve CSF;CA0008;JANE Michael;15/09/2015;31/12/2015;OPE;Projets métiers;DEF;30/09/2015;non;30/10/2015;;;;;
+DEMAT;BAZIZ Fahima;BURDIN Florence;DEMATCSF;FS - e releve CSF;CA0008;JANE Michael;15/09/2015;31/12/2015;OPE;Projets métiers;CTR;10/10/2015;non;10/11/2015;;;;;

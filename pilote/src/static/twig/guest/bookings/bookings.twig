@@ -1,0 +1,25 @@
+{% extends 'layouts/guest.twig' %}
+{% import 'macros/forms.twig' as forms %}
+{% import 'macros/notification.twig' as notification %}
+{% import 'macros/rating.twig' as rating %}
+
+{% block content %}
+
+    <div class="bookings">
+
+        <h2 class="status-title"><i class="status-open"></i> Open booking request</h2>
+
+        {% include './guest/bookings/partials/booking-item.twig' with {status: 'open'} %}
+        {% include './guest/bookings/partials/booking-item.twig' with {status: 'open'} %}
+
+        <h2 class="status-title mt-30"><i class="status-confirmed"></i> Confirmed bookings</h2>
+
+        {% include './guest/bookings/partials/booking-item.twig' with {status: 'confirmed'} %}
+
+        <h2 class="status-title mt-30"><i class="status-history"></i> Booking history</h2>
+
+        {% include './guest/bookings/partials/booking-item.twig' with {status: 'history'} %}
+
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,65 @@
+{% import './macros/lists.twig' as lists %}
+{% import './macros/forms.twig' as forms %}
+
+<div class="search-form-sidebar mt-70 mt-sm-0 mb-sm-15">
+    <form action="" id="search-form-sidebar" class="demo-sidebar-activity">
+        <div class="widget">
+
+            <div class="form-group">
+                <label>Distance (in km):</label>
+                <div class="mt-15">
+                    <div id="slider"></div>
+                    <input type="text" name="radius" value="0" style="color:#1E89DB;border:none;margin-top:5px;margin-left:-4px;" readonly>
+                </div>
+
+                <script>
+                    /*
+                    window.bind('load', function () {
+                        values = function (value) {
+                            $('#search-form-sidebar [name="radius"]').val(value);
+                        };
+
+                        new sliderController('#search-form-sidebar #slider', {
+                            min: 0,
+                            max: 100
+                        }, values);
+                    })
+                    */
+                </script>
+            </div>
+
+            <div class="form-group mt-40">
+                <label>Photo:</label>
+
+                <div class="text-grey">
+                    <label class="width-full">
+                        {{ forms.checkbox('photo', true) }}
+                        With
+                    </label>
+                </div>
+
+                <div style="margin-top: -15px" class="text-grey">
+                    <label class="width-full">
+                        {{ forms.checkbox('photo', false) }}
+                        Without
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget">
+            <label>Transport possibilities:</label>
+
+            <div class="text-center mt-20 mb-10">
+                <a href="https://www.blablacar.fr/" target="_blank">
+                    <img width="180" src="/moowgly/images/blablacar.jpg">
+                </a>
+            </div>
+            <div class="text-center mt-20 mb-10">
+                <a href="https://www.voyages-sncf.com/" target="_blank">
+                    <img width="180" src="/moowgly/images/logo-vsncf.jpg">
+                </a>
+            </div>
+        </div>
+    </form>
+</div>

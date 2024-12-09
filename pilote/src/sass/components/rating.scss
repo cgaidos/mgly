@@ -1,0 +1,56 @@
+.rating-item {
+  display: inline-block;
+  float: left;
+
+  & + & {
+    margin-left: 5px;
+  }
+}
+
+.rating {
+  display: inline-block;
+  padding: 2px 0;
+  vertical-align: middle;
+
+  @include sub('desc') {
+    color: $grey;
+    font-style: italic;
+  }
+
+  @include sub_extend('balls') {
+    .ball {
+      @extend .rating-item;
+
+      width: 15px;
+      height: 14px;
+
+      background-image: img('rating/ball_inactive_15x14.png');
+
+      &.active {
+        background-image: img('rating/ball_active_15x14.png');
+      }
+
+      &.half {}
+    }
+  }
+
+  @include sub_extend('stars') {
+    .star {
+      @extend .rating-item;
+
+      width: 15px;
+      height: 15px;
+
+      background-image: img('rating/star_inactive_15x15.png');
+
+      &.active {
+        background-image: img('rating/star_active_15x15.png');
+      }
+
+      &.half {
+        background-image: img('rating/star_active_half_15x15.png');
+      }
+    }
+  }
+
+}

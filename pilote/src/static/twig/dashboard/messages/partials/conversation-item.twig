@@ -1,0 +1,41 @@
+<article class="conversation-item {{ read ? 'readed' : 'to-read' }}">
+    <div class="row middle-row">
+
+        <span class="conversation-avatar">
+            {#<span class="alt-avatar">D</span>#}
+            <img src="/moowgly/images/Femme3.jpg" alt="D">
+        </span>
+
+        <div class="col-xs-9 col-sm-10 middle-col">
+            <div class="row middle-row-lg">
+
+                <div class="col-lg-5 middle-col">
+                    <div class="conversation-user {{ online ? 'online' : 'offline' }}">
+                        <span class="conversation-user-name display-inline-block-md">
+                            Adelina Ospanis
+                        </span>
+                            <span class="conversation-user-address mt-5 mt-md-0 display-inline-block-md">
+                            Marseille, France <i class="icon-marker"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 middle-col mt-md-5">
+                    <p class="conversation-last-message nm">
+                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesq
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-2 text-center middle-col">
+            <span class="conversation-date">
+                2 Nov
+            </span>
+        </div>
+
+        <button class="conversation-remove"><i class="icon-remove-grey"></i></button>
+
+    </div>
+</article>
